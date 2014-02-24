@@ -19,8 +19,15 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 150%;
+}
+h3, h4, h5, h6 {
+  font-size: 100%;
+}
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -157,4 +164,20 @@ a:visited { color: #a0a; }
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+
+/*****************************************************************************/
+/*
+/* custom
+/*
+/*****************************************************************************/
+
+em {
+    color: grey;
+    font-size: 70%;
+}
+
+.post h2 {
+    margin-top: 1em;
 }
