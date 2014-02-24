@@ -5,19 +5,77 @@ date:   2014-02-24 09:00:00
 categories: php conference talks
 ---
 
-# Blurb
+Blurb
+======
 General info about the conference can be found [here][phpuk2014-website] and a full list of talks can be found on
 the conference's joindin [page][phpuk2014-joindin] .
 
 
-# Talks
+Talks
+======
 
 My very scattered and hashed together notes for each of the talks I attended. Listed in no particular order.
+
+## (Re)discovering the SPL _by Joshua Thijssen_
+- Takeaway message: The spl is cool but comes with some GOTCHAs
+- The limititerator does not implement countable.
+- RecursiveIterators don't recurse. They enabled recursion but need to be wrapped by the recursiveiteratoriterator (sadly this isn't a typo).
+They should be called recursibleiterators.
+- Caching iterator doesn't really cache. It should propbably be called a lookaheaditerator as it has the method hasnext().
+The hasnext method is actually potentially very useful.
+- Despite a lack of documentation a lot of code actually makes useof the seekableiterator interface. If you implement
+an iteratable object where it's possible to jump to specific positions implement the seekableiterator interface and you
+may find some unexpected free speedbost.
 
 ## PHP: Under The Hood _by Davey Shafik_
 - Useful tool: Vulcan logic dumper. Can be used to dump the generated opcodes representing a php file.
 - Interestingly there is no difference in opcodes from calling an actual method and a call to __call() magic.
 
+## Vagrant Provisioners in a Nutshell _by Erika Heidi_
+- The shared folder in Vagrant can cause significant slow downs when it is being written to (example given 5s load to
+25s load for symfony app). Switching file cache locations to a location not shared resolved the performance issue.
+- Useful website: phansible.com for building ansible provisioned php vagrant images. Interestingly also has config
+for hhvm.
+- Puppet as a provisioner has a major potential gotcha: The steps you define are not executed in the order you define
+them. Any dependencies in order need to be explicitly specified.
+
+## OPCache! _by Julien Pauli_
+- A very offhand number given was that 20% of an example php file execution time was compilation. This gives very
+impressive speed boosts for almost zero work.
+- The opcache is already doing compiler optimisations. I didn't realise this and this is cool!
+- A typical symfony app stored 40mb and ~3000 files in the cache.
+- The first time a file is hit caching and optimising takes time (as expected) so it is recommended to prime the cache.
+It's worth baring in mind when doing this that the cli uses a separate cache to the one apache may be using.
+- This should not be used with xdebug or any other opcode modifying extension.
+
+## Building scalable PHP applications using Google’s App Engine _by Ian Barber & Mandy Waite_
+- My short summary: It's not ready for php yet. Needs more polish.
+- Built on a fork of 5.4.something. Forked so they can make a few tweaks to get it to run properly.
+- has a built in googled version of memcahce(d) that is transparent to the normal client libraries. Can either use
+a shared instance or pay for some dedicated memory.
+- Access to google's cloud datastore has to be done using the rest api as they don't have php native code yet (unlike
+ their other language integrations).
+
+## Caching Best Practices _by Eli White_
+- Various levels of caching. Full page caching best level to well configured proxies.
+- Goal level of code caching is the biggest smallest reusable object. Knowledge of the code and domain is useful.
+- It can be a real benefit to have multiple levels of cache. For example APC caches on a single web server instance for
+a short time. Next a shared memcached pool could cache for a bit longer then a hit to the db if the cache is empty.
+- Pre-generation of cached content is a really good idea.
+- memcached can be asked to fetch data asynchronously so this could be done earlier in a script than it's needed.
+- Interestingly when optimising Digg they did seperate queries for each user but cached each result seperately. All though
+ this meant a far greater number of DB queries initially once the cache was warmed up it resulted in very few additional queries.
+
+## Wield AngularJS like a Pro _by Nate Abele_
+- Main take away point: batarang is an excellent tool for debugging/profiling angular apps in chrome.
+
+## The Seven Deadly Sins of Dependency Injection _by Stephan Hochdörfer_
+- Use a factory class instead of a factory method if you want to provide default dependencies for an object. This
+helps maintain SRP and keeps the coupling out of your non-factory code.
+
+## Facebook's Approach to Common Web Vulnerabilities _by Ben Mathews_
+- Scarily facebook has a mostly single repo that is 49GB. The speaker thought this was a good thing. I disagree.
+- TODO: I have a lot of notes for this talk that need writing up properly.
 
 [phpuk2014-website]: http://phpconference.co.uk/
 [phpuk2014-joindin]: http://joind.in/event/view/1585
