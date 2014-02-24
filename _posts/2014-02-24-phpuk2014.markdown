@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "PHP UK 2014 conference talk notes"
+date:   2014-02-24 09:00:00
+categories: php conference talks
+---
+
+# Blurb
+General info about the conference can be found [here][phpuk2014-website] and a full list of talks can be found on
+the conference's joindin [page][phpuk2014-joindin] .
+
+
+# Talks
+
+My very scattered and hashed together notes for each of the talks I attended. Listed in no particular order.
+
+## PHP: Under The Hood _by Davey Shafik_
+- Useful tool: Vulcan logic dumper. Can be used to dump the generated opcodes representing a php file.
+- Interestingly there is no difference in opcodes from calling an actual method and a call to __call() magic.
+
+
+[phpuk2014-website]: http://phpconference.co.uk/
+[phpuk2014-joindin]: http://joind.in/event/view/1585
