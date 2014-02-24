@@ -57,7 +57,7 @@ a shared instance or pay for some dedicated memory.
  their other language integrations).
 
 ## Caching Best Practices _by Eli White_
-- Various levels of caching. Full page caching best level to well configured proxies.
+- Various levels of caching. Full page caching best left to well configured proxies.
 - Goal level of code caching is the biggest smallest reusable object. Knowledge of the code and domain is useful.
 - It can be a real benefit to have multiple levels of cache. For example APC caches on a single web server instance for
 a short time. Next a shared memcached pool could cache for a bit longer then a hit to the db if the cache is empty.
