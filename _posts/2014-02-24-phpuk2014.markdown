@@ -10,6 +10,7 @@ Blurb
 General info about the conference can be found [here][phpuk2014-website] and a full list of talks can be found on
 the conference's joindin [page][phpuk2014-joindin] .
 
+You tube videos are also available for most talks: [phpuk 2014 youtube][phpuk2014-youtube]
 
 Talks
 ======
@@ -79,3 +80,4 @@ helps maintain SRP and keeps the coupling out of your non-factory code.
 
 [phpuk2014-website]: http://phpconference.co.uk/
 [phpuk2014-joindin]: http://joind.in/event/view/1585
+[phpuk2014-youtube]: http://www.youtube.com/playlist?list=PL_aPVo2HeGF-7o9SPO5arFrAaU8bcIjba
