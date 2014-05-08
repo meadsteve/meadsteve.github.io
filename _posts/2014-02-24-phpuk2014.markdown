@@ -2,7 +2,11 @@
 layout: post
 title:  "PHP UK 2014 conference talk notes"
 date:   2014-02-24 09:00:00
-categories: php conference talks
+categories: conferences php
+tags:
+- php
+- conference
+- talks
 ---
 
 Blurb
