@@ -14,7 +14,7 @@ The area I want to focus on specifically is code reviews and how they can be mad
 Most constructive criticism advice focuses on how to leave more effective feedback.
 I feel it's also immensely helpful to be able to take as much as possible from any criticism.
 
-## Problem
+#### Problem
 Early on in my development life my process went something like this:
 
  1. Create flawless code that's a beauty to look at and is wonderfully self documenting.
@@ -25,7 +25,7 @@ Early on in my development life my process went something like this:
 Now the result of this process is that the final step makes me sad and frustrated. I generally don't want to be sad.
 So I wanted to identify what was wrong with the above process and improve  my life (and hopefully my code).
 
-## Potential Causes
+#### Potential Causes
 Maybe the problem is with step 2? So if I stop participating in code reviews I'll be a happier person?
 Whilst this solution might give me the illusion of happiness. I won't learn anything from my fellows and I run the risk of letting through some errors.
 
@@ -35,7 +35,7 @@ It seems unlikely that I'm a special hero and only everyone else is a troll so w
 So finally maybe the problem is with step 4. Should I get so defensive?
 Is my defensiveness actually caused by a mistaken assumption in point 1 (and a little bit 3). This seems like a good place to start.
 
-## Solutions
+#### Solutions
 So now whenever I receive some comments on a code review I try and follow this thought process:
 
  * Is it a simple mistake in my code?
@@ -64,4 +64,9 @@ So now whenever I receive some comments on a code review I try and follow this t
  If this is the case you may well genuinely be dealing with a troll (although think very carefully and revisit the previous steps before coming to this conclusion).
  In which case take some nursery rhyme advice: "Sticks and stones may break my bones. But comments on the internet will never hurt me".
 
+#### Conclusion
 
+Since following the above I feel like I've gained a lot more from the code review process.
+Now I'm not perfect and I still miss the point, get a bit frustrated and so forth.
+However I've found that if I keep coming back to the points above I can extract something useful from almost all comments.
+There are probably some points from this that apply to leaving comments on a code review but that's a topic for another day.
