@@ -29,3 +29,34 @@ It seems unlikely that I'm a special hero and only everyone else is a troll so w
 
 So finally Maybe the problem is with step 4. Should I get so defensive?
 Is my defensiveness actually caused by a mistaken assumption in point 1 (and a little bit 3). This seems like a good place to start.
+
+## Solutions
+So now whenever I receive some comments on a code review I try and follow this thought process:
+
+ * Is it a simple mistake in my code?
+ If it is then I can fix it.
+ Thank the reviewer and celebrate that my code is now better.
+ This is the simplest situation.
+
+ * Has reviewer has mistaken the intention of my code?
+ If they have then this is possibly an issue with the way my code has been presented.
+ Are there any comments I could add to clarify my intent?
+ Is there any supporting documentation I could update?
+ Once I've asked myself these questions I'll discuss the possible solutions with the reviewer.
+
+ * If neither of the above has resulted in a conclusion then it's possible the issue is a large one.
+ Maybe there are some issues with the entire approach I've taken.
+ Maybe I've made a large number of small errors that hide my intentions.
+ When this happens ideally I would like to talk to the reviewer face to face. Or on IRC, google hangout, IM etc.
+ The important thing is to communicate in a manner that allows rapid back and forth (the ideal really is face to face).
+ I've found without this kind of high fidelity conversation it's very easy for both sides to be misunderstood and for pointless arguments to ensue.
+ Hopefully after this a conclusion will be reached that can be summarised on the code review.
+ It's possible the result is abandoning the review and doing a rewrite.
+ At the time this may seems like a bad thing but if it results in better quality, more robust code then you'll thank yourself later.
+ This last situation is less stressful the smaller your unit of work. Less to throw away.
+
+ * There is a small chance that after doing all the above you are left with some negative comments.
+ If this is the case you may well genuinely be dealing with a troll.
+ In which case take some nursery rhyme advice: "Sticks and stones may break my bones. But comments on the internet will never hurt me".
+
+
