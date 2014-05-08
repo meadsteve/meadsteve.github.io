@@ -9,6 +9,11 @@ tags:
 - criticism
 ---
 
+This post started out with me thinking about constructive criticism and how this affects developers.
+The area I want to focus on specifically is code reviews and how they can be made more positive.
+Most constructive criticism advice focuses on how to leave more effective feedback.
+I feel it's also immensely helpful to be able to take as much as possible from any criticism.
+
 ## Problem
 Early on in my development life my process went something like this:
 
