@@ -13,7 +13,7 @@ tags:
 Early on in my development life my process went something like this:
 
  1. Create flawless code that's a beauty to look at and is wonderfully self documenting.
- 1. Pass the above code to a code review process to much fanfare.
+ 1. Pass the above code to a code review process with much fanfare.
  1. All the reviewers turn out to be trolls and mercilessly attack my code.
  1. I get defensive. Fight to justify my code and keep everything unchanged.
 
@@ -27,7 +27,7 @@ Whilst this solution might give me the illusion of happiness. I won't learn anyt
 So what about step 3? Are all of my co-workers (or open-source contributors) negative trolls?
 It seems unlikely that I'm a special hero and only everyone else is a troll so we'll skip this for the moment.
 
-So finally Maybe the problem is with step 4. Should I get so defensive?
+So finally maybe the problem is with step 4. Should I get so defensive?
 Is my defensiveness actually caused by a mistaken assumption in point 1 (and a little bit 3). This seems like a good place to start.
 
 ## Solutions
@@ -56,7 +56,7 @@ So now whenever I receive some comments on a code review I try and follow this t
  This last situation is less stressful the smaller your unit of work. Less to throw away.
 
  * There is a small chance that after doing all the above you are left with some negative comments.
- If this is the case you may well genuinely be dealing with a troll.
+ If this is the case you may well genuinely be dealing with a troll (although think very carefully and revisit the previous steps before coming to this conclusion).
  In which case take some nursery rhyme advice: "Sticks and stones may break my bones. But comments on the internet will never hurt me".
 
 
