@@ -15,7 +15,7 @@ Most constructive criticism advice focuses on how to leave more effective feedba
 I feel it's also immensely helpful to be able to take as much as possible from any criticism.
 
 #### Problem
-Early on in my development life my process went something like this:
+Early on in my development life my workflow went something like this:
 
  1. Create flawless code that's a beauty to look at and is wonderfully self documenting.
  1. Pass the above code to a code review process with much fanfare.
@@ -36,7 +36,7 @@ So finally maybe the problem is with step 4. Should I get so defensive?
 Is my defensiveness actually caused by a mistaken assumption in point 1 (and a little bit 3). This seems like a good place to start.
 
 #### Solutions
-So now whenever I receive some comments on a code review I try and follow this thought process:
+So now whenever I receive some comments on a code review I try to follow this thought process:
 
  * Is it a simple mistake in my code?
  If it is then I can fix it.
@@ -67,6 +67,7 @@ So now whenever I receive some comments on a code review I try and follow this t
 #### Conclusion
 
 Since following the above I feel like I've gained a lot more from the code review process.
-Now I'm not perfect and I still miss the point, get a bit frustrated and so forth.
+Now I'm not perfect, I still miss the point, I still get a bit frustrated and so on.
 However I've found that if I keep coming back to the points above I can extract something useful from almost all comments.
-There are probably some points from this that apply to leaving comments on a code review but that's a topic for another day.
+This means my code improves, I learn new techniques and I generally get better at explaining myself.
+There are probably some points from this that apply to leaving more constructive criticism on a code review but that's a topic for another day.
