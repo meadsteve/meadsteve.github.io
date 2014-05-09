@@ -20,6 +20,10 @@ An anti-fragile system is one that is actually improved by shocks. It gets bette
 This got me thinking about how this thought process can be applied to software.
 
 #### Robustness? Too much bad?
+We don't want fragile software. If your application crashes the moment someone clicks in the wrong spot you're gonna have a bad time.
+So the first step in countering this is normally to make our software less error prone.
+When a service dies we handle it gracefully and carry on as best we can.
+
 
 #### Speed of change - CD & CI
 
