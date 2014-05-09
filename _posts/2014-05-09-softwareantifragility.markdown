@@ -16,7 +16,7 @@ Now whilst I sometimes find his writing style a little annoying he raises some v
 The core idea is that the opposite of something fragile isn't just robust but is anti-fragile.
 A fragile system is one that breaks down when shocked.
 A robust system is one that is resistant and doesn't break when exposed to shocks.
-An anti-fragile system is one that is actually improved by shocks. It gets better with each shock. Provided the shocks aren't too big.
+An anti-fragile system is one that is actually improved by shocks. Provided the shocks aren't too big.
 Evolution is a good example of an anti-fragile system.
 Life throws a series of problems at species and through survival of the fittest the species becomes more suited to its environment.
 This got me thinking about how this idea might apply to software development.
@@ -25,8 +25,9 @@ This got me thinking about how this idea might apply to software development.
 We don't want fragile software. If your application crashes the moment someone clicks in the wrong spot you're gonna have a bad time.
 So the first step in countering this is normally to make our software less error prone.
 When a service dies we handle it gracefully and carry on as best we can.
-Now whilst this is almost certainly better than having a fragile piece of software is this the best we can do?
-Every error, warning and problem our users run in to is effectively a piece of information we could use to improve our code base.
+Now whilst this is almost certainly better than having a fragile piece of software. Is this the best we can do?
+Every error, warning and problem our users run in to is effectively a piece of information. Hinting at something we could and should change.
+We could use this to improve our code base.
 I would even go as far as to say if we are too robust we risk hiding some potentially useful information ([fail fast][wiki-fail-fast] is one way of countering this).
 
 #### Errors as useful input
