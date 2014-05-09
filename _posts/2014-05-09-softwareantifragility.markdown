@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making anti-fragile software"
-date:   2014-05-08 13:00:00
+date:   2014-05-09 10:00:00
 categories: software-design
 tags:
 - anti-fragility
