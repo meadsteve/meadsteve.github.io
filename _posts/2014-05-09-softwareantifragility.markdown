@@ -11,14 +11,20 @@ tags:
 ---
 
 #### anti-fragility
-Nassim Nicholas Taleb, [Antifragile: Things that Gain from Disorder][book-antifragile]
+Recently I've been reading [Antifragile: Things that Gain from Disorder][book-antifragile] by Nassim Nicholas Taleb.
+Now whilst I sometimes find his writing style a little annoying he raises some very interesting concepts in the book.
+The core idea is that the opposite of something fragile isn't just robust but is anti-fragile.
+A fragile system is one that breaks down when shocked.
+A robust system is one that is resistant and doesn't break when exposed to shocks.
+An anti-fragile system is one that is actually improved by shocks. It gets better with each shock. Provided the shocks aren't too big.
+This got me thinking about how this thought process can be applied to software.
 
 #### Robustness? Too much bad?
 
+#### Speed of change - CD & CI
+
 #### Errors as useful input
 [bugsnag][errors-bugsnag], [raygun][errors-raygun]
-
-#### Speed of change - CD & CI
 
 #### Artificial Sources of errors
 [Gremlins.js][random-gemlins], [chaos monkey][random-chaosmonkey]
