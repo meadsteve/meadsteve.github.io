@@ -19,13 +19,15 @@ A robust system is one that is resistant and doesn't break when exposed to shock
 An anti-fragile system is one that is actually improved by shocks. It gets better with each shock. Provided the shocks aren't too big.
 This got me thinking about how this thought process can be applied to software.
 
-#### Robustness? Too much bad?
+#### Robustness. Better than fragility right?
 We don't want fragile software. If your application crashes the moment someone clicks in the wrong spot you're gonna have a bad time.
 So the first step in countering this is normally to make our software less error prone.
 When a service dies we handle it gracefully and carry on as best we can.
+Now whilst this is almost certainly better than having a fragile piece of software is this the best we can do?
+Every error, warning and problem our users run in to is effectively a piece of information we could use to improve our code base.
+I would even go as far as to say if we are too robust we risk hiding some potentially useful information ([fail fast][wiki-fail-fast] is one way of countering this).
 
-
-#### Speed of change - CD & CI
+#### Speed of change - CD, CI, Agile, Kanban, XP and others
 
 #### Errors as useful input
 [bugsnag][errors-bugsnag], [raygun][errors-raygun]
@@ -38,3 +40,4 @@ When a service dies we handle it gracefully and carry on as best we can.
 [errors-raygun]: http://raygun.io
 [random-gemlins]: https://github.com/marmelab/gremlins.js
 [random-chaosmonkey]: https://github.com/Netflix/SimianArmy
+[wiki-fail-fast]: http://en.wikipedia.org/wiki/Fail-fast
