@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Anti-fragility in software"
-date:   2014-05-09 10:00:00
+date:   2014-05-10 10:00:00
 categories: software-design
 tags:
 - anti-fragility
@@ -11,8 +11,8 @@ tags:
 ---
 
 #### anti-fragility
-Recently I've been reading [Antifragile: Things that Gain from Disorder][book-antifragile] by Nassim Nicholas Taleb.
-Now whilst I sometimes find his writing style a little annoying he raises some very interesting concepts in the book.
+I'm currently reading [Antifragile: Things that Gain from Disorder][book-antifragile] by Nassim Nicholas Taleb.
+Now whilst at times his writing style annoys me a little he raises some very interesting concepts in the book.
 The core idea is that the opposite of something fragile isn't just robust but is anti-fragile.
 A fragile system is one that breaks down when shocked.
 A robust system is one that is resistant and doesn't break when exposed to shocks.
@@ -62,6 +62,16 @@ This approach allows us to provide extra stress on our software. Forcing it to b
 #### Closing thoughts
 Errors and failures don't have to be negative.
 When handled correctly they are in fact a valuable form of data that allows us to improve our software.
+I think the following is required to become anti-fragile:
+
+ * Errors must be known. This can be through logging, well defined metrics, or good client comms. If the errors
+ aren't quantified then nothing can be down about them.
+ * The system should be relatively robust and modular. A small mistake shouldn't take down our server for example.
+ Large failures could hide the small, more useful failures.
+ * Change must be able to happen quickly.
+ This enables new versions of the software to be exposed to the same feedback process and improved upon in the same way.
+
+Some of the above is necessarily vague. The exact values will depend on the context.
 I like to think I write robust software. Can I move to anti-fragility?
 
 [book-antifragile]: http://en.wikipedia.org/wiki/Antifragile
