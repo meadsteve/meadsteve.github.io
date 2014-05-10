@@ -56,7 +56,7 @@ The combined system of the software, error tracking and development team is now 
 Users and natural hardware failures don't have to be our only source of shocks.
 They can be simulated artificially either during testing or, for bolder developers, when live.
 For hammering the front end [Gremlins.js][random-gemlins] is a handy little library.
-Netflix are also fairly well know for using [chaos monkey][random-chaosmonkey] to randomly taken down hardware.
+Netflix are also fairly well know for using [chaos monkey][random-chaosmonkey] to randomly take down hardware.
 This approach allows us to provide extra stress on our software. Forcing it to be a better fit for our environment.
 
 #### Closing thoughts
