@@ -65,7 +65,7 @@ When handled correctly they are in fact a valuable form of data that allows us t
 I think the following is required to become anti-fragile:
 
  * Errors must be known. This can be through logging, well defined metrics, or good client comms. If the errors
- aren't quantified then nothing can be down about them.
+ aren't quantified then nothing can be donr about them.
  * The system should be relatively robust and modular. A small mistake shouldn't take down our server for example.
  Large failures could hide the small, more useful failures.
  * Change must be able to happen quickly.
