@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Anti-fragility in software"
+title:  "Anti-fragility: errors are good!"
 date:   2014-05-11 14:00:00
 categories: software-design
 tags:
@@ -41,7 +41,7 @@ In addition they've done some really odd things (they are users after all).
 At the same time our software will also be exposed to the effects of the real world. Maybe some hardware will fail.
 Maybe a network connection will go through a sluggish period.
 
-Harnessing this information is a good thing &trade;
+Harnessing this information is a good thing &trade;.
 If the problem is big enough then your users will probably get in touch.
 If it's small then they'll likely ignore it.
 This is one of the reasons I like error tracking software (see [bugsnag][errors-bugsnag] and [raygun][errors-raygun]).
