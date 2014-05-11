@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Anti-fragility in software"
-date:   2014-05-10 10:00:00
+date:   2014-05-11 14:00:00
 categories: software-design
 tags:
 - anti-fragility
@@ -18,7 +18,8 @@ A fragile system is one that breaks down when shocked.
 A robust system is one that is resistant and doesn't break when exposed to shocks.
 An anti-fragile system is one that is actually improved by shocks. Provided the shocks aren't too big.
 Evolution is a good example of an anti-fragile system.
-Life throws a series of problems at species and through survival of the fittest the species becomes more suited to its environment.
+Life throws problems at a species. Through survival of the fittest the species becomes more suited to its environment.
+It actively gets better thanks to small amounts of stress and damage.
 This got me thinking about how this idea might apply to software development.
 
 #### Robustness. Better than fragility right?
@@ -57,22 +58,24 @@ Users and natural hardware failures don't have to be our only source of shocks.
 They can be simulated artificially either during testing or, for bolder developers, when live.
 For hammering the front end [Gremlins.js][random-gemlins] is a handy little library.
 Netflix are also fairly well know for using [chaos monkey][random-chaosmonkey] to randomly take down hardware.
-This approach allows us to provide extra stress on our software. Forcing it to be a better fit for our environment.
+This approach allows us to provide extra stress on our software. Forcing it to be a better fit for our requirements.
 
 #### Closing thoughts
 Errors and failures don't have to be negative.
 When handled correctly they are in fact a valuable form of data that allows us to improve our software.
-I think the following is required to become anti-fragile:
+I think the following is required for software to be anti-fragile:
 
  * Errors must be known. This can be through logging, well defined metrics, or good client comms. If the errors
- aren't quantified then nothing can be donr about them.
+ aren't quantified then nothing can be done about them.
  * The system should be relatively robust and modular. A small mistake shouldn't take down our server for example.
  Large failures could hide the small, more useful failures.
  * Change must be able to happen quickly.
  This enables new versions of the software to be exposed to the same feedback process and improved upon in the same way.
 
-Some of the above is necessarily vague. The exact values will depend on the context.
-I like to think I write robust software. Can I move to anti-fragility?
+Some of the above is necessarily vague. The exact values would depend on the context.
+Theses are just some ideas I've been mulling over.
+It's possible I'll take these thoughts further and make something useful out of them in a later post.
+Hopefully this was some good food for thought.
 
 [book-antifragile]: http://en.wikipedia.org/wiki/Antifragile
 [errors-bugsnag]: http://bugsnag.com
