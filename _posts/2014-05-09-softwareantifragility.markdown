@@ -73,9 +73,9 @@ I think the following is required for software to be anti-fragile:
  This enables new versions of the software to be exposed to the same feedback process and improved upon in the same way.
 
 Some of the above is necessarily vague. The exact values would depend on the context.
-Theses are just some ideas I've been mulling over.
+These are just some ideas I've been mulling over.
 It's possible I'll take these thoughts further and make something useful out of them in a later post.
-Hopefully this was some good food for thought.
+Hopefully this was at least some food for thought.
 
 [book-antifragile]: http://en.wikipedia.org/wiki/Antifragile
 [errors-bugsnag]: http://bugsnag.com
