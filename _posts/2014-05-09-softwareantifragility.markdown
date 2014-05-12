@@ -34,7 +34,7 @@ I would even go as far as to say if we are too robust we risk hiding some potent
 #### Errors as useful input
 You test your software (you do right?).
 This eliminates a lot of bugs and issues before your software even meets the outside world.
-Now lets say you spend an hour testing your software.
+Now let's say you spend an hour testing your software.
 You release it. You then get 4000 users over the next day each spending 15 minutes using the software.
 In this one day your users have now spent one thousand times longer testing the software than you did.
 In addition they've done some really odd things (they are users after all).
@@ -50,7 +50,7 @@ This is one of the reasons I like error tracking software (see [bugsnag][errors-
 Once we are getting this steady flow of errors we need to start doing something about it.
 If the errors are ignored then the risk of them compounding increases and it all starts to seem a bit fragile.
 One of the core strengths of agile development (and other related methodologies) is the ability to respond rapidly to change.
-Now with every error the software can be improved. Getting incrementally better with each shock.
+Now with every error the software can be improved, getting incrementally better with each shock.
 The combined system of the software, error tracking and development team is now starting to look anti-fragile.
 
 #### Artificial Sources of errors
