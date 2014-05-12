@@ -62,7 +62,7 @@ This approach allows us to provide extra stress on our software. Forcing it to b
 
 #### Closing thoughts
 Errors and failures don't have to be negative.
-When handled correctly they are in fact a valuable form of data that allows us to improve our software.
+When handled correctly they are, in fact, a valuable form of data that allows us to improve our software.
 I think the following is required for software to be anti-fragile:
 
  * Errors must be known. This can be through logging, well defined metrics, or good client comms. If the errors
