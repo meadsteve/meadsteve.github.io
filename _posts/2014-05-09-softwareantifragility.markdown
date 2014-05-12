@@ -67,7 +67,7 @@ I think the following is required for software to be anti-fragile:
 
  * Errors must be known. This can be through logging, well defined metrics, or good client comms. If the errors
  aren't quantified then nothing can be done about them.
- * The system should be relatively robust and modular. A small mistake shouldn't take down our server for example.
+ * The system should be relatively robust and modular. A small mistake shouldn't take down our server, for example.
  Large failures could hide the small, more useful failures.
  * Change must be able to happen quickly.
  This enables new versions of the software to be exposed to the same feedback process and improved upon in the same way.
