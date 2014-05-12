@@ -44,7 +44,7 @@ Maybe a network connection will go through a sluggish period.
 Harnessing this information is a good thing &trade;.
 If the problem is big enough then your users will probably get in touch.
 If it's small then they'll likely ignore it.
-This is one of the reasons I like error tracking software (see [bugsnag][errors-bugsnag] and [raygun][errors-raygun]).
+This is one of the reasons I like error tracking software (see [bugsnag][errors-bugsnag] and [raygun][errors-raygun] - both of which dramtically improve the signal to noise ratio of an error feed). 
 
 #### Speed of change - Continuous Delivery, Agile, Kanban, XP and others
 Once we are getting this steady flow of errors we need to start doing something about it.
