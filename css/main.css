@@ -65,8 +65,8 @@ a:visited { color: #a0a; }
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
+  max-width: 60em;
+  margin: 1em auto 2em;
   line-height: 1.5em;
 }
 
@@ -180,4 +180,17 @@ em {
 
 .post h2 {
     margin-top: 1em;
+}
+
+.title-container {
+    clear: both;
+    height: 60px;
+}
+
+.title-container h1 {
+    float: left;
+}
+
+.title-container h2 {
+    float: right;
 }
