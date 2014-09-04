@@ -68,11 +68,15 @@ TODO
 
 ## A tale in production node.js – Nuno Job
 
-TODO
+Who gives a talk in vi? Crazy. Some nice ascii art.
+
+TODO: actual content of this talk.
 
 ## Byte Shifting – Martin Kleppe
 
-TODO
+* Code golf.
+* [jsfuck.com][website-jsfuck]
+* mind-blowing self executing code: [aem1k world][website-aem1k-world]
 
 [website-home]: http://londonjsconf.com/
 [website-rigb]: http://www.rigb.org/
@@ -80,6 +84,8 @@ TODO
 [website-polymer]: http://www.polymer-project.org/
 [website-x-tags]: http://x-tags.org/
 [website-traceur]: https://github.com/google/traceur-compiler
+[website-jsfuck]: http://jsfuck.com
+[website-aem1k-world]: http://aem1k.com/world/
 [repo-putatestonit]: http://bit.ly/putatestonit
 [repo-element-graphite-metrics]: https://github.com/guardian/element-graphite-metrics
 [repo-element-aws-cloudwatch]: https://github.com/guardian/element-aws-cloudwatch
