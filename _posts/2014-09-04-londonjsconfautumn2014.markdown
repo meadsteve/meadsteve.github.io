@@ -16,7 +16,6 @@ Talks' Summary/notes/braindumps
 ======
 
 ## The state of JavaScript – Domenic Denicola
-
 Near future with the web:
 
 *  [Extensible web manifesto][website-extensibleweb]
@@ -47,7 +46,6 @@ Things in the language:
 * [Shoulda put a test on it][repo-putatestonit]
 
 ## Server-less applications powered by Web Components – Sébastien Cevey
-
 TLDR: Web components and poylmer kick ass. The guardian are open sourcing some nice elements.
 Especially some for doing metrics/reporting:
 
@@ -58,11 +56,9 @@ Especially some for doing metrics/reporting:
 Clientside for the win.
 
 ## Science !!!
-
 A sciency interlude. Who doesn't love thermite, jelly babies with perchlorate and exploding hydrogen.
 
 ## Fun With the command Line – Paul King
-
 Fun talk about the command line. Cool demos (including some scrillex sampling).
 Bit disappointed it wasn't a talk on js on the command line.
 
