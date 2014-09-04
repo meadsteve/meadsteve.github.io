@@ -41,12 +41,13 @@ Things in the language:
 
 * "Not tdd is debug later development" - quote from agile2014 (can't remember who she got it from)
 * Tests can make good internal documentation. They don't rot unlike wikis.
-* Write the tests that give you the *confidence* for the *important* parts of the system.
+* Write the tests that give you the **confidence** for the **important** parts of the system.
 * Be selective about which and how many tests you run.
 * Slow acceptance tests not necessarily bad. Finding a bug after 12 hours is better than a bug report from a customer in 3 weeks.
 * [Shoulda put a test on it][repo-putatestonit]
 
 ## Server-less applications powered by Web Components – Sébastien Cevey
+
 TLDR: Web components and poylmer kick ass. The guardian are open sourcing some nice elements.
 Especially some for doing metrics/reporting:
 
