@@ -10,6 +10,6 @@ show_related_posts: false
 # Build settings
 markdown: kramdown
 permalink: pretty
-paginate: 3
+paginate: 10
 sass:
   compressed: true
