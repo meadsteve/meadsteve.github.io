@@ -1,4 +1,15 @@
-name: MeadSteve's Dev Blog
-description: Rambling thoughts, ideas and other stuff from MeadSteve
-markdown: redcarpet
-highlighter: pygments
+# Site settings
+title: MeadSteve's Dev Blog
+email: meadsteve@gmail.com
+author: Steve Brazier
+description: "Rambling thoughts, ideas and other stuff from MeadSteve"
+baseurl: ""
+animated: false
+show_related_posts: false
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 3
+sass:
+  compressed: true
