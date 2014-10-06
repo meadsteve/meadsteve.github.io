@@ -32,14 +32,15 @@ The next step he listed then removed this global and used dependency injection. 
 state than when he'd started.
 
 So maybe every time you use global you don't get eaten by a grue.
+Does using classes always make your code better? Or for that matter does using classes instantly mean you are using OO?
 Maybe every time you use a GOTO you don't get attacked by a raptor.
 I'm not so sure about this later one because [obligatory xkcd][xkcd-raptor-goto] but I did meet [igorw][raptor-bait] at the weekend and he seemed okay.
 
 ## The message to take away
 
-What I want to cultivate is a mindfulness of when I'm doing something because it's the ```right thing to do```&trade;.
-Rather than the best thing to do to solve the problem I'm currently working on.
-I'm certainly not going to stop following best practises. They've often been found/created by people smarter than me.
+What I want to cultivate is a mindfulness of when I'm doing something because it's the ```right thing to do```&trade;
+instead of the best thing to do to solve the problem I'm currently working on.
+I'm certainly not going to stop following best practises. They've generally been found/created by people smarter than me.
 They can save me a lot of future pain. They can help me structure my solutions in a better way.
 But that's no excuse to blindly follow them.
 Especially if that prevents me getting the very thing I desired from following best practises: well written code.
