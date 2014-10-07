@@ -21,7 +21,7 @@ Better safe than sorry (for a better more well found explanation see here: [New 
 ## What does this have to do with development?
 
 Recently I've been wondering if it may in fact be healthy to treat development best practises as superstitions.
-This doesn't meant they don't work a lot or most of the time. It doesn't mean they are always harmful.
+This doesn't mean they don't work a lot or most of the time. It doesn't mean they are always harmful.
 Though some may in fact be. And relying on many of them blindly almost certainly is.
 
 A good example came up in a [talk on refactoring][joindin-bringto2014] I attended at the weekend.
