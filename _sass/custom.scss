@@ -1,0 +1,7 @@
+/* Hack fix to get rid of large space at the top of posts */
+.post[role=main] {
+  padding-top: 0;
+  h1 {
+    padding-top: 0;
+  }
+}
