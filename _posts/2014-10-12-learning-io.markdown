@@ -22,9 +22,12 @@ The first chapter was ruby. I'm now on the second chapter covering a language ca
 
 ## Hello Io
 
+Io is a prototype based OO language (much like javascript). Everything is an object.
+In fact everything is a clone of an object.
+
 ``` Io
 Duck := Object clone
-Duck quak := method("quak like a duck!" print)
+Duck quack := method("quack like a duck!" print)
 ```
 
 
