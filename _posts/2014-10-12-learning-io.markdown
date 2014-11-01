@@ -23,13 +23,25 @@ The first chapter was ruby. I'm now on the second chapter covering a language ca
 ## Clone all the things!
 
 Io is a prototype based OO language (much like javascript). Everything is an object.
-In fact everything is a clone of an object.
+In fact everything is a clone of an object. Take the following snippit:
 
 ``` Io
 Duck := Object clone
 Duck quack := method("quack like a duck!" print)
 ```
 
+Duck is now an object with ```Object``` as its prototype. All objects have slots and we've set the quack slot on the duck. In fact we've set it to contain another object called method. Any object starting with a capital letter is a type. Anything starting with a lowercase letter is an instance of a type so the following would happen in Io's console:
+
+``` console
+Io> Duck type
+==> Duck
+
+Io> bobby := Duck clone
+==>...
+Io> bobby type
+==> Duck
+
+```
 
 [book-7-languages]: http://shop.oreilly.com/product/9781934356593.do
 [website-io-language]: http://iolanguage.org/
