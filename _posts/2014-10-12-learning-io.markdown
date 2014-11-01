@@ -20,7 +20,7 @@ but the author has tried to focus on what makes that language interesting.
 
 The first chapter was ruby. I'm now on the second chapter covering a language called [Io](website-io-language).
 
-## Hello Io
+## Clone all the things!
 
 Io is a prototype based OO language (much like javascript). Everything is an object.
 In fact everything is a clone of an object.
