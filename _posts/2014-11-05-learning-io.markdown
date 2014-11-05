@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Achievement unlocked: programming in Io"
-date:   2014-10-12 10:00:00
+date:   2014-11-05 10:00:00
 categories: programming
 tags:
 - learning
