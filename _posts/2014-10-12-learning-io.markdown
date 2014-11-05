@@ -43,5 +43,8 @@ Io> bobby type
 
 ```
 
+This is about as far as I've got with the language so far. There are some interesting ideas to think about.
+The complete lack of any syntactic sugar is a little overwhelming but I'm looking forward to diving in to Io a bit more.
+
 [book-7-languages]: http://shop.oreilly.com/product/9781934356593.do
 [website-io-language]: http://iolanguage.org/
