@@ -11,8 +11,8 @@ tags:
 - pattern matching
 ---
 
-The book club at work picked [Programming Erlang](book-erlang) as the next book.
-Handily enough this is also one of the languages I'll be studying as part of [Seven languages in seven weeks](book-7-languages).
+The book club at work picked [Programming Erlang][book-erlang] as the next book.
+Handily enough this is also one of the languages I'll be studying as part of [Seven languages in seven weeks][book-7-languages].
 
 ## Pattern Matching - The price of things
 One of the really cool features of erlang is pattern matching.
