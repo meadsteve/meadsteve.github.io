@@ -12,13 +12,13 @@ tags:
 ---
 
 ## Why Io?
-I've been reading through a new book called [Seven languages in seven weeks](book-7-languages).
+I've been reading through a new book called [Seven languages in seven weeks][book-7-languages].
 Its goal is to try and give the reader a flavour of a number of different languages.
 The languages have been selected to try and cover a range of paradigms and features.
 Given that the book covers seven languages it doesn't (and can't) cover the language in detail
 but the author has tried to focus on what makes that language interesting.
 
-The first chapter was ruby. I'm now on the second chapter covering a language called [Io](website-io-language).
+The first chapter was ruby. I'm now on the second chapter covering a language called [Io][website-io-language].
 
 ## Clone all the things!
 
