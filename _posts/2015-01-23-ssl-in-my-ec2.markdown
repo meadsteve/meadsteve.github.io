@@ -1,1 +1,12 @@
-todo
+---
+layout: post
+title:  "SSLing my EC2"
+date:   2015-01-23 10:00:00
+categories: environents
+tags:
+- ssl
+- aws
+- https
+- security
+- ec2
+---
