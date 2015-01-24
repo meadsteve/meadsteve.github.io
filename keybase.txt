@@ -1,0 +1,83 @@
+==================================================================
+https://keybase.io/meadsteve
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blog.meadsteve.io
+  * I am meadsteve (https://keybase.io/meadsteve) on keybase.
+  * I have a public key with fingerprint RETU RN T HIS. PGP. GET_  FING ERPR INT( );
+     }
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.6.0"
+        },
+        "key": {
+            "fingerprint": "33ec9cc0cf5ed42941739fc7a04b8fce8ba02853",
+            "host": "keybase.io",
+            "key_id": "A04B8FCE8BA02853",
+            "uid": "aeaeb9c4a938b0a3d63fd32afe9ad800",
+            "username": "meadsteve"
+        },
+        "merkle_root": {
+            "ctime": 1422119703,
+            "hash": "d5955c10d9a25d7515f38e85013f023909c9fcad7f7c513999b3976f0bcf086f4ca3c59a5d017a87135b0119965e44cc1394715db497974f718b52acc9457fd8",
+            "seqno": 140123
+        },
+        "service": {
+            "hostname": "blog.meadsteve.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1422119988,
+    "expire_in": 157680000,
+    "prev": "944e6fcb45f859db45bf5ecee586bcd4e2beed13d2035f1e432ca26198a74bdb",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkn1QVFUYxncpCCmNiq9I+bhh2Liz3I9z9t5LkAOkI2qUxBAVA5x7zrmwwO6F
+3eVjMcihcRL6kNFMYYY/hKYxI0ndwWxoMjWSpTHThphQSGkd0UZF0sDJ7F7Cyv/u
+ued5n/f9Pe9pW3ifKcg8fioS/Z4e2WUemlRMeUd/BBsYRSNeJnUDgyvt1OkxvpzI
+QZlUpoJ6FeSmVruW4NQItZa7E+Y1FqaWutx2zamrWKvNyjKNFkNuFKt2Zyl1Vbns
+hhcjCBTLGLNYhZQAXgacKMgqFhELFEnFVFIQy0tQ0C3LNLfnnq7MnGexneh/M1iQ
+Ka3KWillZtzV18xdIIqoImOAZEFSWCQQm6ASgUcqlRGRWNYQuqlrHslBEXF7aC01
+BnZQV0UlLXZp2hw19tgNDQd4nuNkkRX0kZC7TK8iUIYQcyyREQ+JCDmoChKVIMsJ
+KssLMitjnQkRURUx5ARZlhVBFm0qq2CVlWwqwEjAUEaQsJyIJJEToMLqPWQbpABg
+rJcAkYNEAbIoi0AVOUmBPMJYBlBUiaQzuGm1UzOGYzleaDTOrlo7psbcRm7zeEql
+Vmr9l/GfCKtcmkfDWqV+XebxVKUa5B5vFWUOpDJ1VCmedypW7E6ir+7/u+V06b2p
+yJJkYWh9ld1Fi+2GAoo2PWSWNfrQWr2HDAC1qVgBUJWgrCNBRV89phRKNgUTQHmF
+UsIJhGcFqHIUCDxGvI2TJSQChSj/ser5e1Cpbum2lzqRp8alL60laPH9JnOQKSQ4
+yHi8prAF4Xdf9EMvhJvefyw8IvJ0SrO0K3+8aJPyiv+LMC9bkOta++q7u3LastfH
+z7jT0qPPP3lkePW5rfvDEr/OiO78+enJ4Kw3LIUZy7w34iOPh8QS39Fof4FSl5c/
+9cO2gu7nFzQvckwz6rHPZy3hzclx9Y2vXY54cXjV6JJuq2v8zuoYx872Y5n+mJfH
+hsFvnrZnuQ5+tMhM+ovVK33mvAj10+c0f3LDEnAnxvTB1Y5AzlN/vZf9ibgWzPYP
+bR2ZWpGU2zMYE5t90RwcKHhn751TXVcb4taJLfsk1d/YVHQmajOxvb7n+4EdpTxK
+OBO5/uGC7cnbY/L23BrYdqVhy5d7120t9Ob1d+cW5jqq4aXHwaOHWos+rm0NOz/5
+wNKRiiDvjeQD18YK+0YeWcitnEibpnW+Id+3vcMXPrzwk4+rTphYPtwaADWez1LN
+iyLe2pTy4MESzuL2wSdu95SHpIwxy4u+y+hZNrxloK3kbBQ43Le0d/zPzqqG3atG
+tJbZtPZvVojp+39RN2TNhF7uPFx+c3CQ3myfJr01x69PXd/SNJIY+lVsxMp9SeUl
+8ETGjoMafzLCObs5J+ojvxD/Rw7sSIVr0naH8pW2N7k4ODOT/1I980xi4gIhsCap
+6bStZfFJceLIaP3FAIreuHGgK7n2kqXnbLX52AlH1ITv0PjAziIucM2Z+es57pbv
+7fHbRPsb
+=2yz2
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/meadsteve
+
+==================================================================
