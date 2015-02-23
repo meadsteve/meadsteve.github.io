@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "PHP UK 2015 conference write up"
+date:   2015-02-23 09:00:00
+categories: conferences php
+tags:
+- php
+- conference
+- talks
+---
+
+Blurb
+======
+General info about the conference can be found on the [php uk conference website][phpuk2015-website] and a full list of talks can be found on
+the conference's [joindin page][phpuk2015-joindin] .
+
+
+Talks
+======
+
+## Talk name
+
+[phpuk2015-website]: http://phpconference.co.uk/
+[phpuk2015-joindin]: https://joind.in/event/view/3063
