@@ -18,7 +18,17 @@ the conference's [joindin page][phpuk2015-joindin] .
 Talks
 ======
 
-## Talk name
+## Everything That I Really Needed to Know, I Learned in Rabbinical School - Yitzchok Willroth
+Opening keynote. Really interesting take on parts of the talmud applied to software development. TLDR summary: community, mentoring and peers are important.
+
+## Adding 1.21 Gigawatts to Applications with RabbitMQ - James Titcumb
+Nice intro to RabbitMQ. Some takeaway points for me:
+- AMQP standard so any suitable client library can be used in php.
+- In php it's better to open a single connection to Rabbit and then use multiple channels.
+- Exchanges can be configured in rabit to route messages in to queues. Has some useful syntax for pattern matching a routing key.
+- RabbitMQ provides a [simulator][rabbitmq-simulator] to experiment with how the routing will work.
 
 [phpuk2015-website]: http://phpconference.co.uk/
 [phpuk2015-joindin]: https://joind.in/event/view/3063
+
+[rabbitmq-simulator]: http://tryrabbitmq.com/
