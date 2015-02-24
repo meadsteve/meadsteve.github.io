@@ -42,6 +42,27 @@ Good food for thought about how to make more accesible sites. I'd never consider
 ## The Future of Programming - Nate Abele 
 Closing talk on the first day. Quite insightful talk about how  current programming lanugages are limited. We've possibly reached a local maxima.
 
+## Integrating Communities - Jenny Wong
+Very pasionate opening keynote on the second day. Focused on making communities more diverse and not excluding anyone.
+
+## The NoSQL Store everyone ignores: PostgreSQL - Stephan Hochdörfer 
+Basically postgres is superpowerful. It provides a few types out of the box (and some more with plugins) that let you use postgres in the same way as you would a document or column db. With the added benefit that you can use postgres's relational features. Highlights inlcuded information on the following types available for fields:
+- Arrays
+  - Can be multi dimensional.
+  - Each element is typed.
+- hstore
+  - Basically an associtive array. 
+  - Key with string values.
+  - Requires an extension as not in core (at least as of 9.6).
+- json & jsonb
+  -  Validates data conforms to schema.
+  -  Indexes can be created on 1st level elements in the json.
+  -  jsonb can be queried slightly more quickly but takes up more diskspace. Formatting may also be lost. Other than that the two field types are very similar.
+- xml
+  - Validates that field is well formed. Can not validate content is correct.
+  - Access is through xpath.
+  -  
+
 [phpuk2015-website]: http://phpconference.co.uk/
 [phpuk2015-joindin]: https://joind.in/event/view/3063
 
