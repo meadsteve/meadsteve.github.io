@@ -39,6 +39,9 @@ Overview of some sensible composer practises. Little bit empty of interesting co
 ## Accessibility done right -  Michelle Sanver
 Good food for thought about how to make more accesible sites. I'd never considered the effect of captchas on anyone with a visual impairment. ARIA Live Regions are definitely something that I want to dive in to.
 
+## The Future of Programming - Nate Abele 
+Closing talk on the first day. Quite insightful talk about how  current programming lanugages are limited. We've possibly reached a local maxima.
+
 [phpuk2015-website]: http://phpconference.co.uk/
 [phpuk2015-joindin]: https://joind.in/event/view/3063
 
