@@ -28,6 +28,17 @@ Nice intro to RabbitMQ. Some takeaway points for me:
 - Exchanges can be configured in rabit to route messages in to queues. Has some useful syntax for pattern matching a routing key.
 - RabbitMQ provides a [simulator][rabbitmq-simulator] to experiment with how the routing will work.
 
+## Composer Best Practices - Jordi Boggiano
+Overview of some sensible composer practises. Little bit empty of interesting content. Main takeaway for me was a new operator for composer version matching that deals with semver (and is aware of the 0.X.Y Dev convention) :
+```JSON
+  "^1.2.3" // Greater than or equal to 1.2.3 but less than 2.0.0
+  "^1.2" // Greater than or equal to 1.2.0 but less than 2.0.0
+  "^0.4.0" // Greater than or equal to 0.4.0 but less than 0.5.0
+```
+
+## Accessibility done right -  Michelle Sanver
+Good food for thought about how to make more accesible sites. I'd never considered the effect of captchas on anyone with a visual impairment. ARIA Live Regions are definitely something that I want to dive in to.
+
 [phpuk2015-website]: http://phpconference.co.uk/
 [phpuk2015-joindin]: https://joind.in/event/view/3063
 
