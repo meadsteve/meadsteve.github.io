@@ -37,13 +37,13 @@ Overview of some sensible composer practises. Little bit empty of interesting co
 ```
 
 ## Accessibility done right -  Michelle Sanver
-Good food for thought about how to make more accesible sites. I'd never considered the effect of captchas on anyone with a visual impairment. ARIA Live Regions are definitely something that I want to dive in to.
+Good food for thought about how to make more accessible sites. I'd never considered the effect of captchas on anyone with a visual impairment. ARIA Live Regions are definitely something that I want to dive in to.
 
 ## The Future of Programming - Nate Abele 
-Closing talk on the first day. Quite insightful talk about how  current programming lanugages are limited. We've possibly reached a local maxima.
+Closing talk on the first day. Quite insightful talk about how  current programming languages are limited. We've possibly reached a local maxima.
 
 ## Integrating Communities - Jenny Wong
-Very pasionate opening keynote on the second day. Focused on making communities more diverse and not excluding anyone.
+Very passionate opening keynote on the second day. Focused on making communities more diverse and not excluding anyone.
 
 ## The NoSQL Store everyone ignores: PostgreSQL - Stephan Hochdörfer 
 Basically postgres is superpowerful. It provides a few types out of the box (and some more with plugins) that let you use postgres in the same way as you would a document or column db. With the added benefit that you can use postgres's relational features. Highlights inlcuded information on the following types available for fields:
@@ -51,7 +51,7 @@ Basically postgres is superpowerful. It provides a few types out of the box (and
   - Can be multi dimensional.
   - Each element is typed.
 - hstore
-  - Basically an associtive array. 
+  - Basically an associative array.
   - Key with string values.
   - Requires an extension as not in core (at least as of 9.6).
 - json & jsonb
