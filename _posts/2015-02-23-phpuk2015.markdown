@@ -61,7 +61,6 @@ Basically postgres is superpowerful. It provides a few types out of the box (and
 - xml
   - Validates that field is well formed. Can not validate content is correct.
   - Access is through xpath.
-  -  
 
 [phpuk2015-website]: http://phpconference.co.uk/
 [phpuk2015-joindin]: https://joind.in/event/view/3063
