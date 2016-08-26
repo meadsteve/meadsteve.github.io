@@ -8,7 +8,7 @@ animated: false
 show_related_posts: false
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 permalink: pretty
 paginate: 10
