@@ -9,7 +9,7 @@ show_related_posts: false
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 paginate: 10
 sass:
