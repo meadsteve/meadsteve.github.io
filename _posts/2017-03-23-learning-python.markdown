@@ -9,6 +9,7 @@ tags:
 - python
 ---
 
+picking a version
 WTFs
 package management (pipenv)
 static analysis
