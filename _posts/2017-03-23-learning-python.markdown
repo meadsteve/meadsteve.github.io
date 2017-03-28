@@ -22,3 +22,5 @@ for v3 this looks nice: mypy. Nice syntax for 3 as well.
 
 ## testing
 
+## Things I like
+Annotations for wrapping functions.
