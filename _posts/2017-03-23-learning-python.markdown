@@ -10,7 +10,7 @@ tags:
 ---
 
 ## picking a version
-picked 3 but a lot of 2.7 (including my new job)
+picked 3 but a lot of 2.7 (including my new job - largely due to aws???)
 
 ## WTFs 
 default arguments only loaded once -> but if you default to an empty list (which is mutable)
@@ -24,3 +24,4 @@ for v3 this looks nice: mypy. Nice syntax for 3 as well.
 
 ## Things I like
 Annotations for wrapping functions.
+list comprehensions are done in quite a neat way
