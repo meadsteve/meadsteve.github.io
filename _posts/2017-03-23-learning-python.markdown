@@ -15,6 +15,7 @@ picked 3 but a lot of 2.7 (including my new job - largely due to aws???)
 ## WTFs 
 default arguments only loaded once -> but if you default to an empty list (which is mutable)
 debugging py.test in pycharm requires pip `install pytest-pycharm`
+coverage overrides breakpoints in pycharm(and probably other IDEs) https://github.com/pytest-dev/pytest-cov/issues/131
 
 ## package management (pipenv)
 
