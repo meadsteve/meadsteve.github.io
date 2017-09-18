@@ -213,7 +213,7 @@ Now that this shell is working I'll stop for now and reflect on what I've got so
  
 ## Questions
   * Do I need webpack? What if I just target modern browsers?
-  * Do I need webpack? Are their simpler tools? Better tools?
+  * Do I need webpack? Are there simpler tools? Better tools?
   * I've only started quite small and I've already got: hyperapp, jsx, webpack and babel. Is this normal?
   * I've pulled out my initial state & actions. Is this a good organisation?
   * What makes sure my view doesn't try and act on items that don't exist in the state?
