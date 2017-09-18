@@ -9,12 +9,77 @@ tags:
 - webpack
 ---
 
-intro [link to thing][web-link] 
+I stumbled across [hyperapp][repo-hyperapp] recently. It made me realise it's been
+a while since I've experimented with front end development so I thought I'd have a go
+at building a TODO app (as is tradition). I plan to do this as a series of posts with
+the following rules:
 
-## Section 1
+1. Javascript - I've played a bit will elm. But I want to see what's possible with js right now.
+2. I'll do some research but not much. So the tools will hopefully be current but not bleeding edge.
+3. If I get stuck in weird frontend bug hacks I'm hitting eject.
+4. I'm not going to css - because reasons.
 
-```javascript
+## Getting something to build
+So I'd already picked hyperapp as my starting point. I've also decided this is a good time
+to try out jsx. Jsx means I'm going to need to do some transformation. So now we need a build tool to
+turn my jsx infused javascript in to old javascript.
 
+Hyperapp has instructions for using webpack as a build chain so I've now
+got the following in my stack so far:
+
+hyperapp
+jsx
+webpack
+babel
+
+So to NPM:
+```bash
+npm init
+npm i hyperapp
+npm i -D \
+  webpack \
+  babel-core \
+  babel-loader \
+  babel-preset-env \
+  babel-plugin-transform-react-jsx
 ```
 
-[web-link]: https://github.com/meadsteve/ErlangSpace
+One thing to note is I've used `babel-preset-env` instead of `babel-preset-es2015`.
+This means I'll be able to specify an environment in the future that I want to target.
+
+With the above installed I setup
+
+A `.babelrc` for babel:
+
+```js
+{
+  "presets": ["es2015"],
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ]
+}
+```
+and `webpack.config.js` to get webpack building:
+
+```js
+module.exports = {
+  entry: "./index.js",
+  output: {
+    filename: "bundle.js",
+  },
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: "babel-loader"
+    }]
+  }
+}
+```
+
+[repo-hyperapp]: https://github.com/hyperapp/hyperapp
