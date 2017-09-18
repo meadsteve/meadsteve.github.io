@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Frontend in 2017 by a non front end dev - Part 1 - Build & Debug"
+date:   2017-09-19 10:00:00
+categories: programming
+tags:
+- learning
+- javascript
+- webpack
+---
+
+intro [link to thing][web-link] 
+
+## Section 1
+
+```javascript
+
+```
+
+[web-link]: https://github.com/meadsteve/ErlangSpace
