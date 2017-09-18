@@ -27,10 +27,10 @@ turn my jsx infused javascript in to old javascript.
 Hyperapp has instructions for using webpack as a build chain so I've now
 got the following in my stack so far:
 
-hyperapp
-jsx
-webpack
-babel
+  * hyperapp
+  * jsx
+  * webpack
+  * babel
 
 So to NPM:
 ```bash
@@ -87,9 +87,9 @@ module.exports = {
 I started off with a bit of tooling but now I want a skeleton app.
 Hyperapp is based on the elm architecture so an app has the following pieces:
 
-* State - Dealt with as a plain javascript object.
-* Actions - Which when triggered take the current state and return the next state.
-* View - Takes the current state and renders it as html.
+  * State - Dealt with as a plain javascript object.
+  * Actions - Which when triggered take the current state and return the next state.
+  * View - Takes the current state and renders it as html.
 
 I stated with the state. I created a file `src/todolist.js` and decided 
 I'd have a list of `todo`s. 
