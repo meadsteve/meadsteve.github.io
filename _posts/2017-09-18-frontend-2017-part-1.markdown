@@ -91,7 +91,7 @@ Hyperapp is based on the elm architecture so an app has the following pieces:
   * Actions - Which when triggered take the current state and return the next state.
   * View - Takes the current state and renders it as html.
 
-I stated with the state. I created a file `src/todolist.js` and decided 
+I started with the state. I created a file `src/todolist.js` and decided 
 I'd have a list of `todo`s. 
 In addition a `nextTodo` which is the todo currently being written:
 
