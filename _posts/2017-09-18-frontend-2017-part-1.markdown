@@ -93,7 +93,7 @@ Hyperapp is based on the elm architecture so an app has the following pieces:
 
 I stated with the state. I created a file `src/todolist.js` and decided 
 I'd have a list of `todo`s. 
-In addition a `nextTodo` which is todo being prepared:
+In addition a `nextTodo` which is the todo currently being written:
 
 ```js
 const emptyState = {
