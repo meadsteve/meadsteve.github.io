@@ -103,7 +103,7 @@ const emptyState = {
 
 ```
 
-With the above state it mind I created two actions. One which takes a
+With the above state in mind I created two actions. One which takes a
 string and uses it for the text of the next todo. And a second action
 which takes the nextTodo pushes it on to the list then prepares a new clean
 todo.
