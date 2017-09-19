@@ -201,11 +201,12 @@ abbr {
 }
 
 pre, code {
-  font-family: Menlo, Monaco, "Courier New", monospace
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  background: #444444;
 }
 
 code {
-  color: #7a7a7a;
+  color: lightblue;
 }
 
 pre {
