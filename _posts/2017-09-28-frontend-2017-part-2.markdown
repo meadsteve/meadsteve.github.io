@@ -1,0 +1,311 @@
+---
+layout: post
+title:  "Frontend in 2017 by a non front end dev - Part 2 - Testing"
+date:   2017-09-19 10:00:00
+categories: programming
+tags:
+- learning
+- javascript
+- jest
+- flowtype
+- unit testing
+- types
+---
+
+This is the second part of my series experimenting with front end. [Part one][series-part-one]
+covered the basic setup and some building. This post is going to cover getting
+unit testing setup so I can start TDD.
+
+The code for the app so far can be found here:  [meadsteve/todo-2017][repo-app].
+
+## Jest - for unit tests
+After a bit of reading I went with Jest as the docs looked quite comprehensive and
+the setup looked simple:
+
+```bash
+
+npm i -D jest
+```
+
+modified my package.json:
+
+```json
+{
+  "scripts": {
+    "build": "webpack -p",
+    "test": "jest"
+  }
+}
+```
+
+Then running `npm test` shows that I've succesfully executed zero tests.
+
+## The first test
+Jest looks for any file like `*.test.js` so I created `todolist.test.js` and added:
+
+```javascript
+describe('Action: addTodo', () => {
+    test('Moves the current nextTodo on to the list', () => {
+        const startingState = {
+            todos: [],
+            nextTodo: {text: "first thing", id: 0, done: false}
+        };
+        const updatedState = actions.addTodo(startingState);
+
+        expect(updatedState.todos).toBe([{text: "first thing", id: 0, done: false}]);
+    });
+});
+```
+
+Running this test I got the following error message:
+
+```
+Expected value to be (using ===):
+  {"id": 0, "text": "do the thing"}
+Received:
+  {"id": 0, "text": "do the thing"}
+
+Difference:
+
+Compared values have no visual difference. Looks like you wanted to test for object/array equality with strict `toBe` matcher. You probably need to use `toEqual` instead.
+
+```
+
+As first experiences of a tool go this is a good one. The error was clear and gave me a step to resolve it. 
+Switching the matcher from `toBe` to `toEqual` got my test passing.
+
+I wrote a few more tests covering the rest of the action & state code I wrote in part
+one. At this point it uncovered a typo. I'd written `id` instead of `Id`. This is
+why I generally won't go very long before switching to TDD.
+
+## Testing the view construction
+I was initially a bit stuck on how to approach this. After some helpful conversations
+on the hyperapp slack I was encouraged to break the view down in to small functions
+and test these. I ended up testing them using jsx itself.
+
+To validate the function which builds the `<li>` list I had the following:
+
+```javascript
+    test('Renders an empty <ul /> for an empty list', () => {
+        const todos = [];
+        expect(renderTodoList({todos}, {})).toEqual(<ul/>);
+    });
+
+    test('Creates an <li> item for each todo', () => {
+        const todos = [
+            {text: "Buy milk", id: 0},
+            {text: "Drink milk", id: 1}
+        ];
+        expect(renderTodoList({todos}, {})).toEqual(<ul>
+            <li>Buy milk</li>
+            <li>Drink milk</li>
+        </ul>);
+    });
+```
+
+This works for now because I can match the output vdom nodes to the vdom nodes
+created by the jsx in the test. This started to get a bit messy later on though
+once the li elements start to get more complicated. In a follow up post I'd like
+to write (or find) some matchers for hyperapp's vdom so that I can assert on
+specific properties of the output.
+
+## Types
+The elm architecture that hyperapp follows means all action & view functions 
+take a state. Since this state is always supposed to be the same shape this
+is a good opportunity to use type system to help make sure I've not made any mistakes.
+
+I opted to go with flow as I wanted to stay in javascript. Flow diverges from
+javascript a little but this can be kept to a minimum if desired.
+
+Another npm install and `flow init` has flow setup. I modified my package.json slightly
+so that I can keep running all my tests with a single command:
+
+```json
+{
+  "scripts": {
+    "build": "webpack -p",
+    "test": "npm run test-unit && npm run flow check --all",
+    "test-unit": "jest",
+    "flow": "flow"
+  }
+}
+```
+
+Given that I wanted to keep flow fairly separate from the javascript and because
+my types are shared by the views & actions I created a `types.js` file with the
+following:
+
+```javascript
+// @flow
+
+type TodoId = number;
+
+export type Todo = {
+    text: string,
+    id: TodoId
+};
+```
+
+The comment at the start tells flow this is a file that should be tested. Other than
+the `type` keyword this is basically javascript. I opted to create an alias for
+a `TodoId` rather than using `number` directly as this will make it easier to find
+usages in the future if I wanted to change from a numeric id to a string for example.
+
+Next I wanted to describe my state using this Todo type:
+
+```javascript
+// Parts of each state - allows for hinting on partial updates
+type StateTodos = {
+    todos: Array<Todo>
+}
+
+type StateNextTodo = {
+    nextTodo: Todo
+}
+
+// The full state is the intersection of all the sub parts
+export type State = StateTodos & StateNextTodo;
+```
+
+I split the state in to two parts because hyperapp allows action functions to
+return partial updates and I wanted to be able to indicate what a function
+would update. The full state is described by combining these states.
+
+Next I wanted to describe the actions I've already created:
+
+```javascript
+export type Actions = {
+    addTodo: (State) => StateTodos & StateNextTodo,
+    setNewTitle: (State, Actions, string) => StateNextTodo
+};
+
+// Hyperjs converts the callbables slightly (autobinds the state, actions as the
+// first 2 args)  so the type signatures won't match if we hinted on Actions
+export type ViewActions = {
+    addTodo: () => void,
+    setNewTitle: (string) => void
+};
+```
+
+There's some duplication here because a view function doesn't get given the
+actions directly. Instead they are modified slightly to bind the state and
+actions as the first two arguments. Also it's not expected that a view
+would use the return value. Hence the `void` return type.
+
+With my types fully defined I then wanted to pull these in to todoList.js:
+
+```javascript
+// @flow
+
+import type {Actions, State, Todo} from './types';
+
+const emptyState: State = {
+    todos: [],
+    nextTodo: {text: "", id: 0, done: false}
+};
+
+const actions: Actions = {
+//...
+```
+
+After any variable declaration I can add `: TYPE` and flow makes sure it's
+the correct shape.
+
+## Using flow & jest to add "done"
+My todo app wouldn't be much good without a concept of "done." So the first
+thing I did was add a bool to my Todo type:
+
+```javascript
+export type Todo = {
+    text: string,
+    id: TodoId,
+    done: boolean
+};
+```
+Now when I run flow I get the error:
+```
+Error: src/types.js:17
+ 17:     nextTodo: Todo
+                   ^^^^ property `done`. Property not found in
+  7:     nextTodo: {text: "", id: 0}
+                   ^^^^^^^^^^^^^^^^^ object literal. See: src/todolist.js:7
+```
+
+So I can see that my initial state was missing the new `done` property.
+
+The next error I can see is in my addTodo function:
+```
+Error: src/types.js:17
+ 17:     nextTodo: Todo
+                   ^^^^ property `done`. Property not found in
+ 16:             nextTodo: {text: "", id: state.nextTodo.id + 1}
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ object literal. See: src/todolist.js:16
+
+```
+ 
+I see I've also not added `done` to the new todo item this function creates 
+(this also hints there's some DRYing up that could be done as two places in the code
+attempt to build an empty todo item).
+
+After fix these errors I want to create a function to mark a todo as done. Again
+I start with a type defintion and add the following to my types.js:
+
+```javascript
+export type Actions = {
+    //...
+    markAsDone: (State, Actions, TodoId) => StateTodos
+};
+```
+My new function will update the StateTodos based on marking a TodoId as done.
+Creating the following shell of a function will make flow happy:
+```javascript
+{
+    markAsDone(state, _actions, doneId) {
+        return {
+            todos: state.todos
+        }
+    }
+}
+```
+
+It's the correct shape but it doesn't do anything so this is where I switch
+to jest and write:
+
+```javascript
+describe('Action: markAsDone', () => {
+    test('Sets the done flag on a todo', () => {
+        const startingState = {
+            todos: [
+                {text: "thing 1", id: 1, done: false},
+                {text: "almost done", id: 4, done: false},
+                {text: "thing 5", id: 5, done: false}
+            ],
+            nextTodo: {text: "next thing", id: 5, done: false}
+        };
+        const updatedState = actions.markAsDone(startingState, {}, 4);
+
+        expect(updatedState.todos).toContainEqual({text: "almost done", id: 4, done: true});
+        expect(updatedState.todos).not.toContainEqual({text: "almost done", id: 4, done: false});
+    });
+});
+```
+
+From this point I just need to write the code to make the test pass and update
+the todo.
+ 
+I'm now happy that I've got a good foundation for adding new features to my codebase.
+
+## Questions
+
+  * How can I get flow to run on my test files? They have a lot of undefined functions.
+  * Is there anyway to get around having Actions and ViewActions types?
+  * What's the best way to write the vdom matchers to clean up my view tests.
+
+## Next step(s)
+
+The next step will be adding one of the following (depending on my mood):
+  * Persistence - A disappearing todo list is no good after all.
+  * End to end Tests - I've currently got nothing that asserts I've wired all the pieces togetehr.
+
+[repo-app]: https://github.com/meadsteve/todo-2017/
+[series-part-one]: /programming/2017/09/19/frontend-2017-part-1/
