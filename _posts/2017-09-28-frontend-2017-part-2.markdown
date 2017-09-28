@@ -201,7 +201,7 @@ import type {Actions, State, Todo} from './types';
 
 const emptyState: State = {
     todos: [],
-    nextTodo: {text: "", id: 0, done: false}
+    nextTodo: {text: "", id: 0}
 };
 
 const actions: Actions = {
