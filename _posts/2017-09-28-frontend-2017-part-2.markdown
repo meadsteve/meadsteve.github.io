@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Frontend in 2017 by a non front end dev - Part 2 - Testing"
-date:   2017-09-19 10:00:00
+date:   2017-09-28 10:00:00
 categories: programming
 tags:
 - learning
