@@ -1,4 +1,7 @@
 source "https://rubygems.org"
 
-gem 'redcarpet'
 gem 'pygmentize'
+gem 'jekyll-paginate'
+gem 'kramdown'
+gem 'addressable'
+gem 'jekyll-watch', "~> 1.5"

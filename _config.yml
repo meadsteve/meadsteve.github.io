@@ -14,3 +14,10 @@ permalink: pretty
 paginate: 10
 sass:
   compressed: true
+
+plugins:
+- pygmentize
+- jekyll-paginate
+- kramdown
+- addressable
+- jekyll-watch
