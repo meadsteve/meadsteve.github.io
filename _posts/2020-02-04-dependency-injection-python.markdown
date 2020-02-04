@@ -18,7 +18,7 @@ dependency injection and designed a container with three main goals in mind:
 
 * Strong usage of types - work well with mypy
 * Minimal modification of code
-* Push code in a direction to avoid monkey patching for tests
+* It should push code towards being more decoupled and avoid the need for monkey patching in tests
 
 Let's take the example of a simple web app (built using [starlette][website-starlette])
 that will provide a json blob to great visitors:
@@ -44,8 +44,7 @@ for my guest. So I could write something like this:
 
 ```python
 class MessageGenerator:
-    def __init__(self):
-        self._messages = ["Hello", "Hej", "Hellå"]
+    _messages = ["Hello", "Hej", "Hellå"]
 
     def random_message(self):
         return random.choice(self._messages)
@@ -134,10 +133,11 @@ and running it through mypy will raise the following error:
 example.py:21: error: Incompatible types in assignment (expression has type "Callable[[], str]", ...
 ```
 
-There are a number of other features of [lagom][website-lagom] but these
-are covered in the readme.
+I think this approach balances the lightweight approach of traditional python
+with some of the benefits of a more strictly typed design.
 
 The code for this example can be found here: [https://github.com/meadsteve/lagom-example-repo][website-example-code]
+
 
 [website-lagom]: https://github.com/meadsteve/lagom
 [website-starlette]: https://github.com/encode/starlette
