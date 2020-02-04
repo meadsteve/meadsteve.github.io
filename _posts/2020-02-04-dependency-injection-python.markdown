@@ -89,7 +89,7 @@ def test_my_homepage_greets_my_guests():
     assert homepage({}, FakeGreeter()).body == expected_response.body
 ```
 
-Next up I decide I want to make the message generator a little more 
+Next up let's make the message generator a little more 
 complicated and make the messages configurable (I won't discuss testing this here).
 
 ```python
