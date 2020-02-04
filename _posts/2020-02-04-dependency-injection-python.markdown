@@ -106,7 +106,7 @@ Lagom is now no longer able to automatically construct `MessageGenerator`
 as it's not clear what should be passed to `messages`.
 
 I made the decision early on to not base anything on name as this can
-lead to hard to debug errors. Instead lagom provides an interface for
+lead to hard to debug errors. Instead, lagom provides an interface for
 defining how a type should be built:
 
 ```python
