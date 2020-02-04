@@ -21,7 +21,7 @@ dependency injection and designed a container with three main goals in mind:
 * It should push code towards being more decoupled and avoid the need for monkey patching in tests
 
 Let's take the example of a simple web app (built using [starlette][website-starlette])
-that will provide a json blob to great visitors:
+that will provide a json blob to greet visitors:
 
 ```python
 def homepage(request):
