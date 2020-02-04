@@ -16,7 +16,7 @@ commonly used in python as it is in some other languages (especially statically 
 However as types seem to be becoming more popular in python I wanted to revisit using
 dependency injection and designed a container with three main goals in mind:
 
-* Strong usage of types - work well with mypy
+* Strong usage of types - work well with [mypy][website-mypy]
 * Minimal modification of code
 * It should push code towards being more decoupled and avoid the need for monkey patching in tests
 
@@ -140,5 +140,6 @@ The code for this example can be found here: [https://github.com/meadsteve/lagom
 
 
 [website-lagom]: https://github.com/meadsteve/lagom
+[website-mypy]: http://mypy-lang.org/
 [website-starlette]: https://github.com/encode/starlette
 [website-example-code]: https://github.com/meadsteve/lagom-example-repo
