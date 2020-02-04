@@ -70,7 +70,7 @@ app = Starlette(debug=True, routes=[
     Route('/', container.partial(homepage)),
 ])
 ```
-The call to container.partial(homepage) returns a new function that's
+The call to `container.partial(homepage)` returns a new function that's
 bound to the container and any arguments that aren't provided are
 automatically injected by the container.
 
@@ -134,6 +134,11 @@ and running it through mypy will raise the following error:
 example.py:21: error: Incompatible types in assignment (expression has type "Callable[[], str]", ...
 ```
 
+There are a number of other features of [lagom][website-lagom] but these
+are covered in the readme.
+
+The code for this example can be found here: [https://github.com/meadsteve/lagom-example-repo][website-example-code]
+
 [website-lagom]: https://github.com/meadsteve/lagom
 [website-starlette]: https://github.com/encode/starlette
-[website-example-code]:https://github.com/meadsteve/lagom-example-repo
+[website-example-code]: https://github.com/meadsteve/lagom-example-repo
