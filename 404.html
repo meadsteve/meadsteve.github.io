@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<h2>404</h2>
+<p>
+    Sorry, this page seems to have become lost. Maybe you wanted one of these:
+</p>
+{% for post in site.posts limit:2 %}
+    {% include post_title.html %}
+{% endfor %}
