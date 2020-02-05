@@ -10,12 +10,13 @@ tags:
 - testing
 - monkey patching
 ---
-This post will go into a little of the background on why I created [lagom][website-lagom],
+This post will go into a little into why I created [lagom][website-lagom],
 an auto-wiring dependency injection container. Dependency injection is not something as
 commonly used in python as it is in some other languages (especially statically typed languages).
+This is a bit of a shame as it is a powerful technique which helps with building loosely coupled
+but cohesive code.
 
-
-I'll save writing why I think dependency injection is great, even in python, 
+I'll save writing more on why I think dependency injection is great, even in python, 
 for a later blog post. However, as types seem to be becoming more popular in python, 
 I wanted to explore dependency injection combined with explicit typing and designed a container with 
 three main goals in mind:
