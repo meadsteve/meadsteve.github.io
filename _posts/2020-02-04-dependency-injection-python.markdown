@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dependency injection in python"
+title:  "Dependency injection in Python"
 date:   2020-02-04 10:00:00
 categories: programming
 tags:
@@ -11,12 +11,12 @@ tags:
 - monkey patching
 ---
 This post will go into why I created [lagom][website-lagom], an auto-wiring dependency injection container for Python. 
-Dependency injection is not something as commonly used in python as it is in some other languages 
+Dependency injection is not something as commonly used in Python as it is in some other languages 
 (especially statically typed languages). This is a bit of a shame as it is a powerful technique which helps with 
 building loosely coupled but cohesive code.
 
-I'll save writing more on why I think dependency injection is great, even in python, 
-for a later blog post. However, as types seem to be becoming more popular in python, 
+I'll save writing more on why I think dependency injection is great, even in Python, 
+for a later blog post. However, as types seem to be becoming more popular in Python, 
 I wanted to explore dependency injection combined with explicit typing. I designed a 
 container with three main goals in mind:
 
@@ -137,7 +137,7 @@ and running it through mypy will raise the following error:
 example.py:21: error: Incompatible types in assignment (expression has type "Callable[[], str]", ...
 ```
 
-I think this approach balances the lightweight approach of traditional python
+I think this approach balances the lightweight approach of traditional Python
 with some of the benefits of a more strictly typed design.
 
 The code for this example can be found here: [https://github.com/meadsteve/lagom-example-repo][website-example-code]
