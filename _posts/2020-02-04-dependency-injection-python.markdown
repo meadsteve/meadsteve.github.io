@@ -10,16 +10,15 @@ tags:
 - testing
 - monkey patching
 ---
-This post will go into a little into why I created [lagom][website-lagom],
-an auto-wiring dependency injection container. Dependency injection is not something as
-commonly used in python as it is in some other languages (especially statically typed languages).
-This is a bit of a shame as it is a powerful technique which helps with building loosely coupled
-but cohesive code.
+This post will go into why I created [lagom][website-lagom], an auto-wiring dependency injection container for Python. 
+Dependency injection is not something as commonly used in python as it is in some other languages 
+(especially statically typed languages). This is a bit of a shame as it is a powerful technique which helps with 
+building loosely coupled but cohesive code.
 
 I'll save writing more on why I think dependency injection is great, even in python, 
 for a later blog post. However, as types seem to be becoming more popular in python, 
-I wanted to explore dependency injection combined with explicit typing and designed a container with 
-three main goals in mind:
+I wanted to explore dependency injection combined with explicit typing. I designed a 
+container with three main goals in mind:
 
 * Strong usage of types - work well with [mypy][website-mypy]
 * Minimal modification of code - existing code should *not* get polluted by the container
@@ -40,8 +39,8 @@ app = Starlette(debug=True, routes=[
 ])
 ```
 The nice thing about starlette here is that my response handler `homepage` is
-a pure function. It takes a request and returns a response without any side effects.
-This would be very easy to test. 
+a pure function. It takes a request and returns a response without any side effects or
+global state usage. This is very easy to test. 
 
 At the moment there's no real need for any dependency injection or a container.
 But next I would like to have the capability to generate a random message
