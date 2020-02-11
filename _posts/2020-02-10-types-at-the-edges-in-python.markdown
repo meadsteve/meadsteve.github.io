@@ -64,7 +64,7 @@ of some kind:
         return resp.json()
 ```
 
-with pydantic I could instead write the function as:
+with Pydantic I could instead write the function as:
 
 ```python
     class ProductDetails(BaseModel):
