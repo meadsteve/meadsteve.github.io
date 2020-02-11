@@ -53,28 +53,28 @@ imagine a call to an API to get details about a product for a webshop
 of some kind:
 
 ```python
-    def get_product_details(pid: str):
-        """
-            A dictionary with the product details:
-                in_stock - bool
-                name - str
-                description - str
-        """
-        resp = requests.get(f"https://shopping.com/product/{pid}")
-        return resp.json()
+def get_product_details(pid: str):
+    """
+        A dictionary with the product details:
+            in_stock - bool
+            name - str
+            description - str
+    """
+    resp = requests.get(f"https://shopping.com/product/{pid}")
+    return resp.json()
 ```
 
 with Pydantic I could instead write the function as:
 
 ```python
-    class ProductDetails(BaseModel):
-        in_stock: bool
-        name: str
-        description: str
+class ProductDetails(BaseModel):
+    in_stock: bool
+    name: str
+    description: str
 
-    def get_product_details(pid: str) -> ProductDetails:
-        resp = requests.get(f"https://shopping.com/product/{pid}")
-        return ProductDetails(**resp.json())
+def get_product_details(pid: str) -> ProductDetails:
+    resp = requests.get(f"https://shopping.com/product/{pid}")
+    return ProductDetails(**resp.json())
 ```
 
 Pydantic checks that each key I expected exists and is of the correct 
@@ -89,10 +89,10 @@ know what is wrong about my assumptions and I make the following change to
 my code:
 
 ```python
-    class ProductDetails(BaseModel):
-        in_stock: bool
-        name: str
-        description: typing.Optional[str]
+class ProductDetails(BaseModel):
+    in_stock: bool
+    name: str
+    description: typing.Optional[str]
 ```
 
 I run mypy next and get:
@@ -103,15 +103,15 @@ I go to this line and them remember that I wrote a function to tidy the
 whitespace a little:
 
 ```python
-    def tidied_up_description(details: ProductDetails) -> str:
-        return details.description.strip()
+def tidied_up_description(details: ProductDetails) -> str:
+    return details.description.strip()
 ```
 
 now I can make mypy pass by dealing with the new `None` case:
 
 ```python
-    def tidied_up_description(details: ProductDetails) -> str:
-        return (details.description or "").strip()
+def tidied_up_description(details: ProductDetails) -> str:
+    return (details.description or "").strip()
 ```
 
 All of this flows automatically by stating and then updating my
@@ -126,14 +126,14 @@ into my system. For example let's look at a POST endpoint for
 ordering a product in my webshop (I picked [FastAPI][website-fastapi]
 but you could choose anything really):
 ```python
-    class ProductOrder(BaseModel):
-        product_id: str
-        quantity: int
-    
-    @app.post("/order/")
-    async def add_item(order: ProductOrder):
-        # Do something with order
-        return "ok"
+class ProductOrder(BaseModel):
+    product_id: str
+    quantity: int
+
+@app.post("/order/")
+async def add_item(order: ProductOrder):
+    # Do something with order
+    return "ok"
 ```
 FastAPI was used as it integrates with Pydantic out of the box
 but, again, this could be built with any framework. The post data 
