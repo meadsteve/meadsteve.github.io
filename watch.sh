@@ -2,5 +2,4 @@
 
 set -ex
 
-docker build -t ghpages .
-docker run -v "$PWD":/usr/src/app -p "4000:4000" -it ghpages
+docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
