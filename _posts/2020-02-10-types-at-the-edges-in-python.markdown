@@ -138,7 +138,7 @@ but you could choose anything really):
 FastAPI was used as it integrates with Pydantic out of the box
 but, again, this could be built with any framework. The post data 
 gets loaded automatically into this Pydantic model (thanks to FastAPI). 
-Any validation errors will result a 400 error being returned to the browser. 
+Any validation errors will result in a 400 error being returned to the browser. 
 An added benefit of Pydantic is that json schemas can be generated for each model 
 so we can communicate our requirements in a platform neutral fashion.
 
