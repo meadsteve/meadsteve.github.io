@@ -13,9 +13,9 @@ tags:
 
 For a new web service in python there are 3 things I now often start
 with:
-    * [Pydantic][website-pydantic]
-    * [mypy][website-mypy]
-    * Production error tracking of some kind ([Sentry][website-sentry] is great)
+ * [Pydantic][website-pydantic]
+ * [mypy][website-mypy]
+ * Production error tracking of some kind ([Sentry][website-sentry] is great)
  
 ## Why
 This main reason for this is because instead of this error:
@@ -116,14 +116,42 @@ I can also apply exactly the same kind of logic on data coming
 into my system. For example let's look at a POST endpoint for
 ordering a product in my webshop using FastAPI:
 ```python
-@app.post("/items/")
-async def create_item(item: Item):
-    return item
+    class ProductOrder(BaseModel):
+        product_id: str
+        quantity: int
+    
+    @app.post("/order/")
+    async def add_item(order: ProductOrder):
+        # Do something with order
+        return "ok"
 ```
 FastAPI was used as it integrates with Pydantic out of the box
-but this could be integrated with any framework
+but this could be built with any framework. The framework
+puts the post data into this Pydantic model. Any validation
+errors will return a 400. An added benefit of Pydantic is
+that json schemas can be generated for each model so we can
+communicate our requirements in a platform neutral fashion.
+
+We can also do exactly the same with the data leaving our system
+so any consumers of our API can rely on the schema we've
+given them.
+
+## The big picture
+Once all API communication is type checked, and all our incoming
+requests go through our models then we'll have a system something 
+like this:
+
+![System diagram showing pydantic at interfaces with the outside world](/images/2020-02-10-types-at-the-edges-in-python/types-at-the-edges.png)
+
+Everything within the green box has a well known shape. So it's much
+easier to reason about and run type checks on. 
+
+If you'd like to try out an example of how this can help I've
+written a mini-kata like exercise here that can be worked through:
+[meadsteve/types-at-the-edges-minikata][github-worked-example]
 
 
 [website-pydantic]: https://pydantic-docs.helpmanual.io/
 [website-mypy]: http://mypy-lang.org/
-[website-sentry]: [https://sentry.io/welcome/]
+[website-sentry]: https://sentry.io/welcome/
+[github-worked-example]: https://github.com/meadsteve/types-at-the-edges-minikata
