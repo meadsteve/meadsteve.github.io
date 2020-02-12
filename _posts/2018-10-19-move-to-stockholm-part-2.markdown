@@ -4,10 +4,13 @@ title:  "Still living in Stockholm"
 date:   2018-10-19 10:00:00
 categories: life
 tags:
-- learning
-- Sweden
-- Stockholm
-- relocation
+    - learning
+    - Sweden
+    - Stockholm
+    - relocation
+comments:
+    title: Disqus chat for this post
+    link: https://disqus.com/home/discussion/meadsteve/still_living_in_stockholm_meadsteves_dev_blog/
 ---
 I've now been living in stockholm for over a month. It's very quickly started
 to feel like home. In no particular order here are a few things I wanted

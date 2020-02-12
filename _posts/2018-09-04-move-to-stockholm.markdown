@@ -4,10 +4,13 @@ title:  "My move to Stockholm"
 date:   2018-09-04 10:00:00
 categories: life
 tags:
-- learning
-- Sweden
-- Stockholm
-- relocation
+    - learning
+    - Sweden
+    - Stockholm
+    - relocation
+comments:
+    title: Disqus chat for this post
+    link: https://disqus.com/home/discussion/meadsteve/my_move_to_stockholm_meadsteves_dev_blog/
 ---
 
 In the spirit of adventure, my family and I have decided to move to Stockholm. This 
