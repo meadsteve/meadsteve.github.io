@@ -10,6 +10,7 @@ tags:
     - contracts
     - pydantic
     - bugs
+    - error tracking
 comments:
     title: Discuss this post over on reddit
     link: https://www.reddit.com/r/Python/comments/f26lzi/why_i_love_pydantic_so_much/
