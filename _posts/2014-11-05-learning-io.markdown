@@ -7,7 +7,7 @@ tags:
 - learning
 - new language
 - coding
-- Io
+- io
 - prototype based
 ---
 

@@ -7,7 +7,7 @@ tags:
 - anti-fragility
 - agile
 - bugs
-- error-tracking
+- error tracking
 ---
 
 #### anti-fragility

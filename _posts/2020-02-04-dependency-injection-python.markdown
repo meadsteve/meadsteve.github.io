@@ -9,6 +9,7 @@ tags:
     - dependency injection
     - testing
     - monkey patching
+    - types
 comments:
     title: Discuss this post over on reddit
     link: https://www.reddit.com/r/Python/comments/ez8jpg/types_and_dependency_injection_in_python/

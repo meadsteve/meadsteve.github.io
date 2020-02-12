@@ -5,8 +5,8 @@ date:   2018-10-19 10:00:00
 categories: life
 tags:
     - learning
-    - Sweden
-    - Stockholm
+    - sweden
+    - stockholm
     - relocation
 comments:
     title: Disqus chat for this post

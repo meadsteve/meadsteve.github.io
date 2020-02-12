@@ -1,0 +1,18 @@
+---
+layout: default
+title: MeadSteve's Dev Blog - Full index
+---
+<div id='tag_list'>
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+      <div>
+          <h2 class='tag_name'>{{ tag[0] }}</h2>
+          <ul>
+          {% assign sorted_posts = tag[1] | sort: "date" | reverse %}
+          {% for post in sorted_posts %}
+              <li class='tag_post'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+</div>

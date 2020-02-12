@@ -4,8 +4,8 @@ title:  "Taking All Criticism in a Positive Light"
 date:   2014-05-08 13:00:00
 categories: soft-skills
 tags:
-- soft-skills
-- code-reviews
+- soft skills
+- code reviews
 - criticism
 ---
 
