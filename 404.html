@@ -8,5 +8,9 @@ permalink: /404.html
     Sorry, this page seems to have become lost. Maybe you wanted one of these:
 </p>
 {% for post in site.posts limit:2 %}
-    {% include post_title.html %}
+    {% include post_title_short.html %}
 {% endfor %}
+<h3 class="full-index-link" style="margin-top: 0">
+    <i class="fab fa-searchengin"></i>
+    <a href="full-index/"> Complete index by topic</a>
+</h3>
