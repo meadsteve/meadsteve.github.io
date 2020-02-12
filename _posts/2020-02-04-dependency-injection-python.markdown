@@ -4,11 +4,14 @@ title:  "Dependency injection in Python"
 date:   2020-02-04 10:00:00
 categories: programming
 tags:
-- python
-- development
-- dependency injection
-- testing
-- monkey patching
+    - python
+    - development
+    - dependency injection
+    - testing
+    - monkey patching
+comments:
+    title: Discuss this post over on reddit
+    link: https://www.reddit.com/r/Python/comments/ez8jpg/types_and_dependency_injection_in_python/
 ---
 This post will go into why I created [lagom][website-lagom], an auto-wiring dependency injection container for Python. 
 Dependency injection is not something as commonly used in Python as it is in some other languages 

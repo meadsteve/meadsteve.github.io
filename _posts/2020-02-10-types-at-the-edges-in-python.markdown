@@ -4,11 +4,14 @@ title:  "Types at the edges in Python"
 date:   2020-02-10 10:00:00
 categories: programming
 tags:
-- python
-- types
-- testing
-- contracts
-- pydantic
+    - python
+    - types
+    - testing
+    - contracts
+    - pydantic
+comments:
+    title: Discuss this post over on reddit
+    link: https://www.reddit.com/r/Python/comments/f26lzi/why_i_love_pydantic_so_much/
 ---
 
 For a new web service in python there are 3 things I now often start
