@@ -3,6 +3,7 @@ layout: post
 title:  "Achievement unlocked: programming in Io"
 date:   2014-11-05 10:00:00
 categories: programming
+icon: fas fa-code
 tags:
 - learning
 - new language

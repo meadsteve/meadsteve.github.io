@@ -3,6 +3,7 @@ layout: post
 title:  "Still living in Stockholm"
 date:   2018-10-19 10:00:00
 categories: life
+icon: fas fa-globe
 tags:
     - learning
     - sweden

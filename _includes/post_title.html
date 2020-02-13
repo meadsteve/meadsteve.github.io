@@ -2,7 +2,10 @@
 <div class="post">
   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
     <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-    <h3 class="h3 post-title"><i class="fas fa-pencil-alt" style="color:orangered"></i>  {{ post.title }}</h3>
+    <h3 class="h3 post-title">
+      {% include post_icon.html %}
+      {{ post.title }}
+    </h3>
     <p class="post-summary">{{ post.summary }}</p>
   </a>
 </div>

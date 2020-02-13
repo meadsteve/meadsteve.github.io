@@ -3,6 +3,7 @@ layout: post
 title:  "Anti-fragility: errors are good!"
 date:   2014-05-11 14:00:00
 categories: software-design
+icon: fas fa-bomb
 tags:
 - anti-fragility
 - agile

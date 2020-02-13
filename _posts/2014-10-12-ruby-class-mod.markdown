@@ -3,6 +3,7 @@ layout: post
 title:  "Modifying existing classes in ruby"
 date:   2014-10-12 09:00:00
 categories: programming
+icon: fas fa-gem
 tags:
 - learning
 - ruby

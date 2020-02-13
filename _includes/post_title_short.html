@@ -1,6 +1,9 @@
 
 <div class="post">
   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-    <h3 class="h3 post-title"><i class="fas fa-pencil-alt" style="color:orangered"></i>  {{ post.title }}</h3>
+    <h3 class="h3 post-title">
+      {% include post_icon.html %}
+      {{ post.title }}
+    </h3>
   </a>
 </div>

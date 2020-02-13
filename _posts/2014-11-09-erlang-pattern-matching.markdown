@@ -3,6 +3,7 @@ layout: post
 title:  "Erlang pattern matching"
 date:   2014-11-09 10:00:00
 categories: programming
+icon: fab fa-erlang
 tags:
 - learning
 - new language

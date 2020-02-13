@@ -3,6 +3,7 @@ layout: post
 title:  "Taking All Criticism in a Positive Light"
 date:   2014-05-08 13:00:00
 categories: soft-skills
+icon: fas fa-thumbs-up
 tags:
 - soft skills
 - code reviews

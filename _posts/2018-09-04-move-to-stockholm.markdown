@@ -3,6 +3,7 @@ layout: post
 title:  "My move to Stockholm"
 date:   2018-09-04 10:00:00
 categories: life
+icon: fas fa-globe
 tags:
     - learning
     - sweden

@@ -3,6 +3,7 @@ layout: post
 title:  "Types at the edges in Python"
 date:   2020-02-10 10:00:00
 categories: programming
+icon: fab fa-python
 tags:
     - python
     - types

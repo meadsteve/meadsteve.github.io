@@ -7,6 +7,15 @@
   }
 }
 
+i.post-icon {
+  color: orangered;
+}
+
+/* the fab (or at least python needs normal font weight)*/
+i.post-icon.fab {
+  font-weight: normal;
+}
+
 /* Comment box styling */
 div.comment-section {
   padding-top: 30px;
