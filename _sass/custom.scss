@@ -6,7 +6,17 @@
     padding-top: 0;
   }
 }
+.posts {
+  div.post {
+    padding-bottom: 0;
+  }
+}
 
+.post-header {
+  .py2 {
+    padding-bottom: 0;
+  }
+}
 i.post-icon {
   color: orangered;
 }
