@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "One less microservice than you need"
+date:   2020-02-16 10:00:00
+categories: programming
+icon: fas fa-project-diagram
+tags:
+    - microservices
+    - complexity
+    - containers
+    - mono-repos
+    - monolith
+---
+
+Last week a friend shared this tweet with me:
+
+{% include tweet.html 
+    username="evnsio" 
+    text="Completely unscientific and hugely subjective question of the day: what is a sensible number of microservices?" 
+    link="https://twitter.com/evnsio/status/1228346035745042433" 
+%}
+
+my initial reaction was
+
+{% include tweet.html 
+    username="meadsteve" 
+    text="I'd always say as few as you can get away with. They are great for solving certain problems but they add deployment/runtime complexity that someone needs to think about. #monolithfirst" 
+    link="https://twitter.com/meadsteve/status/1228371819427762177" 
+%}
+
+and, after a little more thought, I followed up with
+
+{% include tweet.html 
+    username="meadsteve" 
+    text="Always 1 less than you need" 
+    link="https://twitter.com/meadsteve/status/122837270567998668" 
+%}
