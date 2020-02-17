@@ -22,7 +22,15 @@ html, body {
 }
 
 img {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+  max-width: 100%;
+}
+
+a img {
+  padding: 0;
+  display: inline;
 }
 
 .site-wrap {
