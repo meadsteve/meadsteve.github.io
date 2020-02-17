@@ -3,6 +3,7 @@ layout: post
 title:  "Dependency injection in Python"
 date:   2020-02-04 10:00:00
 categories: programming
+summary: "Introduction to why I wrote a dependency injection container for python"
 icon: fab fa-python
 tags:
     - python

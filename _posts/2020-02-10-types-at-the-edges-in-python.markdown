@@ -3,6 +3,7 @@ layout: post
 title:  "Types at the edges in Python"
 date:   2020-02-10 10:00:00
 categories: programming
+summary: "Adding more strict typing around the edges of a python system for better error messages and design."
 icon: fab fa-python
 tags:
     - python

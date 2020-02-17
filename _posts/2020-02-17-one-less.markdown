@@ -3,6 +3,7 @@ layout: post
 title:  "One less microservice than you need"
 date:   2020-02-16 10:00:00
 categories: programming
+summary: "A response to the question: what is a sensible number of microservices"
 icon: fas fa-project-diagram
 tags:
     - microservices
