@@ -34,9 +34,9 @@ I want to see a value across time showing me how much work I'm putting on the lo
 
 One of the simplest ways to do this is to time how long it takes to resume a piece
 of code that's performed an `asyncio.sleep`. In ideal conditions the code
-after the call to sleep will be executed immediately. In reality it'll take
-time for other work in the loop to be dealt with. Measuring this difference
-will give us a number for how busy the event loop is.
+after the call to sleep will be executed immediately after the requested duration.
+In reality it'll take time for other work in the loop to be dealt with. 
+Measuring this difference will give us a number for how busy the event loop is.
 
 The code samples below assume Python 3.7 (but the approach will make sense for 3.6 or 3.8)
 
