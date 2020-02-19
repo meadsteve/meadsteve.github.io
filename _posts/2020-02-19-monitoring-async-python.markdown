@@ -51,9 +51,9 @@ class Monitor:
 
     def start(self):
         loop = get_running_loop()
-        loop.create_task(self._monitor_lag(loop))
+        loop.create_task(self._monitor_loop(loop))
 
-    async def _monitor_lag(self, loop: AbstractEventLoop):
+    async def _monitor_loop(self, loop: AbstractEventLoop):
         while loop.is_running():
             start = loop.time()
             await sleep(self._interval)
@@ -68,7 +68,14 @@ lag can then be pushed to some monitoring system and graphed.
 
 If after a change is made to production this value jumps up then I know
 those changes have introduced more blocking work onto the loop. This
-can act as an early warning system before things get too bad.
+can act as an early warning sign before things get too bad.
+
+Another aspect I want to monitor is the number of active tasks on the event 
+loop. For a system in a steady healthy state this number should stay roughly 
+constant.
+
+This can be tracked by add some code to the `_monitor_loop` task
+from earlier:
 
 ```python
 from asyncio import AbstractEventLoop, Task
@@ -76,9 +83,37 @@ from asyncio import AbstractEventLoop, Task
 class Monitor:
     active_tasks: float = 0
 
-    async def _monitor_lag(self, loop: AbstractEventLoop):
+    async def _monitor_loop(self, loop: AbstractEventLoop):
         while loop.is_running():
-            #...All of the lag code...
-            tasks = [task for task in Task.all_tasks(loop) if not task.done()]
+            #...All of the lag timing code from before...
+            tasks = [t for t in Task.all_tasks(loop) if not t.done()]
             self.active_tasks = len(tasks)
 ```
+
+Again once we have this `active_tasks` value we can push it into a monitoring
+system of some kind.
+
+Now the only thing we need to do is start this monitor when we load our app.
+For example In an app I run built using FastAPI:
+
+```python
+# https://github.com/meadsteve/british_food_generator/blob/master/british_food_generator/app.py
+from fastapi import FastAPI
+from british_food_generator.monitoring.asyncio import Monitor
+
+monitor = Monitor(0.25)
+app = FastAPI(title="British Food Generator")
+
+@app.on_event("startup")
+def start_monitoring():
+    monitor.start()
+```
+
+The real benefit with this approach is that we can spot warning signs of a 
+problem before our app's performance is impacted. If either measure indicates 
+some problems then the code can be investigated further. Potentially running the 
+locally with event loop in debug mode. Which is explained a little better in
+[the asyncio dev docs][docs-asyncio-dev]
+
+
+[docs-asyncio-dev]:https://docs.python.org/3.8/library/asyncio-dev.html#asyncio-dev
