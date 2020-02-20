@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Monitoring async Python"
-date:   2020-02-19 10:00:00
+date:   2020-02-24 10:00:00
 categories: programming
 summary: "Thoughts and code samples on how to monitor the load in an async Python system"
 icon: fab fa-python
