@@ -74,7 +74,7 @@ Another aspect I want to monitor is the number of active tasks on the event
 loop. For a system in a steady healthy state this number should stay roughly 
 constant.
 
-This can be tracked by add some code to the `_monitor_loop` task
+This can be tracked by adding some code to the `_monitor_loop` task
 from earlier:
 
 ```python
