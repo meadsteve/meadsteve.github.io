@@ -90,10 +90,10 @@ class Monitor:
             self.active_tasks = len(tasks)
 ```
 
-Again once we have this `active_tasks` value we can push it into a monitoring
-system of some kind.
+Again this `active_tasks` value should be pushed into whatever monitoring system is 
+being used.
 
-Now the only thing we need to do is start this monitor when we load our app.
+Now the only thing I need to do is start this monitor when the app loads.
 For example in an app I run built using FastAPI:
 
 ```python
@@ -109,11 +109,12 @@ def start_monitoring():
     monitor.start()
 ```
 
-The real benefit with this approach is that we can spot warning signs of a 
-problem before our users notice a performance impact. If either measure indicates 
-some problems then the code can be investigated further. Potentially running the 
-locally with event loop in debug mode. Which is explained a little better in
-[the asyncio dev docs][docs-asyncio-dev]
+The real benefit with this approach is that I can spot warning signs of a 
+problem before any users notice a performance impact. If either measure indicates 
+some problems I can start investigating straight away. At this stage the code could 
+be run locally with the event loop in debug mode. This is explained a little better in
+[the asyncio dev docs][docs-asyncio-dev] and gives some tooling around spotting
+blocking tasks and other issues.
 
 
 [docs-asyncio-dev]:https://docs.python.org/3.8/library/asyncio-dev.html#asyncio-dev
