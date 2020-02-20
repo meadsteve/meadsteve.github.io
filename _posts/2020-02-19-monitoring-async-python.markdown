@@ -94,7 +94,7 @@ Again once we have this `active_tasks` value we can push it into a monitoring
 system of some kind.
 
 Now the only thing we need to do is start this monitor when we load our app.
-For example In an app I run built using FastAPI:
+For example in an app I run built using FastAPI:
 
 ```python
 # https://github.com/meadsteve/british_food_generator/blob/master/british_food_generator/app.py
@@ -110,7 +110,7 @@ def start_monitoring():
 ```
 
 The real benefit with this approach is that we can spot warning signs of a 
-problem before our app's performance is impacted. If either measure indicates 
+problem before our users notice a performance impact. If either measure indicates 
 some problems then the code can be investigated further. Potentially running the 
 locally with event loop in debug mode. Which is explained a little better in
 [the asyncio dev docs][docs-asyncio-dev]
