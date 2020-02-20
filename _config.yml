@@ -6,6 +6,7 @@ description: "Rambling thoughts, ideas and other stuff from MeadSteve"
 baseurl: ""
 animated: false
 show_related_posts: false
+future: true
 
 # Build settings
 markdown: kramdown
