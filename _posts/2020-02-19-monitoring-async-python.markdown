@@ -11,6 +11,9 @@ tags:
     - async
     - event loop
     - monitoring
+comments:
+    title: Discuss this post over on reddit
+    link: https://www.reddit.com/r/Python/comments/f8o8c7/monitoring_asyncio_python/
 ---
 
 This post will cover some basics on how to monitor the health of a
