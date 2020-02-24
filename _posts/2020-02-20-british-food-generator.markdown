@@ -23,7 +23,10 @@ British Food generator.
 
 ## Names
 
-Combining random elements
+The name generation is fairly simplistic. I took a bunch of traditional food names and
+split them into pieces. These pieces are then recombined randomly.
+
+![image of name components](/images/2020-02-20-british-food-generator/food_names.png)
 
 ## Description
 Uses a [markov chain][wiki-markov] built on top of descriptions of British food.
