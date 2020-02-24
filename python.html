@@ -1,0 +1,22 @@
+---
+layout: default
+title: Python posts by meadsteve
+---
+{% assign python-posts = site.posts | where: "tags","python" %}
+<div class="home">
+    <div class="intro">
+        <h2>
+            <i class="fas fa-chalkboard-teacher"></i>
+            What I know about Python
+        </h2>
+        <p>
+            I've spent the last few years working with Python. Here are some posts about
+            what I've learnt.
+        </p>
+    </div>
+    <div class="posts">
+        {% for post in python-posts %}
+            {% include post_title_short.html %}
+        {% endfor %}
+    </div>
+</div>
