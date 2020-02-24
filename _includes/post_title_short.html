@@ -1,5 +1,5 @@
 
-<div class="post">
+<div class="post{% if post.published == false %} unpublished{% endif %}">
   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
     <h3 class="h3 post-title">
       {% include post_icon.html %}
