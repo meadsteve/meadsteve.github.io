@@ -33,7 +33,7 @@ The complete code for doing this can be seen in the [name generation module][mod
 ## Description
 Next I used a [markov chain][wiki-markov] built on top of descriptions of British food. Markov chains
 are often used for pun/joke text generation as they can be quite good at generating
-almost realistic sentences from bodies of text. 
+almost realistic sentences.
 
 I opted to use the [markovify library][library-markovify] as it was simple to use. The
 first step is to build a model from a sample of text. I collected descriptions of traditional
