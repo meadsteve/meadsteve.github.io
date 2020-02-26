@@ -35,9 +35,12 @@ Next I used a [markov chain][wiki-markov] built on top of descriptions of Britis
 are often used for pun/joke text generation as they can be quite good at generating
 almost realistic sentences from bodies of text. 
 
-I opted to use the [markovify library][library-markovify] as it was simple to use. 
-I wanted the description to reference the name in some way so a set of sample sentences are generated 
-then the sentences are scored based on whether they mention words in the food's name.
+I opted to use the [markovify library][library-markovify] as it was simple to use. The
+first step is to build a model from a sample of text. I collected descriptions of traditional
+british foods and put these in a [text file][text-food]. Markovify can then compile a model from
+this text. I wanted the description to reference the name in some way so a set of 
+sample sentences are generated and are all scored based on whether they mention words 
+in the food's name.
 
 ```python
 def __init__(self, file_path):
@@ -115,3 +118,4 @@ This app is then deployed on heroku and we all get to enjoy:
 [module-name-generation]: https://github.com/meadsteve/british_food_generator/blob/de8ae5bec41c3c5479712844795aa1062b21f1c2/british_food_generator/name_generation.py
 [module-description-generation]: https://github.com/meadsteve/british_food_generator/blob/c1ddba8de7bdc0101b5a4e5b7c9c6d2f97be3d42/british_food_generator/description_generation.py
 [module-image-generation]: https://github.com/meadsteve/british_food_generator/blob/c1ddba8de7bdc0101b5a4e5b7c9c6d2f97be3d42/british_food_generator/image_generation.py
+[text-food]: https://github.com/meadsteve/british_food_generator/blob/master/british_food_generator/real_descriptions_of_food.txt
