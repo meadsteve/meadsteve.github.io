@@ -80,3 +80,21 @@ blockquote.twitter-tweet {
     color: black;
   }
 }
+
+/* Hover fun */
+
+header a:hover {
+  filter: drop-shadow(2px 0px 5px black);
+}
+
+h3.post-title:hover {
+  filter: drop-shadow(2px 0px 5px orangered);
+}
+
+a:hover {
+  filter: drop-shadow(2px 0px 5px lightblue);
+}
+
+.specific-summary h3:hover {
+  filter: drop-shadow(2px 0px 5px deeppink);
+}
