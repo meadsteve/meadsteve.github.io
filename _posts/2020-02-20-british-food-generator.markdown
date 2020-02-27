@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 title:  "How the British Food Generator works"
 date:   2020-02-27 10:00:00
 categories: programming
