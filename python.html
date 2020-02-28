@@ -31,8 +31,8 @@ title: What meadsteve knows about Python
             <i class="fas fa-file-code"></i>
             Python Libraries
         </h2>
-        {% for library in Python-libraries %}
-            <a href="{{ library.link }}"><h3 class="project-link"><i class="{{ library.icon }}"></i>{{ library.text }}</h3></a>
+        {% for project in Python-libraries %}
+            {% include project-link.html %}
         {% endfor %}
     </div>
     <div class="site-list">
@@ -40,8 +40,8 @@ title: What meadsteve knows about Python
             <i class="fas fa-globe"></i>
             Websites
         </h2>
-        {% for website in Python-sites %}
-            <a href="{{ website.link }}"><h3 class="project-link"><i class="{{ website.icon }}"></i>{{ website.text }}</h3></a>
+        {% for project in Python-sites %}
+            {% include project-link.html %}
         {% endfor %}
     </div>
     <div class="talk-list">
@@ -49,8 +49,8 @@ title: What meadsteve knows about Python
             <i class="fas fa-bullhorn"></i>
             Talks
         </h2>
-        {% for talk in Python-talks %}
-            <a href="{{ talk.link }}"><h3 class="project-link"><i class="{{ talk.icon }}"></i>{{ talk.text }}</h3></a>
+        {% for project in Python-talks %}
+            {% include project-link.html %}
         {% endfor %}
     </div>
     <div class="kata-list">
@@ -58,8 +58,8 @@ title: What meadsteve knows about Python
             <i class="fas fa-hand-rock"></i>
             Katas
         </h2>
-        {% for kata in Python-katas %}
-            <a href="{{ kata.link }}"><h3 class="project-link"><i class="{{ kata.icon }}"></i>{{ kata.text }}</h3></a>
+        {% for project in Python-katas %}
+            {% include project-link.html %}
         {% endfor %}
     </div>
 </div>

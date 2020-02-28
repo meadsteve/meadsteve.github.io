@@ -110,8 +110,13 @@ a:hover {
   filter: drop-shadow(2px 0px 5px lightblue);
 }
 
-.specific-summary h3:hover {
-  filter: drop-shadow(2px 0px 5px deeppink);
+.project-link h3:hover {
+  i {
+    filter: drop-shadow(2px 0px 5px deeppink);
+  }
+  span {
+    filter: drop-shadow(2px 0px 7px black);
+  }
 }
 
 .comment-section a:hover {
