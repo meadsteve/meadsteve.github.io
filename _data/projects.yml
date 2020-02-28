@@ -35,3 +35,21 @@
   language: elixir
   type: library
   link: https://github.com/meadsteve/unit_fun
+
+- text: Monte carlo simulation (in Python) for forecasting deadlines
+  language: python
+  type: talk
+  link: https://github.com/meadsteve/monte_predictor
+  icon: fas fa-dice
+
+- text: Cafe Fika Kata - An intro to using types in Python
+  language: python
+  type: kata
+  link: https://github.com/meadsteve/cafefikakata
+  icon: fas fa-coffee
+
+- text: Types at the edges - An intro to using pydantic
+  language: python
+  type: kata
+  link: https://github.com/meadsteve/types-at-the-edges-minikata
+  icon: fas fa-university

@@ -27,7 +27,8 @@ title: MeadSteve's Dev Blog - About me
 <div>
     <h3><i class="fas fa-wrench" style="color:darkslateblue"></i> Things I've Made</h3>
     <ul>
-        {% for project in site.data.projects %}
+        {% assign interesting-projects = site.data.projects | where_exp:"p","p.type == 'library' or p.type == 'website'" %}
+        {% for project in interesting-projects %}
         <li><a href="{{ project.link }}">{{ project.text }}</a></li>
         {% endfor %}
         <li>Lots of silly  mistakes</li>
