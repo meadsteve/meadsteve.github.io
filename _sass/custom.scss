@@ -41,11 +41,12 @@ div.comment-section {
 }
 
 .full-index-link {
-  a {
+  span {
     color: black;
   }
   i {
     color: purple;
+    width: 45px;
   }
 }
 
@@ -88,7 +89,21 @@ header a:hover {
 }
 
 h3.post-title:hover {
-  filter: drop-shadow(2px 0px 5px orangered);
+  i {
+    filter: drop-shadow(2px 0px 5px orangered);
+  }
+  span {
+    filter: drop-shadow(2px 0px 7px black);
+  }
+}
+
+.full-index-link:hover {
+  i {
+    filter: drop-shadow(2px 0px 5px rebeccapurple);
+  }
+  span {
+    filter: drop-shadow(2px 0px 7px black);
+  }
 }
 
 a:hover {

@@ -10,7 +10,9 @@ permalink: /404.html
 {% for post in site.posts limit:2 %}
     {% include post_title_short.html %}
 {% endfor %}
-<h3 class="full-index-link" style="margin-top: 0">
-    <i class="fab fa-searchengin"></i>
-    <a href='{{ "/full-index/" | prepend: site.baseurl }}'> Complete index by topic</a>
-</h3>
+<a href='{{ "/full-index/" | prepend: site.baseurl }}'>
+    <h3 class="full-index-link" style="margin-top: 0">
+        <i class="fab fa-searchengin"></i>
+        <span>Complete index by topic</span>
+    </h3>
+</a>
