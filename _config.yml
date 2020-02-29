@@ -8,6 +8,10 @@ animated: false
 show_related_posts: false
 future: true
 
+collections:
+  knowledgebase:
+    output: true
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

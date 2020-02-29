@@ -1,5 +1,5 @@
 ---
-title:  "Things I've learnt - Finance"
+title:  "Finance"
 layout: default
 ---
 # Finance

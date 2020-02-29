@@ -11,4 +11,6 @@ The idea for this section comes from [wiki.nikitavoloboev.xyz](https://wiki.niki
 [knowledge.mathew-davies.co.uk](https://knowledge.mathew-davies.co.uk/).
 
 ## Index
-* [Finance](/knowledgebase/finance/)
+{% for page in site.knowledgebase %}
+* [{{ page.title }}]({{ page.url }})
+{% endfor %}
