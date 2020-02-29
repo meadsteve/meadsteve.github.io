@@ -7,15 +7,15 @@ title: MeadSteve's Dev Blog - About me
     <h2><i class="fas fa-user" style="color:darkgreen"></i> {{ site.data.me.name}}<br>(AKA {{ site.data.me.username}})</h2>
     <p>
         {{ site.data.me.blurbs.general}}
-        At the moment I mostly develop in <a href='{{ site.data.me.current-focus.link}}'>{{ site.data.me.current-focus.language}}</a>.
-        I work as a {{ site.data.me.current-job.role}} at <a href='{{ site.data.me.current-job.link}}'>{{ site.data.me.current-job.name}}</a>.
+        At the moment I mostly develop in <a href='{{ site.data.me.current_focus.link}}'>{{ site.data.me.current_focus.language}}</a>.
+        I work as a {{ site.data.me.current_job.role}} at <a href='{{ site.data.me.current_job.link}}'>{{ site.data.me.current_job.name}}</a>.
     </p>
 </div>
 
 <div>
     <h3><i class="fas fa-heart" style="color:deeppink"></i> Things I Love</h3>
     <ul>
-        {% for thing in site.data.me.things-i-love %}
+        {% for thing in site.data.me.things_i_love %}
             <li>{{ thing }}</li>
         {% endfor %}
     </ul>
@@ -24,8 +24,12 @@ title: MeadSteve's Dev Blog - About me
 <div>
     <h3><i class="fas fa-wrench" style="color:darkslateblue"></i> Things I've Made</h3>
     <ul>
-        {% assign interesting-projects = site.data.projects | where_exp:"p","p.type == 'library' or p.type == 'website'" %}
-        {% for project in interesting-projects %}
+        {% assign interesting_libs = site.data.projects | where_exp:"p","p.type == 'library'" %}
+        {% assign interesting_sites = site.data.projects | where_exp:"p","p.type == 'website'" %}
+        {% for project in interesting_sites %}
+            <li><a href="{{ project.link }}">{{ project.text }}</a></li>
+        {% endfor %}
+        {% for project in interesting_libs %}
             <li><a href="{{ project.link }}">{{ project.text }}</a></li>
         {% endfor %}
         <li>Lots of silly  mistakes</li>

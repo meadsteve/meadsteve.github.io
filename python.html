@@ -3,10 +3,10 @@ layout: default
 title: What meadsteve knows about Python
 ---
 {% assign Python-posts = site.posts | where: "tags","python" %}
-{% assign Python-libraries = site.data.projects | where_exp:"p","p.language == 'python' and p.type == 'library'" %}
-{% assign Python-sites = site.data.projects | where_exp:"p","p.language == 'python' and p.type == 'website'" %}
-{% assign Python-talks = site.data.projects | where_exp:"p","p.language == 'python' and p.type == 'talk'" %}
-{% assign Python-katas = site.data.projects | where_exp:"p","p.language == 'python' and p.type == 'kata'" %}
+{% assign Python-libraries = site.data.projects | where_exp:"p","p.language == 'python'" | where_exp:"p","p.type == 'library'" %}
+{% assign Python-sites = site.data.projects | where_exp:"p","p.language == 'python'" | where_exp:"p","p.type == 'website'" %}
+{% assign Python-talks = site.data.projects | where_exp:"p","p.language == 'python'" | where_exp:"p","p.type == 'talk'" %}
+{% assign Python-katas = site.data.projects | where_exp:"p","p.language == 'python'" | where_exp:"p","p.type == 'kata'" %}
 <div class="specific-summary">
     <div class="intro">
         <h2>
