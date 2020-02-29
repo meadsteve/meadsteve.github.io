@@ -1,0 +1,24 @@
+{
+  "name": "Steve Brazier",
+  "username": "MeadSteve",
+  "blurbs": {
+    "general": "I'm a Stockholm (previously London) based Software Developer who has worked with a number of languages (including Python, PHP, JavaScript/TypeScript, C#, Elixir/Erlang) and environments.",
+    "python": "I've spent the last few years working with Python. I've worked with Python on aws lambda, converted large projects from Python 2 to 3 and setup new projects in async typed Python."
+  },
+  "current-focus": {
+    "language": "Python",
+    "link": "/python/"
+  },
+  "current-job": {
+    "role": "back-end consultant",
+    "name": "0+x",
+    "link": "https://0x.se/"
+  },
+  "things-i-love": [
+    "Mashing typing and static analysis onto dynamically typed languages",
+    "Deleting code",
+    "Avoiding writing code in the first place",
+    "Kanban",
+    "Walking"
+  ]
+}
