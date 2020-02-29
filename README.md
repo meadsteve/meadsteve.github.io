@@ -1,8 +1,11 @@
-meadsteve.github.io
+blog.meadsteve.dev
 ===================
+github pages blog
 
-github pages blog. For local dev:
-
+## Dev
 ```bash
 ./watch.sh
 ```
+
+## Live
+https://blog.meadsteve.dev/
