@@ -1,0 +1,23 @@
+# Table of contents
+
+* [meadsteve.github.io](README.md)
+* [\_posts](_posts/README.md)
+  * [2017-09-28-frontend-2017-part-2](_posts/2017-09-28-frontend-2017-part-2.md)
+  * [2018-09-04-move-to-stockholm](_posts/2018-09-04-move-to-stockholm.md)
+  * [2017-09-18-frontend-2017-part-1](_posts/2017-09-18-frontend-2017-part-1.md)
+  * [2014-10-06-bp-as-supersitions](_posts/2014-10-06-bp-as-supersitions.md)
+  * [2020-02-17-one-less](_posts/2020-02-17-one-less.md)
+  * [2014-10-12-ruby-class-mod](_posts/2014-10-12-ruby-class-mod.md)
+  * [2014-11-05-learning-io](_posts/2014-11-05-learning-io.md)
+  * [2020-02-20-british-food-generator](_posts/2020-02-20-british-food-generator.md)
+  * [2014-05-08-positivecriticism](_posts/2014-05-08-positivecriticism.md)
+  * [2014-11-09-erlang-pattern-matching](_posts/2014-11-09-erlang-pattern-matching.md)
+  * [2020-02-10-types-at-the-edges-in-python](_posts/2020-02-10-types-at-the-edges-in-python.md)
+  * [2014-05-09-softwareantifragility](_posts/2014-05-09-softwareantifragility.md)
+  * [2020-02-19-monitoring-async-python](_posts/2020-02-19-monitoring-async-python.md)
+  * [2018-10-19-move-to-stockholm-part-2](_posts/2018-10-19-move-to-stockholm-part-2.md)
+  * [2020-02-04-dependency-injection-python](_posts/2020-02-04-dependency-injection-python.md)
+* [knowledgebase](knowledgebase/README.md)
+  * [Finance](knowledgebase/finance.md)
+  * [Knowledgebase](knowledgebase/index.md)
+
