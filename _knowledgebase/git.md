@@ -1,6 +1,6 @@
 ---
 title:  "Git"
-layout: default
+layout: kb
 ---
 # Git
 

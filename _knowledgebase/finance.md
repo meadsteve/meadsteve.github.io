@@ -1,6 +1,6 @@
 ---
 title:  "Finance"
-layout: default
+layout: kb
 ---
 # Finance
 TODO: type up notes

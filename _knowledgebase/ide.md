@@ -1,6 +1,6 @@
 ---
 title:  "IDE"
-layout: default
+layout: kb
 ---
 # IDE
 I really like the jetbrains family.

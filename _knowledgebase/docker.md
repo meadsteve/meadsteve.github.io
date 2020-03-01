@@ -1,6 +1,6 @@
 ---
 title:  "Docker"
-layout: default
+layout: kb
 ---
 # Docker
 docker stuff

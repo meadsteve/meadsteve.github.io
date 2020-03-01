@@ -1,6 +1,6 @@
 ---
 title:  "Legacy Software"
-layout: default
+layout: kb
 ---
 # Legacy Software
 

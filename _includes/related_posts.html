@@ -1,0 +1,29 @@
+<div class="relatedPosts">
+    <h2>Related Blog Posts {{ page.tags }}</h2>
+
+    {% assign minCommonTags =  1 %}
+    {% assign relatedCounter = 0 %}
+
+    {% for post in site.posts %}
+
+        {% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+
+        {% for tag in post.tags %}
+          {% if post.url != page.url %}
+            {% if page.tags contains tag %}
+                <div>
+                    <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></h5>
+                </div>
+                {% assign relatedCounter = relatedCounter | plus: 1 %}
+                {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+    {% endfor %}
+
+    {% if relatedCounter < 1 %}
+        <p>None</p>
+    {% endif %}
+</div>

@@ -1,6 +1,8 @@
 ---
 title:  "Sweden"
-layout: default
+layout: kb
+tags:
+    - sweden
 ---
 # Sweden
 * [vecka.nu](http://vecka.nu/) - week number is important in Sweden.
