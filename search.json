@@ -9,7 +9,7 @@ layout: null
       "tags": "{{ post.tags | join: ', ' }}",
       "url": "{{ site.baseurl }}{{ post.url }}",
       "date": "{{ post.date }}",
-      "content": "{{ post.content | strip_html | downcase | replace: ".", "" | replace: '"', "'" | replace: "\", "" | split: " " | uniq | join: " "}}"
+      "content": "{{ post.content | strip_html | downcase | replace: ". ", " " | replace: '"', "'" | replace: "\", "" | split: " " | uniq | join: " "}}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %},
   {% for kb in site.knowledgebase %}
@@ -18,7 +18,7 @@ layout: null
       "category": "knowledgebase",
       "tags": "{{ kb.tags | join: ', ' }}",
       "url": "{{ site.baseurl }}{{ kb.url }}",
-      "content": "{{ kb.content | strip_html | downcase | replace: ".", "" | replace: '"', "'" | replace: "\", "" | split: " " | uniq | join: " "}}"
+      "content": "{{ kb.content | strip_html | downcase | replace: ". ", " " | replace: '"', "'" | replace: "\", "" | split: " " | uniq | join: " "}}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
