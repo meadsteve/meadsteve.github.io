@@ -4,19 +4,21 @@ layout: null
 [
   {% for post in site.posts %}
     {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.categories }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date }}"
+      "title": "{{ post.title | escape }}",
+      "category": "{{ post.categories }}",
+      "tags": "{{ post.tags | join: ', ' }}",
+      "url": "{{ site.baseurl }}{{ post.url }}",
+      "date": "{{ post.date }}",
+      "content": "{{ post.content | strip_html  |  split: " " | uniq | join: " " | replace: '"', "'" | replace: "\", "" }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %},
   {% for kb in site.knowledgebase %}
     {
-      "title"    : "{{ kb.title | escape }}",
-      "category" : "knowledgebase",
-      "tags"     : "{{ kb.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ kb.url }}"
+      "title": "{{ kb.title | escape }}",
+      "category": "knowledgebase",
+      "tags": "{{ kb.tags | join: ', ' }}",
+      "url": "{{ site.baseurl }}{{ kb.url }}",
+      "content": "{{ kb.content | strip_html | split: " " | uniq | join: " " | replace: '"', "'" | replace: "\", "" }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
