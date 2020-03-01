@@ -1,0 +1,39 @@
+---
+title:  "Things I've learnt - in a less structured way than the posts"
+layout: default
+---
+<script src="/javascripts/simple-jekyll-search.min.js"></script>
+<script>
+    fetch("/search.json")
+        .then(r => r.json())
+        .then(searchData => {
+            SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: searchData,
+            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+    });
+        });
+
+</script>
+<h1>Knowledgebase</h1>
+
+<h2>What</h2>
+<p>
+    As I learn new things I'll try and document them here in very rough form building
+    up as I go. This will be scrappier and less complete than my blog posts
+    The idea for this section comes from <a href="https://wiki.nikitavoloboev.xyz/">wiki.nikitavoloboev.xyz</a>
+    via my friend's version <a href="https://knowledge.mathew-davies.co.uk">knowledge.mathew-davies.co.uk</a>.
+</p>
+<h2>Search</h2>
+<p>
+    <label for="search-input">Search</label>
+    <input type="text" id="search-input"/>
+</p>
+<ul id="results-container"></ul>
+<h2>Index</h2>
+<ul>
+    {% for page in site.knowledgebase %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
