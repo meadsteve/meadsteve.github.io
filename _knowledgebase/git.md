@@ -1,6 +1,9 @@
 ---
 title:  "Git"
 layout: kb
+tags:
+    - git
+    - source control
 ---
 # Git
 

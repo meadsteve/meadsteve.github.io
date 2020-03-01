@@ -1,6 +1,9 @@
 ---
 title:  "Docker"
 layout: kb
+tags:
+    - docker
+    - container
 ---
 # Docker
 docker stuff

@@ -1,6 +1,9 @@
 ---
 title:  "Legacy Software"
 layout: kb
+tags:
+    - legacy
+    - golden master
 ---
 # Legacy Software
 
