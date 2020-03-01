@@ -8,11 +8,16 @@ layout: default
         .then(r => r.json())
         .then(searchData => {
             SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            json: searchData,
-            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
-    });
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: searchData,
+                searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+            });
+            document.getElementById('search-stuff').style.display = "inline";
+            document.getElementById('search-placeholder').style.display = "none";
+        })
+        .catch(_err => {
+            document.getElementById('search-placeholder').innerHTML = "Search unavailable"
         });
 
 </script>
@@ -27,8 +32,10 @@ layout: default
 </p>
 <h2>Search</h2>
 <p>
-    <label for="search-input">Search</label>
-    <input type="text" id="search-input"/>
+    <span id="search-placeholder">Loading search...</span>
+    <span style="display: none" id="search-stuff">
+        <input type="text" id="search-input"/>
+    </span>
 </p>
 <ul id="results-container"></ul>
 <h2>Index</h2>
