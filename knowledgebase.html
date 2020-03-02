@@ -6,26 +6,33 @@ layout: default
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const searchTerm = urlParams.get('query');
-    fetch("/search.json")
-        .then(r => r.json())
-        .then(searchData => {
-            const searchInput = document.getElementById('search-input');
-            const search = SimpleJekyllSearch({
-                searchInput: searchInput,
-                resultsContainer: document.getElementById('results-container'),
-                json: searchData,
-                searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+
+    window.addEventListener('DOMContentLoaded', (_event) => {
+        const searchInput = document.getElementById('search-input');
+        const searchStuff = document.getElementById('search-stuff');
+        const searchPlaceholder = document.getElementById('search-placeholder');
+        const searchResultsContainer = document.getElementById('results-container');
+
+        fetch("/search.json")
+            .then(r => r.json())
+            .then(searchData => {
+                const search = SimpleJekyllSearch({
+                    searchInput: searchInput,
+                    resultsContainer: searchResultsContainer,
+                    json: searchData,
+                    searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+                });
+                searchStuff.style.display = "inline";
+                searchPlaceholder.style.display = "none";
+                if (searchTerm) {
+                    searchInput.value = searchTerm;
+                    search.search(searchTerm);
+                }
+            })
+            .catch(_err => {
+                searchPlaceholder.innerHTML = "Search unavailable"
             });
-            document.getElementById('search-stuff').style.display = "inline";
-            document.getElementById('search-placeholder').style.display = "none";
-            if (searchTerm) {
-                searchInput.value = searchTerm;
-                search.search(searchTerm);
-            }
-        })
-        .catch(_err => {
-            document.getElementById('search-placeholder').innerHTML = "Search unavailable"
-        });
+    });
 
 </script>
 <h1>Knowledgebase</h1>
