@@ -4,17 +4,24 @@ layout: default
 ---
 <script src="/javascripts/simple-jekyll-search.min.js"></script>
 <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('query');
     fetch("/search.json")
         .then(r => r.json())
         .then(searchData => {
-            SimpleJekyllSearch({
-                searchInput: document.getElementById('search-input'),
+            const searchInput = document.getElementById('search-input');
+            const search = SimpleJekyllSearch({
+                searchInput: searchInput,
                 resultsContainer: document.getElementById('results-container'),
                 json: searchData,
                 searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
             });
             document.getElementById('search-stuff').style.display = "inline";
             document.getElementById('search-placeholder').style.display = "none";
+            if (searchTerm) {
+                searchInput.value = searchTerm;
+                search.search(searchTerm);
+            }
         })
         .catch(_err => {
             document.getElementById('search-placeholder').innerHTML = "Search unavailable"
