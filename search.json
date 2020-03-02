@@ -4,7 +4,7 @@ layout: null
 [
   {% for post in site.posts %}
     {
-      "title": "{{ post.title | escape }}",
+      "title": "(Blog) {{ post.title | escape }}",
       "category": "{{ post.categories }}",
       "tags": "{{ post.tags | join: ', ' }}",
       "url": "{{ site.baseurl }}{{ post.url }}",
@@ -14,7 +14,7 @@ layout: null
   {% endfor %},
   {% for kb in site.knowledgebase %}
     {
-      "title": "{{ kb.title | escape }}",
+      "title": "(KB) {{ kb.title | escape }}",
       "category": "knowledgebase",
       "tags": "{{ kb.tags | join: ', ' }}",
       "url": "{{ site.baseurl }}{{ kb.url }}",
