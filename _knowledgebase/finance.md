@@ -5,4 +5,5 @@ tags:
     - finance
 ---
 # Finance
-TODO: type up notes
+
+[Derivatives]({% link _knowledgebase/derivatives.md %})
