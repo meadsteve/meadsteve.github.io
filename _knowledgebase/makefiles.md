@@ -1,5 +1,5 @@
 ---
-title:  "Makfiles"
+title:  "Makefiles"
 layout: kb
 tags:
     - makefiles
@@ -8,6 +8,6 @@ tags:
 # Makefiles
 Are a nice way of defining common actions for a project.
 
-#.PHONY
+## .PHONY
 TLDR it specifies targets that aren't files.
 Checkout [Phony-Targets.html](https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html)
