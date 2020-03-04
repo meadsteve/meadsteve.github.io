@@ -13,8 +13,13 @@ tags:
     - package managers
     - pipenv
 ---
-This blogpost will hopefully introduce a relatively clean
-way of managing python versions and their dependencies.
+Let's start with the obligitory xkcd comic for this topic:
+
+[![xkcd comic of mess of python deps](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/1987/)
+
+This blogpost will hopefully introduce a relatively sensible
+way of trying to keep python versions and their dependencies clean
+
 
 ## Setup
 
