@@ -27,6 +27,11 @@ layout: default
                 if (searchTerm) {
                     searchInput.value = searchTerm;
                     search.search(searchTerm);
+                    let resultCount = searchResultsContainer.children.length;
+                    if (resultCount === 1) {
+                        let luckyLink = searchResultsContainer.firstChild.firstChild.href;
+                        window.location.replace(luckyLink);
+                    }
                 }
             })
             .catch(_err => {
