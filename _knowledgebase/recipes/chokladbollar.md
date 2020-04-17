@@ -1,20 +1,18 @@
 ---
-title:  "Recipes"
+title:  "Recipes - Chokladbollar"
 layout: kb
 tags:
     - cooking
     - food
     - recipes
+    - no-bake
 ---
 
-# Recipes
-
-## Chokladbollar
+# Chokladbollar
 
 Based from https://thecookful.com/swedish-no-bake-balls-chokladbollar/
 
-
-### ingredients
+## ingredients
 
  * 110 butter
  * 100 sugar
@@ -24,7 +22,7 @@ Based from https://thecookful.com/swedish-no-bake-balls-chokladbollar/
  * Some amount of pearl sugar
 
 
-### method
+## method
 
  * Cream butter and sugar (dash of vanilla)
  * Add cocao and mix

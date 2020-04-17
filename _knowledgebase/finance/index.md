@@ -6,4 +6,4 @@ tags:
 ---
 # Finance
 
-[Derivatives]({% link _knowledgebase/derivatives.md %})
+[Derivatives]({% link _knowledgebase/finance/derivatives.md %})
