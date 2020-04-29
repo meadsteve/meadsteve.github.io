@@ -122,3 +122,12 @@ a:hover {
 .comment-section a:hover {
   filter: drop-shadow(2px 0px 5px rebeccapurple);
 }
+
+.site-header {
+  margin-bottom: 2rem;
+  h1 {
+    display: inline;
+    font-weight: 300;
+  }
+}
+
