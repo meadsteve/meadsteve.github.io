@@ -28,3 +28,4 @@ Based from https://thecookful.com/swedish-no-bake-balls-chokladbollar/
  * Add cocao and mix
  * Add oats and a dash of liquid mix
  * Roll into balls and roll the outside onto a plate of pearl sugar
+ * Put in the fridge for a while
