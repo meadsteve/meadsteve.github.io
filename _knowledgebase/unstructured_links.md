@@ -21,6 +21,9 @@ yet(maybe not totally unstructured).
 ## Javascript
 * https://openbase.io/ - find the right package - reviewed packages
 
+## Frontend
+* https://micro-frontends.org/ - information around microfrontends
+
 ## Remote working
 * https://www.toptal.com/remote-work-playbook - suddenly remote playbook
 * https://www.remotemobprogramming.org/ - remote mob programming 
