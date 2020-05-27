@@ -11,6 +11,8 @@ tags:
 This is a dumping ground for things I might want to find later but don't want to spend time classifying too much
 yet(maybe not totally unstructured).
 
+[Edit the page](https://github.com/meadsteve/meadsteve.github.io/edit/master/_knowledgebase/unstructured_links.md)
+
 ## Python
 
 * https://nullprogram.com/blog/2020/05/24/ - async python, queues, bounded.
@@ -18,5 +20,9 @@ yet(maybe not totally unstructured).
 
 ## Javascript
 * https://openbase.io/ - find the right package - reviewed packages
+
+## Remote working
+* https://www.toptal.com/remote-work-playbook - suddenly remote playbook
+* https://www.remotemobprogramming.org/ - remote mob programming 
 
 ## Other
