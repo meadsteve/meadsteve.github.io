@@ -26,3 +26,4 @@ yet(maybe not totally unstructured).
 * https://www.remotemobprogramming.org/ - remote mob programming 
 
 ## Other
+* https://read.amazon.com/notebook - Kindle note browsing
