@@ -17,6 +17,7 @@ yet(maybe not totally unstructured).
 
 * https://nullprogram.com/blog/2020/05/24/ - async python, queues, bounded.
 * https://lucumr.pocoo.org/2020/1/1/async-pressure/  - async python, queues, bounded.
+* https://cjolowicz.github.io/posts/hypermodern-python-02-testing/ - modern python series of arguments
 
 ## Javascript
 * https://openbase.io/ - find the right package - reviewed packages
