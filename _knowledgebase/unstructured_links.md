@@ -29,5 +29,8 @@ yet(maybe not totally unstructured).
 * https://www.toptal.com/remote-work-playbook - suddenly remote playbook
 * https://www.remotemobprogramming.org/ - remote mob programming 
 
+## Tech blog posts
+* https://github.com/thma/WhyHaskellMatters - Why haskell is often discussed a lot despite lower prod usage.
+
 ## Other
 * https://read.amazon.com/notebook - Kindle note browsing
