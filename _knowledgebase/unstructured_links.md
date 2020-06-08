@@ -32,5 +32,8 @@ yet(maybe not totally unstructured).
 ## Tech blog posts
 * https://github.com/thma/WhyHaskellMatters - Why haskell is often discussed a lot despite lower prod usage.
 
+## Tech/common
+* http://jsonpatch.com/ - format for describing diffs to a json doc
+
 ## Other
 * https://read.amazon.com/notebook - Kindle note browsing
