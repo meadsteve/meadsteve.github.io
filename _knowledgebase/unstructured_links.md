@@ -36,5 +36,8 @@ yet(maybe not totally unstructured).
 ## Tech/common
 * http://jsonpatch.com/ - format for describing diffs to a json doc
 
+## Stockholm
+* https://sommar2020.stockholm - things in summer
+
 ## Other
 * https://read.amazon.com/notebook - Kindle note browsing
