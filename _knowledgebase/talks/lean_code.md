@@ -1,3 +1,12 @@
+---
+title:  "Talk - DevTernity 2019: Kevlin Henney - Lean Code"
+layout: kb
+tags:
+    - lean
+    - refactoring
+    - talks
+    - software
+---
 #  DevTernity 2019: Kevlin Henney - Lean Code Talk
 https://www.youtube.com/watch?v=-nWhH-4wWBU&t=35s
 
