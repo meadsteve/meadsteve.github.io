@@ -41,3 +41,4 @@ yet(maybe not totally unstructured).
 
 ## Other
 * https://read.amazon.com/notebook - Kindle note browsing
+* https://www.ifixit.com/ - Fixing, right to repair
