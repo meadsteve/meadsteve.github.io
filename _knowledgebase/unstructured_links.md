@@ -39,6 +39,9 @@ yet(maybe not totally unstructured).
 ## Stockholm
 * https://sommar2020.stockholm - things in summer
 
+## Food shopping
+* https://unwrapped.se/ - EKO, low impact grains, pulses etc.
+
 ## Other
 * https://read.amazon.com/notebook - Kindle note browsing
 * https://www.ifixit.com/ - Fixing, right to repair
