@@ -9,7 +9,7 @@ tags:
 ## Cache files
 Clear them out with:
 ```
-find . -name "*.pyc" -exec rm -f {} \;
+find . -name '*.pyc' -delete
 ```
 
 ## Environment variables that may or may not help with debugging
