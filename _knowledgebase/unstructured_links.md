@@ -41,6 +41,7 @@ yet(maybe not totally unstructured).
 
 ## Food shopping
 * https://unwrapped.se/ - EKO, low impact grains, pulses etc.
+* https://localfoodnodes.org/ - local food collection network
 
 ## Other
 * https://read.amazon.com/notebook - Kindle note browsing
