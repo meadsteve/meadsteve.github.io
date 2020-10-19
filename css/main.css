@@ -7,5 +7,6 @@ html {
 }
 
 div.highlight {
+  color: lightblue;
   background: black;
 }
