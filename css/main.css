@@ -1,11 +1,14 @@
 html {
-  max-width:70ch;
+  max-width:80ch;
   padding:2ch;
   margin:auto;
-  color:#333;
   font-size:1.2em;
 }
 
+/** Code styling  **/
+pre.highlight {
+  overflow: scroll;
+}
 div.highlight {
   color: lightblue;
   background: black;
