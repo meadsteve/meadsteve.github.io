@@ -10,6 +10,27 @@ img {
   height:auto;
 }
 
+nav a {
+  padding-right: 1rem;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: grey;
+}
+
+header a:visited {
+  color: black;
+}
+
+h2.post-title i {
+  color: darkorchid;
+  width: 2rem;
+}
+
 /** Code styling  **/
 pre.highlight {
   overflow: scroll;
