@@ -5,6 +5,15 @@ html {
   font-size:1.2em;
 }
 
+footer {
+  margin-top: 3em;
+  font-size: 0.8em;
+}
+
+.post-title .post-date {
+  font-size: 0.5em;
+}
+
 img {
   max-width:100%;
   height:auto;
@@ -29,14 +38,21 @@ header a:visited {
   color: black;
 }
 
+/** Icon colouring **/
 h2.post-title i {
   color: darkorchid;
   width: 1em;
 }
 
-footer {
-  margin-top: 3em;
-  font-size: 0.8em;
+.specific-summary h2 i {
+  color: darkgreen;
+  width: 1em;
+}
+
+
+.specific-summary h3 i {
+  color: darkorchid;
+  width: 2em;
 }
 
 /** Tweet styling  **/
