@@ -11,7 +11,7 @@ img {
 }
 
 nav a {
-  padding-right: 1rem;
+  padding-right: 1em;
 }
 
 a:link {
@@ -28,7 +28,19 @@ header a:visited {
 
 h2.post-title i {
   color: darkorchid;
-  width: 2rem;
+  width: 1em;
+}
+
+footer {
+  margin-top: 3em;
+  font-size: 0.8em;
+}
+
+/** Tweet styling  **/
+blockquote.twitter-tweet {
+  background: lavender;
+  color: darkblue;
+  padding: 0.5em 2em 1em 2em;
 }
 
 /** Code styling  **/
