@@ -5,6 +5,11 @@ html {
   font-size:1.2em;
 }
 
+img {
+  max-width:100%;
+  height:auto;
+}
+
 /** Code styling  **/
 pre.highlight {
   overflow: scroll;
