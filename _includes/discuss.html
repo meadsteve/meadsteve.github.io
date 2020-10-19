@@ -1,15 +1,13 @@
+<div class="center comment-section">
 {% if page.comments%}
-    <div class="center comment-section">
-        <a href={{ page.comments.link }}>
-            <i class="fas fa-comments"></i>
-            {{ page.comments.title }}
-        </a>
-    </div>
+    <a href={{ page.comments.link }}>
+        <i class="fas fa-comments"></i>
+        {{ page.comments.title }}
+    </a>
 {% else %}
-    <div class="center comment-section">
-        <a href=https://twitter.com/meadsteve>
-            <i class="fas fa-crow"></i>
-            Thoughts? Comments? Send me a tweet!
-        </a>
-    </div>
+    <a href=https://twitter.com/meadsteve>
+        <i class="fas fa-crow"></i>
+        Thoughts? Comments? Send me a tweet!
+    </a>
 {% endif %}
+</div>
