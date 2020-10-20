@@ -39,13 +39,21 @@ nav a {
   display: inline-block;
 }
 
-/** Link colouring **/
+/** Link styling **/
 a:link {
   color: black;
 }
 
 a:visited {
   color: grey;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+header a {
+  text-decoration: none;
 }
 
 header a:visited {
