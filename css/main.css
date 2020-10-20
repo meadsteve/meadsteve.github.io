@@ -11,6 +11,10 @@ article p {
     margin-bottom: 2em;
 }
 
+header {
+  padding-bottom: 1em;
+}
+
 footer {
   margin-top: 3em;
   font-size: 0.8em;
@@ -29,9 +33,6 @@ img {
 }
 
 /** Navigation block **/
-nav {
-  padding-bottom: 2em;
-}
 
 nav a {
   padding-right: 1em;
