@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-{% include head.html %}
-<body>
-  {% include header.html %}
-
+---
+layout: default
+---
+<article>
   {{ content }}
-  {% include related_posts.html %}
-
-  {% include footer.html %}
-</body>
-</html>
+</article>
+{% include related_posts.html %}
