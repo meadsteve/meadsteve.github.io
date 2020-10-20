@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Frontend in 2017 by a non front end dev - Part 2 - Testing"
+title:  "Trying out front-end - Part 2 - Testing"
 date:   2017-09-28 10:00:00
 categories: programming
 icon: fab fa-js-square
