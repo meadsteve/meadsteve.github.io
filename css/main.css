@@ -24,6 +24,7 @@ img {
 
 nav a {
   padding-right: 1em;
+  display: inline-block;
 }
 
 a:link {
