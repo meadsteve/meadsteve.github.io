@@ -45,7 +45,7 @@ header a:visited {
   color: black;
 }
 
-/** Icon colouring **/
+/** Icon colouring & styling **/
 h2.post-title i {
   color: darkorchid;
   width: 1em;
@@ -60,6 +60,11 @@ h2.post-title i {
 .specific-summary h3 i {
   color: darkorchid;
   width: 2em;
+}
+
+i.fab.fa-python {
+  /** the python icon looks silly with a normal font weight **/
+  font-weight: 100;
 }
 
 /** pagination styling  **/
