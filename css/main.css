@@ -6,7 +6,7 @@ html {
   font-family: sans-serif
 }
 
-p {
+article p {
     line-height: 1.4em;
     margin-bottom: 2em;
 }
