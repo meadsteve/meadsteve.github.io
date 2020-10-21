@@ -18,7 +18,7 @@
     "language": "python",
     "type": "library",
     "link": "https://github.com/meadsteve/constrained_types",
-    "icon": "fas fa-file-contract"
+    "icon": "fas fa-tasks"
   },
   {
     "text": "The British food generator",
