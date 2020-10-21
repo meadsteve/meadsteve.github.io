@@ -26,14 +26,14 @@ The first chapter was ruby. I'm now on the second chapter covering a language ca
 Io is a prototype based OO language (much like javascript). Everything is an object.
 In fact everything is a clone of an object. Take the following snippit:
 
-``` Io
+```
 Duck := Object clone
 Duck quack := method("quack like a duck!" print)
 ```
 
 Duck is now an object with ```Object``` as its prototype. All objects have slots and we've set the quack slot on the duck. In fact we've set it to contain another object called method. Any object starting with a capital letter is a type. Anything starting with a lowercase letter is an instance of a type so the following would happen in Io's console:
 
-``` console
+```console
 Io> Duck type
 ==> Duck
 
