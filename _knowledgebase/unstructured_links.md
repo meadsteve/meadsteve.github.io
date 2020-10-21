@@ -39,6 +39,9 @@ yet(maybe not totally unstructured).
 ## Stockholm
 * https://sommar2020.stockholm - things in summer
 
+## Shopping
+* https://buymeonce.com/ - High quality products with repair guarantees etc.
+
 ## Food shopping
 * https://unwrapped.se/ - EKO, low impact grains, pulses etc.
 * https://localfoodnodes.org/ - local food collection network
