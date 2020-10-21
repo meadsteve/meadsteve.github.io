@@ -61,20 +61,21 @@ header a:visited {
 }
 
 /** Icon colouring & styling **/
+
+i {
+  width: 1.4em;
+}
+
 h2.post-title i {
   color: darkorchid;
-  width: 1.4em;
 }
 
 .specific-summary h2 i {
   color: darkgreen;
-  width: 1em;
 }
-
 
 .specific-summary h3 i {
   color: darkorchid;
-  width: 2em;
 }
 
 i.fab.fa-python {
