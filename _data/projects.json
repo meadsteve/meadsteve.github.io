@@ -14,6 +14,13 @@
     "icon": "fas fa-project-diagram"
   },
   {
+    "text": "Constrained Types - strings and numbers with rules",
+    "language": "python",
+    "type": "library",
+    "link": "https://github.com/meadsteve/constrained_types",
+    "icon": "fas fa-file-contract"
+  },
+  {
     "text": "The British food generator",
     "language": "python",
     "type": "website",
