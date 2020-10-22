@@ -37,6 +37,8 @@ img {
 nav a {
   padding-right: 1em;
   display: inline-block;
+  min-width: 12em;
+  padding-bottom: 0.2em;
 }
 
 /** Link styling **/
