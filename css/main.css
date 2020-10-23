@@ -10,10 +10,6 @@ header, footer, h1, h2, h3 {
   font-family: monospace;
 }
 
-h1 {
-  font-size: 3em;
-}
-
 article p {
     line-height: 1.4em;
     margin-bottom: 2em;
