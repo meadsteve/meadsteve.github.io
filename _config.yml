@@ -16,7 +16,7 @@ collections:
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 10
+paginate: 20
 sass:
   compressed: true
 
