@@ -39,11 +39,14 @@ img {
 
 /** Navigation block **/
 
-nav a {
-  padding-right: 1em;
-  display: inline-block;
-  min-width: 12em;
-  padding-bottom: 0.2em;
+nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10.5em);
+}
+
+nav  i {
+  width: 1em;
 }
 
 /** Link styling **/
