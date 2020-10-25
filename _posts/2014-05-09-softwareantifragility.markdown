@@ -11,7 +11,7 @@ tags:
 - error tracking
 ---
 
-#### anti-fragility
+## anti-fragility
 I'm currently reading [Antifragile: Things that Gain from Disorder][book-antifragile] by Nassim Nicholas Taleb.
 Now whilst at times his writing style annoys me a little, he raises some very interesting concepts in the book.
 The core idea is that the opposite of something fragile isn't just robust but is anti-fragile.
@@ -23,7 +23,7 @@ Life throws problems at a species. Through survival of the fittest the species b
 It actively gets better thanks to small amounts of stress and damage.
 This got me thinking about how this idea might apply to software development.
 
-#### Robustness. Better than fragility, right?
+## Robustness. Better than fragility, right?
 We don't want fragile software. If your application crashes the moment someone clicks in the wrong spot you're gonna have a bad time.
 So the first step in countering this is normally to make our software less error prone.
 When a service dies we handle it gracefully and carry on as best we can.
@@ -32,7 +32,7 @@ Every error, warning and problem our users run in to is effectively a piece of i
 We could use this to improve our code base.
 I would even go as far as to say if we are too robust we risk hiding some potentially useful information ([fail fast][wiki-fail-fast] is one way of countering this).
 
-#### Errors as useful input
+## Errors as useful input
 You test your software (you do right?).
 This eliminates a lot of bugs and issues before your software even meets the outside world.
 Now let's say you spend an hour testing your software.
@@ -47,21 +47,21 @@ If the problem is big enough then your users will probably get in touch.
 If it's small then they'll likely ignore it.
 This is one of the reasons I like error tracking software (see [bugsnag][errors-bugsnag] and [raygun][errors-raygun] - both of which dramtically improve the signal to noise ratio of an error feed). 
 
-#### Speed of change - Continuous Delivery, Agile, Kanban, XP and others
+## Speed of change - Continuous Delivery, Agile, Kanban, XP and others
 Once we are getting this steady flow of errors we need to start doing something about it.
 If the errors are ignored then the risk of them compounding increases and it all starts to seem a bit fragile.
 One of the core strengths of agile development (and other related methodologies) is the ability to respond rapidly to change.
 Now with every error the software can be improved, getting incrementally better with each shock.
 The combined system of the software, error tracking and development team is now starting to look anti-fragile.
 
-#### Artificial Sources of errors
+## Artificial Sources of errors
 Users and natural hardware failures don't have to be our only source of shocks.
 They can be simulated artificially either during testing or, for bolder developers, when live.
 For hammering the front end [Gremlins.js][random-gemlins] is a handy little library.
 Netflix are also fairly well know for using [chaos monkey][random-chaosmonkey] to randomly take down hardware.
 This approach allows us to provide extra stress on our software. Forcing it to be a better fit for our requirements.
 
-#### Closing thoughts
+## Closing thoughts
 Errors and failures don't have to be negative.
 When handled correctly they are, in fact, a valuable form of data that allows us to improve our software.
 I think the following is required for software to be anti-fragile:
