@@ -13,6 +13,7 @@ header, footer, h1, h2, h3 {
 article p {
     line-height: 1.4em;
     margin-bottom: 2em;
+    text-align: justify;
 }
 
 header {
