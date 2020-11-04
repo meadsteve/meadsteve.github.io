@@ -1,6 +1,7 @@
 ---
 title:  "Finance"
 layout: kb
+category: finance
 tags:
     - finance
 ---

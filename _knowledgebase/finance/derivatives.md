@@ -1,6 +1,7 @@
 ---
 title:  "Finance - Derivatives"
 layout: kb
+category: finance
 tags:
     - finance
     - derivatives

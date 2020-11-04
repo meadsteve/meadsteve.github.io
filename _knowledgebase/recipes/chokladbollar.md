@@ -1,6 +1,7 @@
 ---
 title:  "Recipes - Chokladbollar"
 layout: kb
+category: recipes
 tags:
     - cooking
     - food

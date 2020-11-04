@@ -1,6 +1,7 @@
 ---
 title:  "Book Reviews"
 layout: kb
+category: book reviews
 tags:
     - books
     - reading

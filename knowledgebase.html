@@ -57,9 +57,10 @@ layout: default
     </span>
 </p>
 <ul id="results-container"></ul>
-<h2>Index</h2>
-<ul>
-    {% for page in site.knowledgebase %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% assign categorised_pages = site.knowledgebase | group_by: "category" | sort: "name" %}
+{% for group in categorised_pages %}
+    <h2>{{group.name | default: "uncategorised" | capitalize}}</h2>
+    {% for page in group.items %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
-</ul>
+{% endfor %}
