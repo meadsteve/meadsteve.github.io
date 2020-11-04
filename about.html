@@ -2,48 +2,49 @@
 layout: default
 title: MeadSteve's Dev Blog - About me
 ---
+<article>
+    <div>
+        <h2>
+            <i class="fas fa-user" style="color:darkgreen"></i>
+            <span class="actual-name">{{ site.data.me.name}}</span>
+            <span class="nickname"> ({{ site.data.me.username}})</span>
+        </h2>
+        <p>
+            {{ site.data.me.blurbs.general}}
+            At the moment <a href='{{ site.data.me.current_focus.link}}'>I mostly develop in {{ site.data.me.current_focus.language}}</a>.
+            I work as a {{ site.data.me.current_job.role}} at <a href='{{ site.data.me.current_job.link}}'>{{ site.data.me.current_job.name}}</a>.
+        </p>
+    </div>
 
-<div>
-    <h2>
-        <i class="fas fa-user" style="color:darkgreen"></i> 
-        <span class="actual-name">{{ site.data.me.name}}</span>
-        <span class="nickname"> ({{ site.data.me.username}})</span>
-    </h2>
-    <p>
-        {{ site.data.me.blurbs.general}}
-        At the moment <a href='{{ site.data.me.current_focus.link}}'>I mostly develop in {{ site.data.me.current_focus.language}}</a>.
-        I work as a {{ site.data.me.current_job.role}} at <a href='{{ site.data.me.current_job.link}}'>{{ site.data.me.current_job.name}}</a>.
-    </p>
-</div>
+    <div>
+        <h3><i class="fas fa-heart" style="color:deeppink"></i> Things I Love</h3>
+        <ul>
+            {% for thing in site.data.me.things_i_love %}
+                <li>{{ thing }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 
-<div>
-    <h3><i class="fas fa-heart" style="color:deeppink"></i> Things I Love</h3>
-    <ul>
-        {% for thing in site.data.me.things_i_love %}
-            <li>{{ thing }}</li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div>
-    <h3><i class="fas fa-wrench" style="color:darkslateblue"></i> Things I've Made</h3>
-    <ul>
-        {% assign interesting_libs = site.data.projects | where_exp:"p","p.type == 'library'" %}
-        {% assign interesting_sites = site.data.projects | where_exp:"p","p.type == 'website'" %}
-        {% for project in interesting_sites %}
-            <li><a href="{{ project.link }}">{{ project.text }}</a></li>
-        {% endfor %}
-        {% for project in interesting_libs %}
-            <li><a href="{{ project.link }}">{{ project.text }}</a></li>
-        {% endfor %}
-        <li>Lots of silly  mistakes</li>
-    </ul>
-</div>
+    <div>
+        <h3><i class="fas fa-wrench" style="color:darkslateblue"></i> Things I've Made</h3>
+        <ul>
+            {% assign interesting_libs = site.data.projects | where_exp:"p","p.type == 'library'" %}
+            {% assign interesting_sites = site.data.projects | where_exp:"p","p.type == 'website'" %}
+            {% for project in interesting_sites %}
+                <li><a href="{{ project.link }}">{{ project.text }}</a></li>
+            {% endfor %}
+            {% for project in interesting_libs %}
+                <li><a href="{{ project.link }}">{{ project.text }}</a></li>
+            {% endfor %}
+            <li>Lots of silly  mistakes</li>
+        </ul>
+    </div>
 
 
-<div>
-    <h3><i class="fa fa-tree" style="color:green"></i>Climate</h3>
-    <p>
-    Want to help me reduce my climate impact? Then visit here to donate: <a href="https://ecologi.com/mottraziers">ecologi.com/mottraziers</a>
-    </p>
-</div>
+    <div>
+        <h3><i class="fa fa-tree" style="color:green"></i>Climate</h3>
+        <p>
+        Want to help me reduce my climate impact? Then visit here to donate: <a href="https://ecologi.com/mottraziers">ecologi.com/mottraziers</a>
+        </p>
+    </div>
+</article>
