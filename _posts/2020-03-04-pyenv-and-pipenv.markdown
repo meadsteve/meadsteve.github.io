@@ -5,7 +5,6 @@ title:  "pipsi + pyenv + pipenv"
 date:   2020-03-04 10:00:00
 categories: programming
 summary: "Taming python setups with pipenv pyenv pipsi"
-icon: fas fa-utensils
 icon: fab fa-python
 tags:
     - python
