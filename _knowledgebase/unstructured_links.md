@@ -50,3 +50,4 @@ yet(maybe not totally unstructured).
 * https://read.amazon.com/notebook - Kindle note browsing
 * https://www.ifixit.com/ - Fixing, right to repair
 * https://futurecrun.ch - positive news
+* https://www.circularmonday.com/countries/sweden - shopping/consuming in a circular way in Sweden.
