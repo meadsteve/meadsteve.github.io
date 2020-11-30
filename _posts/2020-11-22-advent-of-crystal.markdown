@@ -18,7 +18,7 @@ setup.
 
 
 ## Getting started
-The language install, following the docs, went fairly smoothly and I found plugins for intelij so I'll be using this as it's
+The language install, following the docs, went fairly smoothly. I found a plugin for intelij so I'll be using this as my IDE as it's
 what I use for most things. I generally expect newer languages to ship with a testing tool. Crystal was no exception here.
 It comes with a tool called [spec][crystal-spec] that I got running without any real changes
 
