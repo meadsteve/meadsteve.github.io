@@ -29,7 +29,7 @@ Since this is a new language for me I thought I'd investigate what libraries are
 
 This sounded great to me as I'm not really sure what I'll be doing so having something helping me write correct code is going to help.
 
-### Getitng ameba installed
+### Getting ameba installed
 Crystal came with a dependency manager called shard. Running `shard init` was enough to get my project ready. Then I added ameba to my `shard.yml` and ran `shard install`. Here I ran in to my first error:
 
 ```
