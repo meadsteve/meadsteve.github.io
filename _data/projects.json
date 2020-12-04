@@ -3,7 +3,7 @@
     "text": "Lagom - A type based DI container for Python",
     "language": "python",
     "type": "library",
-    "link": "https://github.com/meadsteve/lagom",
+    "link": "https://lagom-di.readthedocs.io/en/latest/",
     "icon": "fas fa-university"
   },
   {
