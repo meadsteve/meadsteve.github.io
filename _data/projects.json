@@ -14,7 +14,7 @@
     "icon": "fas fa-project-diagram"
   },
   {
-    "text": "Wyrd - constrained types and other domain driven security helpers",
+    "text": "Wyrd - constrained types and other domain driven security helpers for Python",
     "language": "python",
     "type": "library",
     "link": "https://github.com/meadsteve/wyrd",
