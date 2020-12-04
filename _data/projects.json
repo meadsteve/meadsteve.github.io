@@ -14,10 +14,10 @@
     "icon": "fas fa-project-diagram"
   },
   {
-    "text": "Constrained Types - strings and numbers with rules",
+    "text": "Wyrd - constrained types and other domain driven security helpers",
     "language": "python",
     "type": "library",
-    "link": "https://github.com/meadsteve/constrained_types",
+    "link": "https://github.com/meadsteve/wyrd",
     "icon": "fas fa-tasks"
   },
   {
