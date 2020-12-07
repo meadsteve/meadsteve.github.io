@@ -32,7 +32,7 @@ I had a block of code like this:
     col_range = col_range.upper_half
   end
  ```
-It took me a longer than I'd care to admit that the second `if` was mutating the value of `char`. I'd love to have some immutability in the language here 
+It took me a longer than I'd care to admit to notice that the second `if` was mutating the value of `char`. I'd love to have some immutability in the language here 
 to help me not fall into this trap. Maybe it has that? Maybe it has some patterns 
 
 ### Forgetting constructors are .new
