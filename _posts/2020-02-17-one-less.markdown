@@ -37,7 +37,7 @@ and, after a little more thought, I followed up with
 {% include tweet.html 
     username="meadsteve" 
     text="Always 1 less than you need" 
-    link="https://twitter.com/meadsteve/status/122837270567998668" 
+    link="https://twitter.com/meadsteve/status/1228372705679986689" 
 %}
 
 I wanted to clarify why I thought this way. I'm making the following assumptions:
