@@ -11,6 +11,8 @@ tags:
     - new language
 ---
 
+**Update: My solutions can be found in this repo: [meadsteve/advent-of-code-2020][github-my-solutions]**
+
 I've decided to do this year's [advent of code][website-advent] in [crystal lang][website-crystal].
 In an attempt to make things more relaxed on the first day I spent
 some time playing with the language and getting my environment 
@@ -53,3 +55,4 @@ I've got the language compiler, tests and static analysis running. My IDE is doi
 [website-crystal]: https://crystal-lang.org/
 [crystal-spec]: https://crystal-lang.org/reference/guides/testing.html
 [crystal-ameba]: https://crystalshards.org/shards/github/crystal-ameba/ameba
+[github-my-solutions]: https://github.com/meadsteve/advent-of-code-2020
