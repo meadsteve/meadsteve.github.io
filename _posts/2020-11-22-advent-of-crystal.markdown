@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Advent of Crystal(lang)"
-date:   2020-03-04 10:00:00
+date:   2020-11-22 10:00:00
 categories: programming
 summary: "Getting ready for advent of code in crystal lang"
 icon: fas fa-gem
