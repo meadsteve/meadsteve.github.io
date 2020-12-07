@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Advent of Mistakes"
-date:   2020-03-04 10:00:00
+date:   2020-12-07 10:00:00
 categories: programming
 summary: "The mistakes I've made during this year's advent of code whilst learning crystal"
 icon: fas fa-gem
