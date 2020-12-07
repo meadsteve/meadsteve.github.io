@@ -50,6 +50,10 @@ nav  i {
   width: 1em;
 }
 
+div {
+  padding-bottom: 1em;
+}
+
 /** Link styling **/
 a:link {
   color: black;
