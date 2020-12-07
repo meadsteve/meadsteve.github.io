@@ -14,13 +14,21 @@ tags:
 ---
 
 For this year's advent of code I decided to try a new language: [crystal](./2020-11-22-advent-of-crystal.markdown).
-Here are some of the mistakes I made (often more than once) whilst working with this new language. 
+I wanted to write about the challenges I've faced writing in a language new to me.
 
-## assignment (=) when I meant equality check (==)
+## Frustrating bugs
 
-## Forgetting constructors are .new
+Here are some of the mistakes I made (often more than once) whilst working with this new language.
 
-## Overriding a method in the same class :facepalm:
+### assignment (=) when I meant equality check (==)
 
-## '' for chars "" for strings
+### Forgetting constructors are .new
 
+### Overriding a method in the same class :facepalm:
+
+### '' for chars "" for strings
+
+## Non-idomatic Code
+
+The harder thing is the feeling that the code I'm writing is clumsy and not embracing the language yet. I think the solution
+here would be spending more time reading Crystal (and probably) ruby code.
