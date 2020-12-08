@@ -11,6 +11,7 @@ tags:
     - new language
     - mistakes
 ---
+**Update: The solutions (without these mistakes) can be found in this repo: [meadsteve/advent-of-code-2020](https://github.com/meadsteve/advent-of-code-2020)**
 
 For this year's advent of code I decided to try a new language: [crystal](https://blog.meadsteve.dev/programming/2020/11/22/advent-of-crystal/).
 I wanted to write about the challenges I've faced writing in a language new to me.
