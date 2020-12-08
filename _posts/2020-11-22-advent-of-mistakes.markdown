@@ -12,7 +12,7 @@ tags:
     - mistakes
 ---
 
-For this year's advent of code I decided to try a new language: [crystal](./2020-11-22-advent-of-crystal.markdown).
+For this year's advent of code I decided to try a new language: [crystal](https://blog.meadsteve.dev/programming/2020/11/22/advent-of-crystal/).
 I wanted to write about the challenges I've faced writing in a language new to me.
 
 ## Frustrating bugs
