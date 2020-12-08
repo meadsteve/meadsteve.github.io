@@ -109,6 +109,11 @@ blockquote.twitter-tweet {
   padding: 0.5em 2em 1em 2em;
 }
 
+div.twitter-tweet{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /** Code styling  **/
 pre.highlight {
   overflow: scroll;
