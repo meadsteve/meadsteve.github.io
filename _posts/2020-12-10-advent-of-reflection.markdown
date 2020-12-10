@@ -12,7 +12,7 @@ tags:
     - new language
     - lessons
     - reflection
-    -retrospective
+    - retrospective
 ---
 
 ## Things I've missed
