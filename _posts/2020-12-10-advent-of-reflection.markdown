@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Advent of Reflection"
 published: false
-date:   2020-12-13 10:00:00
+title: "Advent of Reflection"
+date:  2020-12-13 10:00:00
 categories: programming
 summary: "Reflections on learning crystal lang for advent of code"
 icon: fas fa-gem
