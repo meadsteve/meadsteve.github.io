@@ -23,3 +23,4 @@ tags:
 ## Things I like
 * Function overloading based on type.
 * the speed
+* After a little work that code reads in an expressive manner.
