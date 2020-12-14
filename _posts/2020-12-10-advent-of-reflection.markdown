@@ -25,3 +25,4 @@ tags:
 * the speed
 * After a little work that code reads in an expressive manner.
 * The fast feedback cycle. The compiler was generally good at pointing out mistakes.
+* Nice standard library.
