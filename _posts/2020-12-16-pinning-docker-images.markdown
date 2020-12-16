@@ -30,4 +30,18 @@ end up with whatever the lastest happens to be
 FROM python:3.8
 ```
 
-TODO
+This is better. I'm now communicating what I actually depend on. In this example that I want a python container with python 3.8. I can get more specific
+too:
+
+```dockerfile
+FROM python:3.8.3-slim
+```
+
+For a lot of use cases this is probably enough. Whenever I build my continer I will be building with python `3.8.3` and it will be the slim image. 
+However I'm not protected from bringing in unexpected changes. Docker tags are mutable. `3.8.3-slim` today is not the same as `3.8.3-slim` tomorrow.
+
+## Step three - pinning by tag and digest
+```dockerfile
+FROM python:3.8.3-slim@sha256:9b574c348d20673be5a5c716f4fdefac56643c103c0c7005e2160c6a843faab8
+```
+https://docs.docker.com/engine/reference/commandline/pull/#pull-an-image-by-digest-immutable-identifier
