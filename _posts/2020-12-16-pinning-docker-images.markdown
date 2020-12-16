@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Advent of Reflection"
+title: "Pinning Dockerfiles"
 date:  2020-12-16 10:00:00
 categories: programming
 summary: "How I typically pin docker images for a project"
