@@ -26,6 +26,9 @@ yet(maybe not totally unstructured).
 ## Frontend
 * https://micro-frontends.org/ - information around microfrontends
 
+## CLI
+* https://clig.dev/ - An open-source guide to help you write better command-line programs, taking traditional UNIX principles and updating them for the modern day.
+
 ## Remote working
 * https://www.toptal.com/remote-work-playbook - suddenly remote playbook
 * https://www.remotemobprogramming.org/ - remote mob programming 
