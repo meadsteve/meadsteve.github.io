@@ -21,8 +21,8 @@ The short answer is for docker images I tend to pin by both a tag **and** a dige
 FROM python
 ```
 
-This will work. I'll use it whilst hacking something together. But how long will it work for? There's no request for any specific version of python at all so you'll
-end up with whatever the lastest happens to be
+This will work. I'll use it whilst hacking something together. But how long will it work for? There's no request for any specific version of python at all. You'll
+end up with whatever the lastest happens to be.
 
 ## Step two - pinning by tag
 ```dockerfile
