@@ -49,4 +49,4 @@ When you have the digest you *can* leave out the tag but I like to leave this in
 
 
 ## Summary
-When hacking I'll go as far as step 1. For building system and tooling I may consider stopping at step 2 and for things I'm releaseing and deploying to production I tend to go all the way to step 3. I like having controller over what is deployed and when updates occur.
+When hacking I'll go as far as step 1. For build systems and tooling I may consider stopping at step 2. For things I'm releaseing and deploying to production I tend to go all the way to step 3. I like having controller over what is deployed and when updates occur.
