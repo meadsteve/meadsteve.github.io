@@ -119,7 +119,7 @@ div.twitter-tweet{
 
 /** Code styling  **/
 pre.highlight {
-  overflow: scroll;
+  overflow: auto;
 }
 div.highlight {
   color: lightblue;
