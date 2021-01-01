@@ -39,8 +39,8 @@ if __name__ == "__main__":
 
 The value in the code I was writing was the output of `typer.echo`. So I wanted to test it.
 Initially in my tests I was monkey patching `typer.echo` and asserting that it matched what
-I wanted. This was okay, but I don't like monkey patching with mocks as it often starts to
-get very tangled and complicated.
+I wanted. This was okay, but I don't like monkey patching with mocks as it often becomes 
+very tangled and complicated.
 
 ## A solution? Yielding.
 Since I already had a function representing my command invocation I thought it would be
