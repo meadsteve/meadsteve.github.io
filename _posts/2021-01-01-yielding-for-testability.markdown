@@ -47,7 +47,7 @@ Since I already had a function representing my command invocation I thought it w
 really nice if I could just return the output. Then I could call the function and assert
 that it had output what I wanted. However, given that quite significant delays could
 happen in between each of my echo statements I didn't really want to wait until the end
-to get all my output. So instead `yield` seemed like a good candidate.  I update my code
+to get all my output. So instead `yield` seemed like a good candidate.  I updated my code
 to look something like this:
 
 ```python
