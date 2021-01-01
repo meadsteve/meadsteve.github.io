@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 title: "Yielding for testability in python"
 date:  2021-01-01 10:00:00
 categories: programming
