@@ -36,8 +36,8 @@ too:
 FROM python:3.8.3-slim
 ```
 
-For a lot of use cases this is probably enough. Whenever I build my continer I will be building with python `3.8.3` and it will be the slim image. 
-However I'm not protected from bringing in unexpected changes. Docker tags are mutable. `3.8.3-slim` today is not the same as `3.8.3-slim` tomorrow.
+For a lot of use cases this is probably enough. Whenever I build my container I will be building with python `3.8.3` and it will be the slim image. 
+However, I'm not protected from bringing in unexpected changes. Docker tags are mutable. `3.8.3-slim` today is not the same as `3.8.3-slim` tomorrow.
 
 ## Step three - pinning by tag and digest
 ```dockerfile
@@ -49,4 +49,4 @@ When you have the digest you *can* leave out the tag but I like to leave this in
 
 
 ## Summary
-When hacking I'll go as far as step 1. For build systems and tooling I may consider stopping at step 2. For things I'm releaseing and deploying to production I tend to go all the way to step 3. I like having controller over what is deployed and when updates occur.
+When hacking I'll go as far as step 1. For build systems and tooling I may consider stopping at step 2. For things that I'm releasing and deploying to production I tend to go all the way to step 3. I like having control over what is deployed and when updates occur.
