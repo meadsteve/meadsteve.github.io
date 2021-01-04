@@ -1,7 +1,7 @@
 
 <div class="post{% if post.published == false %} unpublished{% endif %}">
   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-    <h3 class="h3 post-title">
+    <h3 class="post-title">
       {% include post_icon.html %}
       <span>{{ post.title }}</span>
     </h3>
