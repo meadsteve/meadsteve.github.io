@@ -1,0 +1,13 @@
+---
+layout: default
+title: Unpublished blog posts
+---
+<p>
+    The posts here have not been published yet. This could be for a number of reasons.
+    They are likely either posts I've abandoned or ones that are about to be published but
+    aren't quite finished.
+</p>
+{% assign unpublished-posts = site.posts | where: "published", "false" | sort: "date" | reverse  %}
+{% for post in unpublished-posts  %}
+    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+{% endfor %}

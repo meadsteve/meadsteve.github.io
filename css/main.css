@@ -83,6 +83,10 @@ i {
   width: 1.4em;
 }
 
+.unpublished h2.post-title i {
+  color: grey;
+}
+
 h2.post-title i {
   color: darkorchid;
 }
