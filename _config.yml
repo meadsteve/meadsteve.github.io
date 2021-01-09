@@ -11,6 +11,8 @@ future: true
 collections:
   knowledgebase:
     output: true
+  all_posts:
+    output: true
 
 # Build settings
 markdown: kramdown
