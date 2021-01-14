@@ -6,7 +6,8 @@ title: MeadSteve's Dev Blog
 <div class="home">
 
   <div class="posts">
-    {% for post in paginator.posts %}
+    {% assign published-posts = paginator.posts | where_exp: "post", "post.published != false" %}
+    {% for post in published-posts %}
       {% include post_title.html %}
     {% endfor %}
   </div>

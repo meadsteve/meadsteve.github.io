@@ -6,12 +6,12 @@ description: "Rambling thoughts, ideas and other stuff from MeadSteve"
 baseurl: ""
 animated: false
 show_related_posts: false
+unpublished: true
 future: true
+
 
 collections:
   knowledgebase:
-    output: true
-  all_posts:
     output: true
 
 # Build settings

@@ -7,7 +7,7 @@ title: Unpublished blog posts
     They are likely either posts I've abandoned or ones that are about to be published but
     aren't quite finished.
 </p>
-{% assign unpublished-posts = site.all_posts | where: "published", "false" | sort: "date" | reverse  %}
+{% assign unpublished-posts = site.posts | where: "published", "false" | sort: "date" | reverse  %}
 {% for post in unpublished-posts  %}
     <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 {% endfor %}

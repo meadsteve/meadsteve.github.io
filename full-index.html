@@ -21,7 +21,7 @@ title: MeadSteve's Dev Blog - Full index
               <ul>
               {% assign sorted_posts = tag[1] | sort: "date" | reverse %}
               {% for post in sorted_posts %}
-                  <li class='tag_post'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                  <li class='tag_post {% if post.published == false %} unpublished{% endif %}'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} {% if post.published == false %} (unpublished) {% endif %}</a></li>
               {% endfor %}
             </ul>
           </div>
