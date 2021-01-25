@@ -1,10 +1,7 @@
-
-<div class="post{% if post.published == false %} unpublished{% endif %}">
-  <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-    <h3 class="post-title">
-      {% include post_icon.html %}
-      <span>{{ post.title }}</span>
-      {% if post.published == false %}<span>(unpublished)</span>{% endif %}
-    </h3>
-  </a>
-</div>
+<a href="{{ post.url | prepend: site.baseurl }}" class="post-link {% if post.published == false %} unpublished{% endif %}">
+  <h3 class="post-title">
+    {% include post_icon.html %}
+    <span>{{ post.title }}</span>
+    {% if post.published == false %}<span>(unpublished)</span>{% endif %}
+  </h3>
+</a>
