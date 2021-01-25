@@ -4,6 +4,7 @@
     <h2 class="post-title">
       {% include post_icon.html %}
       <span>{{ post.title }}</span>
+      {% if post.published == false %}<span>(unpublished)</span>{% endif %}
     </h2>
   </a>
 </div>

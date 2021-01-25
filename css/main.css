@@ -31,6 +31,10 @@ footer {
   font-size: 0.5em;
 }
 
+p.unpublished-notice{
+  font-weight: bold;
+}
+
 img {
   max-width:100%;
   height:auto;

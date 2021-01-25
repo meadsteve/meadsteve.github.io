@@ -9,6 +9,12 @@ layout: default
     {% if page.update_date %}
     <span class="post-meta">Updated: <time datetime='{{ page.update_date | date: "%Y-%m-%d %H:%M:%S" }}'>{{ page.update_date | date: "%b %-d, %Y" }}</time></span><br>
     {% endif %}
+    {% if page.published == false %}
+    <p class="unpublished-notice">
+      This is an unpublished post. It's likely (more) full of spelling mistakes and errors.
+      It may also end abruptly without a conclusion.
+    </p>
+    {% endif %}
   </header>
   {{ content }}
 </article>
