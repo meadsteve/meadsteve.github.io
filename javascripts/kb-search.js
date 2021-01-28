@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', (_event) => {
                 searchInput: searchInput,
                 resultsContainer: searchResultsContainer,
                 json: searchData,
-                searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>'
             });
             searchStuff.style.display = "inline";
             searchPlaceholder.style.display = "none";
