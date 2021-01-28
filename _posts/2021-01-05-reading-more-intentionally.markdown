@@ -1,9 +1,8 @@
 ---
 layout: post
-published: false
 title: "Reading more intentionally"
-date:  2021-01-05 10:00:00
-categories: programming
+date:  2021-01-28 10:00:00
+categories: productivity
 summary: "How I'm trying to control what I read more consciously - harness the mindless scrolling"
 icon: fas fa-book
 tags:
@@ -31,3 +30,8 @@ sure I've got a couple of interesting books ready.
 ## Do I have enough time/energy to read "something"?
 I can now just pick something from my instapaper. It estimates reading time, so I can pick something that fits
 the time I have.
+
+## Has this worked?
+So far? Subjectively? Yes. I've spent more time reading interesting articles. I've also 
+read a decent amount of a book too. Will this keep up and become a habit? Will I forget?
+I don't know.
