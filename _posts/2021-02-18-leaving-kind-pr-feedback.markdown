@@ -14,6 +14,14 @@ tags:
     - Review
 ---
 
+I started thinking about this because of this tweet:
+
+{% include tweet.html 
+    username="imosquera" 
+    text="I hear a lot about how PRs feedback can be taken personally  and be emotionally painful. What are some of the guidelines your team follows to avoid this from happen?" 
+    link="https://twitter.com/imosquera/status/1361703634115813376" 
+%}
+
 ## Assumptions
 Before I get to my answer to how to leave more constructive feedback I'm going to state some assumptions I've made.
 
