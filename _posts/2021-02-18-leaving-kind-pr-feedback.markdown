@@ -26,4 +26,7 @@ I started thinking about this because of this tweet:
 Before I get to my answer to how to leave more constructive feedback I'm going to state some assumptions I've made.
 
 ### PRs are often too late in the process for major changes.
+### Most of the time it's better to move forward learn something then refactor
 ### We're often more emotionally invested in our code that we'd like to admit 
+
+## How I review
