@@ -28,5 +28,6 @@ Before I get to my answer to how to leave more constructive feedback I'm going t
 ### PRs are often too late in the process for major changes.
 ### Most of the time it's better to move forward learn something then refactor
 ### We're often more emotionally invested in our code that we'd like to admit 
+### PRs are a learning oppurtunity for the reviewer(s) too
 
 ## How I review
