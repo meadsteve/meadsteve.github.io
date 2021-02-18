@@ -13,3 +13,9 @@ tags:
     - PR
     - Review
 ---
+
+## Assumptions
+Before I get to my answer to how to leave more constructive feedback I'm going to state some assumptions I've made.
+
+### PRs are often too late in the process for major changes.
+### We're often more emotionally invested in our code that we'd like to admit 
