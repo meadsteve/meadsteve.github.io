@@ -28,6 +28,8 @@ Before I get to my answer to how to leave more constructive feedback I'm going t
 ### PRs are often too late in the process for major changes.
 ### Most of the time it's better to move forward learn something then refactor
 ### We're often more emotionally invested in our code that we'd like to admit 
-### PRs are a learning oppurtunity for the reviewer(s) too
+### PRs are a learning opportunity for the reviewer(s) too
 
 ## How I review
+
+The first thing I want to look for is potential security issues or major design flaws. If I find anything like this I'll want to flag the PR as one that needs work before it can be merged. Otherwise I'll consider the PR approved and ready for merge. 
