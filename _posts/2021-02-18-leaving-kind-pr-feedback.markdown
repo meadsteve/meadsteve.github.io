@@ -66,4 +66,4 @@ My preference is for the "light touch PRs" I described in my second pass. If we 
 
 ## Do I always follow this?
 
-No. Not strictly. Each team, situation and contributor is different and I'll try and adapt to that. Sometime I'll do more written feedback in a PR, sometimes I'll do more outside a PR. Sometimes I just get it wrong. What I've described is my ideal and my starting point.
+No. Not strictly. Each team, situation and contributor is different and I'll try and adapt to that. Sometimes I'll do more written feedback in a PR, sometimes I'll do more outside a PR. Sometimes I just get it wrong. What I've described is my ideal and my starting point.
