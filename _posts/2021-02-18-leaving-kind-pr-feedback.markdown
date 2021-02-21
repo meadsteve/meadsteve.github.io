@@ -25,10 +25,23 @@ I started thinking about this because of this tweet:
 ## Assumptions
 Before I get to my answer to how to leave more constructive feedback I'm going to state some assumptions I've made.
 
+### We're working in a team environment with richer forms of communications than a PR
+This post is assuming a team working on a project. Where there can be face to face meetungs, video calls, pairing, mobbing
+or any other activity like this.
+
 ### PRs are often too late in the process for major changes.
+For major changes we should try and pair, discuss or plan the issue before commiting time to a large code change.
+
 ### Most of the time it's better to move forward learn something then refactor
-### We're often more emotionally invested in our code that we'd like to admit 
+I like iterative development. Unless there's a major issue with the code or architecture I'd rather move forward, learn from it and apply 
+some refactoring after.
+
+### We're often more emotionally invested in our code that we'd like to admit
+Once time has been spent on a change it's very hard to not be commited to it.
+
 ### PRs are a learning opportunity for the reviewer(s) too
+I'll often ask questions to understand the code a little better. I treat this as a learning opportunity that *may* help with the review but
+doesn't have to,
 
 ## How I review
 
