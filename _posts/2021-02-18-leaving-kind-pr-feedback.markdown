@@ -23,7 +23,7 @@ I started thinking about this because of this tweet:
 %}
 
 ## Assumptions
-Before I get to my answer to how to leave more constructive feedback I'm going to state some assumptions I've made.
+Before I start discussing how I try to leave more constructive feedback I'm going to state some assumptions I've made.
 
 ### Testing and linting is automated
 Humans make lousy proof readers compared to a machine. I'm assuming issues of styling and obvious bugs don't require a comment.
