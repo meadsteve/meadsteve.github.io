@@ -29,7 +29,7 @@ Before I start discussing how I try to leave more constructive feedback I'm goin
 Humans make lousy proof readers compared to a machine. I'm assuming issues of styling and obvious bugs don't require a comment.
 
 ### We're working in a team environment with richer forms of communications than a PR
-This post is assuming a team working on a project. Where there can be face to face meetungs, video calls, pairing, mobbing
+This post assumes a team working on a project. Where there can be face to face meetungs, video calls, pairing, mobbing
 or any other activity like this. For open source a lot of what I'm going to write doesn't really apply as async PRs are the main way of communicating.
 
 ### PRs are often too late in the process for major changes.
