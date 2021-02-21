@@ -3,9 +3,8 @@ layout: post
 title: "Leaving kind (and productive) PR feedback"
 date:  2021-02-21 10:00:00
 categories: team-work
-summary: "How I'm trying to leave more consructive, useufl and kind feedback"
+summary: "How I'm trying to leave more constructive, useful and kind feedback"
 icon: fas fa-thumbs-up
-published: false
 tags:
     - productivity
     - team-work
