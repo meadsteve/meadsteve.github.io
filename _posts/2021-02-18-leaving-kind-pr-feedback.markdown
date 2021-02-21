@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Leaving kind (and productive) PR feedback"
-date:  2021-02-19 10:00:00
+date:  2021-02-21 10:00:00
 categories: team-work
 summary: "How I'm trying to leave more consructive, useufl and kind feedback"
 icon: fas fa-thumbs-up
@@ -26,21 +26,21 @@ I started thinking about this because of this tweet:
 Before I start discussing how I try to leave more constructive feedback I'm going to state some assumptions I've made.
 
 ### Testing and linting is automated
-Humans make lousy proof readers compared to a machine. I'm assuming issues of styling and obvious bugs don't require a comment.
+Humans make lousy proofreaders compared to a machine. I'm assuming issues of styling and obvious bugs don't require a comment.
 
 ### We're working in a team environment with richer forms of communications than a PR
-This post assumes a team working on a project. Where there can be face to face meetungs, video calls, pairing, mobbing
+This post assumes a team working on a project. Where there can be face to face meetings, video calls, pairing, mobbing
 or any other activity like this. For open source a lot of what I'm going to write doesn't really apply as async PRs are the main way of communicating.
 
 ### PRs are often too late in the process for major changes.
-For major changes we should try and pair, discuss or plan the issue before commiting time to a large code change.
+For major changes we should try to pair, discuss or plan the issue before committing time to a large code change.
 
 ### Most of the time it's better to move forward, learn something, then refactor
 I like iterative development. Unless there's a major issue with the code or architecture I'd rather move forward, learn from it and apply 
 some refactoring after.
 
 ### We're often more emotionally invested in our code that we'd like to admit
-Once time has been spent on a change it's very hard to not be commited to it.
+Once time has been spent on a change it's very hard to not be committed to it.
 
 ### PRs are a learning opportunity for the reviewer(s) too
 I'll often ask questions to understand the code a little better. I treat this as a learning opportunity that *may* help with the review but
