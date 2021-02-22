@@ -78,9 +78,15 @@ exclude = ["tests/", "scripts/"]
 ```
 
 ```python
+# version.py
 """Module for tracking the version of the library"""
 __version__ = "1.0.0"
 
 if __name__ == "__main__":
     print(__version__)
+```
+
+```python
+# __init__.py
+from .version import __version__
 ```
