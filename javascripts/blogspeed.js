@@ -3,19 +3,33 @@
 ---
 
 
-{% assign allposts = site.posts | where_exp: "post", "post.published != false" | sort: 'date' | reverse %}
-{% assign oldest = allposts | last %}
+{% assign allposts = site.posts | where_exp: "post", "post.published != false" | sort: 'date'%}
 
 
-const oldest = Date.parse("{{oldest.date}}".replace(" +0000", ""));
-const n5post = Date.parse("{{allposts[4].date}}".replace(" +0000", ""));
-const count = {{site.posts.size}};
+const postDates = [
+    {% for post in allposts %}
+    Date.parse("{{post.date}}".replace(" +0000", ""))
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+
+const oldest = postDates[0];
+const n5post = postDates[postDates.length - 5];
+const count = postDates.length;
+const threeishMonths = 1000 * 60 * 60 * 24 * 30 * 3;
+
+
+// Returns the posts per year for the last 3 months
+function rollingAverage(atDate) {
+    const threeishMonthsAgo = atDate - threeishMonths;
+    const postsInThePeriod = postDates.filter(d => d >= threeishMonthsAgo);
+    return postsInThePeriod.length * 4;
+}
 
 // Blog posts per year
 const lifetimeSpeed = (count / ((Date.now() - oldest) / 1000 / 60 / 60 / 24 / 365.25)).toFixed(2);
-const recentSpeed =  (5 / ((Date.now() - n5post) / 1000 / 60 / 60 / 24 / 365.25)).toFixed(2);
+const recentSpeed =  rollingAverage(Date.now());
 
 console.log(`Current blog speed is ${recentSpeed} posts per year (The lifetime average is ${lifetimeSpeed})`);
-
 const speedSection = document.getElementById("blogspeed");
-speedSection.innerHTML = (`<p><i class="fas fa-tachometer-alt"></i>Currently blogging at ${recentSpeed} posts per year</p>`)
+speedSection.innerHTML = (`<p><i class="fas fa-tachometer-alt"></i>Currently blogging at ${recentSpeed} posts per year</p>`);
