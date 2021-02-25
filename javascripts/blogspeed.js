@@ -18,4 +18,4 @@ const recentSpeed =  (5 / ((Date.now() - n5post) / 1000 / 60 / 60 / 24 / 365.25)
 console.log(`Current blog speed is ${recentSpeed} posts per year (The lifetime average is ${lifetimeSpeed})`);
 
 const speedSection = document.getElementById("blogspeed");
-speedSection.innerHTML = (`<p>Currently blogging at ${recentSpeed} posts per year</p>`)
+speedSection.innerHTML = (`<p><i class="fas fa-tachometer-alt"></i>Currently blogging at ${recentSpeed} posts per year</p>`)
