@@ -4,6 +4,7 @@ email: meadsteve@gmail.com
 author: Steve Brazier
 description: "Rambling thoughts, ideas and other stuff from MeadSteve"
 baseurl: ""
+url: "https://blog.meadsteve.dev"
 animated: false
 show_related_posts: false
 unpublished: true
