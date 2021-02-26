@@ -8,7 +8,17 @@ layout: null
 </div>
 <script src="/javascripts/blogspeed.js"></script>
 <script>
-    const dataPoints = postDates.map(d => {
+    let allDates = [];
+
+    const currDate = moment(oldest).startOf('day');
+    const lastDate = moment(Date.now()).startOf('day');
+
+    while(currDate.add(1, 'months').diff(lastDate) < 0) {
+        console.log(currDate.toDate());
+        allDates.push(currDate.clone().toDate());
+    }
+
+    const dataPoints = allDates.map(d => {
         return {x: d, y: recentAverage(d, threeishMonths)}
     });
 
@@ -19,8 +29,9 @@ layout: null
         data: {
             datasets: [{
                 label: 'Blog posts per year (based on previous 3 months)',
-                backgroundColor: 'rgba(120, 0, 120, 0.1)',
-                data: dataPoints
+                backgroundColor: 'rgba(120, 0, 120, 0.3)',
+                data: dataPoints,
+                pointRadius: 0,
             }]
         },
         options: {

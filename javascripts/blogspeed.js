@@ -35,5 +35,5 @@ const recentSpeed =  recentAverage(Date.now(), threeishMonths);
 console.log(`Current blog speed is ${recentSpeed} posts per year (The lifetime average is ${lifetimeSpeed})`);
 const speedSection = document.getElementById("blogspeed");
 if (speedSection) {
-    speedSection.innerHTML = (`<p><i class="fas fa-tachometer-alt"></i>Currently blogging at ${recentSpeed} posts per year</p>`);
+    speedSection.innerHTML = (`<p><a href="/speed"><i class="fas fa-tachometer-alt"></i>Currently blogging at ${recentSpeed} posts per year</a></p>`);
 }
