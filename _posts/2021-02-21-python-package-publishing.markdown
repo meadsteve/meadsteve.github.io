@@ -14,8 +14,57 @@ tags:
     - flit
     - git
 ---
+The purpose of this post is to give a brief overview of the pieces I've got in place to build and publish python libraries.
 
-TODO: Writing
+## Code and testing
+The code is hosted on github. Github actions are triggered on each PR and push.
+
+## Versionining
+
+```python
+# version.py
+"""Module for tracking the version of the library"""
+__version__ = "1.0.0"
+
+if __name__ == "__main__":
+    print(__version__)
+```
+
+```python
+# __init__.py
+from .version import __version__
+```
+
+## python packaging
+pyproject.toml
+```toml
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "lagom"
+author = "meadsteve"
+author-email = "meadsteve@gmail.com"
+requires-python="~=3.6"
+description-file="README.md"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+
+[tool.flit.sdist]
+include = ["lagom/githash.txt"]
+exclude = ["tests/", "scripts/"]
+```
+
+
+## Publish script
 
 publish.sh
 ```bash
@@ -48,45 +97,4 @@ pipenv run flit publish
 git tag -a "$version" -m "$version"
 git push origin "$version"
 exit 0
-```
-
-pyproject.toml
-```toml
-[build-system]
-requires = ["flit_core >=2,<4"]
-build-backend = "flit.buildapi"
-
-[tool.flit.metadata]
-module = "lagom"
-author = "meadsteve"
-author-email = "meadsteve@gmail.com"
-requires-python="~=3.6"
-description-file="README.md"
-classifiers = [
-  "License :: OSI Approved :: MIT License",
-  "Programming Language :: Python :: 3.6",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Topic :: Software Development :: Libraries",
-  "Typing :: Typed",
-]
-
-[tool.flit.sdist]
-include = ["lagom/githash.txt"]
-exclude = ["tests/", "scripts/"]
-```
-
-```python
-# version.py
-"""Module for tracking the version of the library"""
-__version__ = "1.0.0"
-
-if __name__ == "__main__":
-    print(__version__)
-```
-
-```python
-# __init__.py
-from .version import __version__
 ```
