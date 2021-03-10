@@ -48,10 +48,11 @@ jobs:
 ```     
 
 A makefile in my repo has a test target which runs some combination of:
-    * [pytest](https://docs.pytest.org/en/stable/) - for testing (including doc tests)
-    * [mypy](http://mypy-lang.org/) - for static analysis
-    * [black](https://pypi.org/project/black/) - to check that code has been auto-formatted
-    * [interrogate](https://pypi.org/project/interrogate/) - to make sure I've doc stringed a reasonable amount of the code.
+
+  * [pytest](https://docs.pytest.org/en/stable/) - for testing (including doc tests
+  * [mypy](http://mypy-lang.org/) - for static analysis
+  * [black](https://pypi.org/project/black/) - to check that code has been auto-formatted
+  * [interrogate](https://pypi.org/project/interrogate/) - to make sure I've doc stringed a reasonable amount of the code.
 
 I currently target all minor python versions higher than 3.6.
 
