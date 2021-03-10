@@ -48,7 +48,7 @@ jobs:
 
 A makefile in my repo has a test target which runs all the testing and linting for my project. I currently target all minor python versions higher than 3.6.
 
-## Versionining
+## Versioning
 In the package I have a `version.py` this contains a variable representing the version of my package but also acts as a script that prints out the version number (I use this later in various bash scripts).
 ```python
 # version.py
