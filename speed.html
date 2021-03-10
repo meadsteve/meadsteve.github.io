@@ -22,6 +22,10 @@ layout: null
         return {x: d, y: recentAverage(d, threeishMonths)}
     });
 
+    const lifetimeAveragePoints = allDates.map(d => {
+        return {x: d, y: lifetimeSpeed}
+    });
+
     let ctx = document.getElementById('mySpeedChart').getContext('2d');
     console.log(dataPoints);
     let scatterChart = new Chart(ctx, {
@@ -31,6 +35,11 @@ layout: null
                 label: 'Blog posts per year (based on previous 3 months)',
                 backgroundColor: 'rgba(120, 0, 120, 0.3)',
                 data: dataPoints,
+                pointRadius: 0,
+            },{
+                label: 'Blog posts per year (Life time average)',
+                backgroundColor: 'rgba(120, 0, 0, 0.1)',
+                data: lifetimeAveragePoints,
                 pointRadius: 0,
             }]
         },
