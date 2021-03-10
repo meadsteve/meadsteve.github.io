@@ -17,10 +17,39 @@ tags:
 The purpose of this post is to give a brief overview of the pieces I've got in place to build and publish python libraries.
 
 ## Code and testing
-The code is hosted on github. Github actions are triggered on each PR and push.
+The code is hosted on github. Github actions are triggered on each PR and push. The github action config is relatively small:
+
+```yaml
+name: Validate
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10.0-alpha.4"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        make setup
+    - name: Run Tests
+      run: |
+        make test
+```     
+
+A makefile in my repo has a test target which runs all the testing and linting for my project. I currently target all minor python versions higher than 3.6.
 
 ## Versionining
-
+In the package I have a `version.py` this contains a variable representing the version of my package but also acts as a script that prints out the version number (I use this later in various bash scripts).
 ```python
 # version.py
 """Module for tracking the version of the library"""
@@ -29,6 +58,8 @@ __version__ = "1.0.0"
 if __name__ == "__main__":
     print(__version__)
 ```
+
+This version number is also imported from the root of my python package:
 
 ```python
 # __init__.py
