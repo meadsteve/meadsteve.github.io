@@ -1,8 +1,7 @@
 ---
 layout: post
-published: false
 title: "How I publish python packages"
-date:  2021-02-21 10:00:00
+date:  2021-03-10 20:00:00
 categories: programming
 summary: "How I package up and tag python libraries I own"
 icon: fab fa-python
