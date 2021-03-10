@@ -15,6 +15,7 @@ tags:
     - git
 ---
 The purpose of this post is to give a brief overview of the pieces I've got in place to build and publish python libraries.
+I'm not going to cover any of the steps in much detail though I may in later posts.
 
 ## Code and testing
 The code is hosted on github. Github actions are triggered on each PR and push. The github action config is relatively small:
@@ -46,7 +47,13 @@ jobs:
         make test
 ```     
 
-A makefile in my repo has a test target which runs all the testing and linting for my project. I currently target all minor python versions higher than 3.6.
+A makefile in my repo has a test target which runs some combination of:
+    * [pytest](https://docs.pytest.org/en/stable/) - for testing (including doc tests)
+    * [mypy](http://mypy-lang.org/) - for static analysis
+    * [black](https://pypi.org/project/black/) - to check that code has been auto-formatted
+    * [interrogate](https://pypi.org/project/interrogate/) - to make sure I've doc stringed a reasonable amount of the code.
+
+I currently target all minor python versions higher than 3.6.
 
 ## Versioning
 In the package I have a `version.py` this contains a variable representing the version of my package but also acts as a script that prints out the version number (I use this later in various bash scripts).
@@ -67,8 +74,11 @@ from .version import __version__
 ```
 
 ## python packaging
-pyproject.toml
+For building and getting the package onto pypi I use [flit](https://github.com/takluyver/flit). So far
+it's the simplest tool I've found for this and works with a fairly small amount of config.
+
 ```toml
+# pyproject.toml
 [build-system]
 requires = ["flit_core >=2,<4"]
 build-backend = "flit.buildapi"
@@ -76,7 +86,7 @@ build-backend = "flit.buildapi"
 [tool.flit.metadata]
 module = "lagom"
 author = "meadsteve"
-author-email = "meadsteve@gmail.com"
+author-email = "steve@meadsteve.dev"
 requires-python="~=3.6"
 description-file="README.md"
 classifiers = [
@@ -90,28 +100,33 @@ classifiers = [
 ]
 
 [tool.flit.sdist]
-include = ["lagom/githash.txt"]
 exclude = ["tests/", "scripts/"]
 ```
 
 
 ## Publish script
 
-publish.sh
+Once the build checks have passed on github I have a bash script called `publish.sh` that I run locally.
+This does a few things
+
+### Checks for any blocking issues
+Sometimes I have something I want to fix before I consider releasing. The master branch may contain breaking changes
+or be broken. So I don't forget I create an issue tagged as a release_blocker and use the github api to check there
+are none of these.
+
 ```bash
-#!/usr/bin/env bash
-
-set -ex
-
-# First check for any issues that need to be resolved before releasing
 blocking_issues=$(curl 'https://api.github.com/repos/meadsteve/lagom/issues?labels=release_blocker'|jq length)
 
 if [[ "$blocking_issues" -gt 0 ]]; then
   echo "There are $blocking_issues issues that must be fixed before release."
   exit 1
 fi
+```
 
-# Next check that we've not already released this version
+### Checks for existing git tags with the version number
+I have a git tag for each released version of the software. So before any packaging I check that
+a tag with the current version doesn't already exist (this is where `version.py` from earlier helps).
+```bash
 version=$(pipenv run python lagom/version.py)
 
 git fetch --tags
@@ -121,11 +136,18 @@ then
     echo "Version already released"
     exit 2
 fi
+```
 
-# Everything is okay. Tag and publish to pypi
-git rev-parse HEAD > lagom/githash.txt
+### Push and tag
+Finally if everything was okay then I run the flit command that publishes the package. After this is successful
+I automatically tag the commit and push this back up to the main github repo.
+```bash
 pipenv run flit publish
 git tag -a "$version" -m "$version"
 git push origin "$version"
 exit 0
 ```
+
+## And that's it
+I've not spent too much time on this flow but it gives me enough automation and tracking to be comfortable in
+releasing code without too much fuss that I know has been tested.
