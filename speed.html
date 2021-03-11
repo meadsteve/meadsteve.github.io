@@ -17,6 +17,7 @@ layout: null
         console.log(currDate.toDate());
         allDates.push(currDate.clone().toDate());
     }
+    allDates.push(Date.now()); // Make sure we have the latest right now
 
     const dataPoints = allDates.map(d => {
         return {x: d, y: recentAverage(d, threeishMonths)}
