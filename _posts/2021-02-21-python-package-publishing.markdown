@@ -26,7 +26,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: $\{{ matrix.python-version }}
+    name: ${ { matrix.python-version } }
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -34,10 +34,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python ${ { matrix.python-version } }
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${ { matrix.python-version } }
     - name: Install dependencies
       run: |
         make setup
