@@ -26,7 +26,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: $\{\{ matrix.python-version \}\}
+    name: "${{ matrix.python-version }}"
     runs-on: ubuntu-latest
     strategy:
       matrix:
