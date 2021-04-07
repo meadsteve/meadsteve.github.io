@@ -28,6 +28,13 @@
     "icon": "fas fa-utensils"
   },
   {
+    "text": "isseven?",
+    "language": "python",
+    "type": "website",
+    "link": "https://isseven.meadsteve.dev/",
+    "icon": "fas fa-question"
+  },
+  {
     "text": "The Dice API",
     "language": "php",
     "type": "website",
