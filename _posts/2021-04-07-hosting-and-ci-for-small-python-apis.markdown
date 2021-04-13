@@ -16,3 +16,70 @@ tags:
 ---
 
 TODO: write stuff
+
+## Github actions
+```ỳaml
+
+name: Validate
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Test ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10.0-alpha.4"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pip install pipenv && pipenv install --dev
+    - name: Validate code
+      run: |
+        ./validate.sh
+```
+
+## Scripts
+### format.sh 
+```bash
+#!/usr/bin/env bash
+pipenv run black isseven tests
+```
+
+### run.sh
+```bash
+#!/usr/bin/env bash
+pipenv run uvicorn isseven:app --reload
+```
+
+### test.sh
+```bash
+#!/usr/bin/env bash
+set -ex
+export PYTHONPATH=.
+pipenv run pytest tests
+pipenv run mypy --config-file mypy.ini isseven tests
+pipenv run black --check isseven tests
+```
+## Heroku
+
+### Procfile
+```bash
+web: gunicorn some_app_name:app -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT
+```
+
+### runtime.txt
+```
+python-3.8.8
+```
+
+## FastAPI & uvicorn
+
+## Pipenv, mypy, black & pytest
