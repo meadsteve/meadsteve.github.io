@@ -9,61 +9,59 @@ title: What meadsteve knows about Python
 {% assign Python-sites = Python-projects-all | where_exp:"p","p.type == 'website'" %}
 {% assign Python-talks = Python-projects-all | where_exp:"p","p.type == 'talk'" %}
 {% assign Python-katas = Python-projects-all | where_exp:"p","p.type == 'kata'" %}
-<article>
-    <div class="specific-summary">
-        <div class="intro">
-            <h2 id="what-i-know">
-                <i class="fas fa-chalkboard-teacher"></i>
-                What I know about Python
-            </h2>
-            <p>
-                {{ site.data.me.blurbs.python}}
-            </p>
-        </div>
-        <div class="posts">
-            <h2 id="blog-posts">
-                <i class="fas fa-pencil-alt"></i>
-                Blog posts
-            </h2>
-            {% for post in Python-posts %}
-                {% include post_title_short.html %}
-            {% endfor %}
-        </div>
-        <div class="library-list">
-            <h2 id="libraries">
-                <i class="fas fa-file-code"></i>
-                Python Libraries
-            </h2>
-            {% for project in Python-libraries %}
-                {% include project-link.html %}
-            {% endfor %}
-        </div>
-        <div class="site-list">
-            <h2 id="sites">
-                <i class="fas fa-globe"></i>
-                Websites
-            </h2>
-            {% for project in Python-sites %}
-                {% include project-link.html %}
-            {% endfor %}
-        </div>
-        <div class="talk-list">
-            <h2 id="talks">
-                <i class="fas fa-bullhorn"></i>
-                Talks
-            </h2>
-            {% for project in Python-talks %}
-                {% include project-link.html %}
-            {% endfor %}
-        </div>
-        <div class="kata-list">
-            <h2 id="katas">
-                <i class="fas fa-hand-rock"></i>
-                Katas
-            </h2>
-            {% for project in Python-katas %}
-                {% include project-link.html %}
-            {% endfor %}
-        </div>
-    </div>
+<article class="specific-summary">
+    <section class="intro">
+        <h2 id="what-i-know">
+            <i class="fas fa-chalkboard-teacher"></i>
+            What I know about Python
+        </h2>
+        <p>
+            {{ site.data.me.blurbs.python}}
+        </p>
+    </section>
+    <section class="posts">
+        <h2 id="blog-posts">
+            <i class="fas fa-pencil-alt"></i>
+            Blog posts
+        </h2>
+        {% for post in Python-posts %}
+            {% include post_title_short.html %}
+        {% endfor %}
+    </section>
+    <section class="library-list">
+        <h2 id="libraries">
+            <i class="fas fa-file-code"></i>
+            Python Libraries
+        </h2>
+        {% for project in Python-libraries %}
+            {% include project-link.html %}
+        {% endfor %}
+    </section>
+    <section class="site-list">
+        <h2 id="sites">
+            <i class="fas fa-globe"></i>
+            Websites
+        </h2>
+        {% for project in Python-sites %}
+            {% include project-link.html %}
+        {% endfor %}
+    </section>
+    <section class="talk-list">
+        <h2 id="talks">
+            <i class="fas fa-bullhorn"></i>
+            Talks
+        </h2>
+        {% for project in Python-talks %}
+            {% include project-link.html %}
+        {% endfor %}
+    </section>
+    <section class="kata-list">
+        <h2 id="katas">
+            <i class="fas fa-hand-rock"></i>
+            Katas
+        </h2>
+        {% for project in Python-katas %}
+            {% include project-link.html %}
+        {% endfor %}
+    </section>
 </article>

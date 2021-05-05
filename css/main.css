@@ -16,8 +16,13 @@ article p {
   line-height: 1.5em;
   margin-bottom: 2em;
 }
+
 article {
   padding-bottom: 1em;
+}
+
+section {
+  padding-top: 0.5em;
 }
 
 header {
