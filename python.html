@@ -2,7 +2,7 @@
 layout: default
 title: What meadsteve knows about Python
 ---
-{% assign Python-posts = site.posts | where: "tags","python" %}
+{% assign Python-posts = site.posts | where: "tags","python" | where_exp: "p", "p.published != false" %}
 {% assign Python-projects-all = site.data.projects | where_exp:"p","p.language == 'python'" %}
 
 {% assign Python-libraries = Python-projects-all  | where_exp:"p","p.type == 'library'" %}
