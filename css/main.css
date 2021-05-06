@@ -21,6 +21,10 @@ article {
   padding-bottom: 1em;
 }
 
+li {
+  padding-bottom: 0.3em;
+}
+
 section {
   padding-top: 0.5em;
 }
