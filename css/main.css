@@ -9,7 +9,7 @@ html {
 }
 
 header, footer, h1, h2, h3 {
-  font-family: monospace;
+  font-family: Consolas, monospace;
 }
 
 article p {
