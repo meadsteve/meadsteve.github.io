@@ -52,6 +52,22 @@ error[E0596]: cannot borrow `s` as mutable, as it is not declared as mutable
 
 because I've tried to mutate something that was immutable.
 
+This also includes references so the following code will also error because I try and mutate a reference:
+
+```rust
+fn add_woop(s: &String) {
+    s.push_str("woop")
+}
+```
+
+instead it would need to be:
+
+```rust
+fn add_woop(s: &mut String) {
+    s.push_str("woop")
+}
+```
+
 ### Result types combined with pattern matching
 
 I've worked in the past with elixir/erlang so pattern matching was already something I was familiar with but I like how expresive this is:
