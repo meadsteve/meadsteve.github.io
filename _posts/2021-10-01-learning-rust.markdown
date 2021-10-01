@@ -17,8 +17,6 @@ tags:
 Following ["the book"](https://doc.rust-lang.org/book) and using [clion](https://www.jetbrains.com/clion/) as an IDE.
 
 ## Delights
-### Immutable by default
-I like being able to control where mutation happens so defaulting to immutable makes a lot of sense to me.
 
 ### Nice error messages
 The compilers errors are generally very helpful. For example if I miss out a possiblity in a match expression:
@@ -30,6 +28,29 @@ error[E0004]: non-exhaustive patterns: `Equal` not covered
     |           ^^^^^^^^^^^^^^^^^^^^^^^^^ pattern `Equal` not covered
 
 ```
+
+### Immutable by default
+I like being able to control where mutation happens so defaulting to immutable makes a lot of sense to me.
+
+```rust
+let s = String::from("hello");
+s.push_str(" again");
+```
+
+will cause the compiler to raise the (very helpful) error:
+
+```
+error[E0596]: cannot borrow `s` as mutable, as it is not declared as mutable
+ --> src/main.rs:4:5
+  |
+2 |     let s = String::from("hello");
+  |         - help: consider changing this to be mutable: `mut s`
+3 | 
+4 |     s.push_str(" again");
+  |     ^ cannot borrow as mutable
+```
+
+because I've tried to mutate something that was immutable.
 
 ### Result types combined with pattern matching
 
