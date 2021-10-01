@@ -17,6 +17,9 @@ tags:
 Following https://doc.rust-lang.org/book
 
 ## Delights
+### Immutable by default
+I like being able to control where mutation happens so defaulting to immutable makes a lot of sense to me.
+
 ### Nice error messages
 The compilers errors are generally very helpful. For example if I miss out a possiblity in a match expression:
 ```
@@ -30,13 +33,13 @@ error[E0004]: non-exhaustive patterns: `Equal` not covered
 
 ## Result types combined with pattern matching
 
-I like how expresive this is 
+I've worked in the past with elixir/erlang so pattern matching was already something I was familiar with but I like how expresive this is:
 
 ```rust
-    let guess: u32 = match guess.trim().parse() {
-        Ok(num) => num,
-        Err(_) => continue,
-     };
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    Err(_) => continue,
+ };
 ```
 
 ## Surprises
@@ -44,11 +47,11 @@ I like how expresive this is
 In other languages is something I would usually avoid but it appears early on in the tutorial.
 
 ```rust
-    let mut guess = String::new();
+let mut guess = String::new();
 
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+io::stdin()
+    .read_line(&mut guess)
+    .expect("Failed to read line");
 
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
 ```
