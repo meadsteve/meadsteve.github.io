@@ -126,3 +126,14 @@ fn main() {
     println!("s1:{} s2:{}", s1, s2);
 }
 ```
+
+The "fixed" version of the code is to explicitly clone the string:
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1:{} s2:{}", s1, s2);
+}
+```
