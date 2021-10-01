@@ -140,6 +140,7 @@ div.twitter-tweet{
 /** Code styling  **/
 pre.highlight {
   overflow: auto;
+  margin: 0;
 }
 div.highlight {
   color: lightblue;
