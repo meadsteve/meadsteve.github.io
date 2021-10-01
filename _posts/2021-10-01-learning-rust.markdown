@@ -28,6 +28,17 @@ error[E0004]: non-exhaustive patterns: `Equal` not covered
 
 ```
 
+## Result types combined with pattern matching
+
+I like how expresive this is 
+
+```rust
+    let guess: u32 = match guess.trim().parse() {
+        Ok(num) => num,
+        Err(_) => continue,
+     };
+```
+
 ## Surprises
 ### Variable name shadowing
 In other languages is something I would usually avoid but it appears early on in the tutorial.
