@@ -14,7 +14,7 @@ tags:
 
 ## What
 
-Following https://doc.rust-lang.org/book
+Following ["the book"](https://doc.rust-lang.org/book) and using [clion](https://www.jetbrains.com/clion/) as an IDE.
 
 ## Delights
 ### Immutable by default
