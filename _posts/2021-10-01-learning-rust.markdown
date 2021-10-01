@@ -80,6 +80,7 @@ let guess: u32 = match guess.trim().parse() {
 ```
 
 ## Surprises
+
 ### Variable name shadowing
 In other languages is something I would usually avoid but it appears early on in the tutorial.
 
@@ -153,3 +154,7 @@ fn main() {
     println!("s1:{} s2:{}", s1, s2);
 }
 ```
+
+## Delightful surprises
+
+There's something I want to try about ownership and borrowing, but I've thought about how to express it yet.
