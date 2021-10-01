@@ -113,3 +113,16 @@ error: could not compile `functions`
 
 To learn more, run the command again with --verbose.
 ```
+
+### Memory safety variable invalidation
+
+Attempting to compile the following code will raise `error[E0382]: borrow of moved value: `s1``
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1; // s1 stops being valid after this point
+
+    println!("s1:{} s2:{}", s1, s2);
+}
+```
