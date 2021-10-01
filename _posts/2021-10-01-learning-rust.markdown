@@ -16,6 +16,18 @@ tags:
 
 Following https://doc.rust-lang.org/book
 
+## Delights
+### Nice error messages
+The compilers errors are generally very helpful. For example if I miss out a possiblity in a match expression:
+```
+error[E0004]: non-exhaustive patterns: `Equal` not covered
+   --> src/main.rs:18:11
+    |
+18  |     match guess.cmp(&secret_number) {
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^ pattern `Equal` not covered
+
+```
+
 ## Surprises
 ### Variable name shadowing
 In other languages is something I would usually avoid but it appears early on in the tutorial.
