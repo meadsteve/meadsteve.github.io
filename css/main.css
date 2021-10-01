@@ -143,7 +143,7 @@ pre.highlight {
 }
 div.highlight {
   color: lightblue;
-  background: black;
+  background: darkslategrey;
   padding: 0.5em 1em 0.5em 1em;
   line-height: 1.2em;
 }
