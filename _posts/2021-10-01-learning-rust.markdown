@@ -31,7 +31,7 @@ error[E0004]: non-exhaustive patterns: `Equal` not covered
 
 ```
 
-## Result types combined with pattern matching
+### Result types combined with pattern matching
 
 I've worked in the past with elixir/erlang so pattern matching was already something I was familiar with but I like how expresive this is:
 
@@ -54,4 +54,20 @@ io::stdin()
     .expect("Failed to read line");
 
 let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+
+### A semicolon between and expression and a statement
+
+```rust
+// This returns x + 1
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+
+// vs
+
+// this "implicitly returns `()` as its body has no tail or `return` expression"
+fn plus_one(x: i32) -> i32 {
+    x + 1;
+}
 ```
