@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title:  "Learning rust"
 date:   2021-10-01 10:00:00
 categories: programming
@@ -14,12 +14,17 @@ tags:
 
 ## What
 
-Following ["the book"](https://doc.rust-lang.org/book) and using [clion](https://www.jetbrains.com/clion/) as an IDE.
+As a challenge between contracts (I'm currently a consultant) I've decided to learn rust.
+I've been following ["the book"](https://doc.rust-lang.org/book) and using [clion](https://www.jetbrains.com/clion/) 
+as an IDE. Whilst learning the language I've been writing this blog post about things I've either
+found interesting or a little difficult.
 
 ## Delights
 
+Here are the things I really enjoyed from my first day of rust.
+
 ### Nice error messages
-The compilers errors are generally very helpful. For example if I miss out a possiblity in a match expression:
+The compiler's errors are generally very helpful. For example if I miss out a possibility in a match expression:
 ```
 error[E0004]: non-exhaustive patterns: `Equal` not covered
    --> src/main.rs:18:11
@@ -30,14 +35,17 @@ error[E0004]: non-exhaustive patterns: `Equal` not covered
 ```
 
 ### Immutable by default
-I like being able to control where mutation happens so defaulting to immutable makes a lot of sense to me.
+I like being able to control where mutation happens so defaulting to immutable makes a 
+lot of sense to me.
+
+If I create a string and then try and mutate it like this
 
 ```rust
 let s = String::from("hello");
 s.push_str(" again");
 ```
 
-will cause the compiler to raise the (very helpful) error:
+then the compiler will raise the following (very helpful) error:
 
 ```
 error[E0596]: cannot borrow `s` as mutable, as it is not declared as mutable
@@ -50,9 +58,11 @@ error[E0596]: cannot borrow `s` as mutable, as it is not declared as mutable
   |     ^ cannot borrow as mutable
 ```
 
-because I've tried to mutate something that was immutable.
+because I've tried to mutate something that was immutable. It provides a solution if I
+want to make it mutable but it has to be done thoughtfully.
 
-This also includes references so the following code will also error because I try and mutate a reference:
+This also includes function arguments that are references so the following code will also
+error because I try and mutate a reference:
 
 ```rust
 fn add_woop(s: &String) {
@@ -60,7 +70,7 @@ fn add_woop(s: &String) {
 }
 ```
 
-instead it would need to be:
+instead, it would need to be:
 
 ```rust
 fn add_woop(s: &mut String) {
@@ -70,7 +80,8 @@ fn add_woop(s: &mut String) {
 
 ### Result types combined with pattern matching
 
-I've worked in the past with elixir/erlang so pattern matching was already something I was familiar with but I like how expresive this is:
+I've worked in the past with elixir/erlang so pattern matching was already something I was 
+familiar with, I like how expressive this is:
 
 ```rust
 let guess: u32 = match guess.trim().parse() {
@@ -81,8 +92,12 @@ let guess: u32 = match guess.trim().parse() {
 
 ## Surprises
 
+Following on from the delights I also found a few things either chalenging or at least
+surprising on my first day.
+
 ### Variable name shadowing
-In other languages is something I would usually avoid but it appears early on in the tutorial.
+In other languages re-using a variable name is something I would usually avoid, but for rust
+variable shadowing appears early on in the tutorial.
 
 ```rust
 let mut guess = String::new();
@@ -93,6 +108,8 @@ io::stdin()
 
 let guess: u32 = guess.trim().parse().expect("Please type a number!");
 ```
+
+My worry here is that I will accidentally change something rather than doing it on purpose.
 
 ### A semicolon between and expression and a statement
 
@@ -131,30 +148,8 @@ error: could not compile `functions`
 To learn more, run the command again with --verbose.
 ```
 
-### Memory safety variable invalidation
-
-Attempting to compile the following code will raise `error[E0382]: borrow of moved value: `s1``
-
-```rust
-fn main() {
-    let s1 = String::from("hello");
-    let s2 = s1; // s1 stops being valid after this point
-
-    println!("s1:{} s2:{}", s1, s2);
-}
-```
-
-The "fixed" version of the code is to explicitly clone the string:
-
-```rust
-fn main() {
-    let s1 = String::from("hello");
-    let s2 = s1.clone();
-
-    println!("s1:{} s2:{}", s1, s2);
-}
-```
-
 ## Delightful surprises
 
-There's something I want to try about ownership and borrowing, but I've thought about how to express it yet.
+I'm really enjoying the way rust deals with memory management.
+There's something I want to try and write about ownership and borrowing.
+I've not thought about how to express it yet though, so I'll save this for another post.
