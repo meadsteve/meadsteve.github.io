@@ -5,7 +5,7 @@ title: MeadSteve's Dev Blog - About me
 <article>
     <section>
         <h2 id="me">
-            <i class="fas fa-user" style="color:darkgreen"></i>
+            <i class="fas fa-user" style="color:darkgreen" aria-hidden="true"></i>
             <span class="actual-name">{{ site.data.me.name}}</span>
             <span class="nickname"> ({{ site.data.me.username}})</span>
         </h2>
@@ -17,7 +17,7 @@ title: MeadSteve's Dev Blog - About me
     </section>
 
     <section>
-        <h3 id="things-i-love"><i class="fas fa-heart" style="color:deeppink"></i> Things I Love</h3>
+        <h3 id="things-i-love"><i class="fas fa-heart" style="color:deeppink" aria-hidden="true"></i> Things I Love</h3>
         <ul>
             {% for thing in site.data.me.things_i_love %}
                 <li>{{ thing }}</li>
@@ -26,7 +26,7 @@ title: MeadSteve's Dev Blog - About me
     </section>
 
     <section>
-        <h3 id="things-ive-made"><i class="fas fa-wrench" style="color:darkslateblue"></i> Things I've Made</h3>
+        <h3 id="things-ive-made"><i class="fas fa-wrench" style="color:darkslateblue" aria-hidden="true"></i> Things I've Made</h3>
         <ul>
             {% assign interesting_libs = site.data.projects | where_exp:"p","p.type == 'library'" %}
             {% assign interesting_sites = site.data.projects | where_exp:"p","p.type == 'website'" %}
@@ -41,7 +41,7 @@ title: MeadSteve's Dev Blog - About me
     </section>
     
     <section>
-        <h3 id="climate"><i class="fa fa-tree" style="color:green"></i>Climate</h3>
+        <h3 id="climate"><i class="fa fa-tree" style="color:green" aria-hidden="true"></i>Climate</h3>
         <p>
             Want to help me reduce my climate impact? Then consider donating to one of the following:
             <ul>

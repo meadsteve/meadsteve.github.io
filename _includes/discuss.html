@@ -1,12 +1,12 @@
 <div class="comment-section bottom-of-post">
 {% if page.comments%}
     <a href={{ page.comments.link }}>
-        <i class="fas fa-comments"></i>
+        <i class="fas fa-comments" aria-hidden="true"></i>
         {{ page.comments.title }}
     </a>
 {% else %}
     <a href=https://twitter.com/meadsteve>
-        <i class="fas fa-crow"></i>
+        <i class="fas fa-crow" aria-hidden="true"></i>
         Thoughts? Comments? Send me a tweet!
     </a>
 {% endif %}
