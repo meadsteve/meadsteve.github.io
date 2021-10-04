@@ -48,3 +48,21 @@ error[E0515]: cannot return value referencing local variable `lowercase_contents
    |     returns a value referencing data owned by the current function
 
 ```
+
+my hacky fix:
+
+```rust
+fn search(query: &str, contents: String) -> Vec<String> {
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .map(|s| s.to_string())
+        .collect()
+}
+
+fn search_case_insensitive(query: &str, contents: String) -> Vec<String> {
+    let lowercase_contents = contents.to_lowercase();
+    let lowercase_search = query.to_lowercase();
+    search(&lowercase_search, lowercase_contents)
+}
+```
