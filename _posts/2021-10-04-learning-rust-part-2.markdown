@@ -30,7 +30,7 @@ I wanted a case insensitive one. I thought this would work:
 ```rust
 fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let lowercase_contents = contents.to_lowercase();
-    let lowercase_search = &query.to_lowercase();
+    let lowercase_search = query.to_lowercase();
     search(&lowercase_search, &lowercase_contents)
 }
 ```
