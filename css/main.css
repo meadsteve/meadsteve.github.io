@@ -1,6 +1,5 @@
 html {
   max-width:80ch;
-  padding:2ch;
   margin:auto;
   font-size:1.2em;
   font-family: sans-serif;
@@ -29,12 +28,7 @@ section {
   padding-top: 0.5em;
 }
 
-header {
-  padding-bottom: 1em;
-}
-
 footer {
-  margin-top: 3em;
   font-size: 0.8em;
 }
 
