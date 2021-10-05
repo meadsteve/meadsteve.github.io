@@ -45,6 +45,10 @@ img {
   padding-bottom: 2em;
 }
 
+div.bottom-of-post {
+  padding-bottom: 1em;
+}
+
 /** Navigation block **/
 
 nav {
@@ -57,8 +61,20 @@ nav  i {
   width: 1em;
 }
 
-div.bottom-of-post {
-  padding-bottom: 1em;
+/** Article header block **/
+
+article header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article header h1 {
+  margin-right: 2em;
+}
+
+article header time {
+  margin: auto 0 auto 0;
 }
 
 /** Link styling **/
