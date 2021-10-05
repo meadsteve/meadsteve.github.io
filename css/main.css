@@ -134,7 +134,7 @@ section.post {
 }
 
 .posts {
-  width: 100%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 20em);
 }
