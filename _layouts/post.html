@@ -5,7 +5,7 @@ layout: default
 <article>
   <header>
     <h1>{{ page.title }}</h1>
-    <time datetime='{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}' class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <time datetime='{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}' class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</time>
     {% if page.update_date %}
     <span class="post-meta">Updated: <time datetime='{{ page.update_date | date: "%Y-%m-%d %H:%M:%S" }}'>{{ page.update_date | date: "%b %-d, %Y" }}</time></span><br>
     {% endif %}

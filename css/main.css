@@ -67,6 +67,7 @@ article header {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 article header h1 {
@@ -75,6 +76,7 @@ article header h1 {
 
 article header time {
   margin: auto 0 auto 0;
+  max-width: 10em;
 }
 
 /** Link styling **/
