@@ -3,14 +3,14 @@ layout: default
 title: MeadSteve's Dev Blog
 ---
 
-<div class="home">
+<main class="home">
 
-  <div class="posts">
+  <section class="posts">
     {% assign published-posts = paginator.posts | where_exp: "post", "post.published != false" %}
     {% for post in published-posts %}
       {% include post_title.html %}
     {% endfor %}
-  </div>
+  </section>
 
   {% include pagination.html %}
-</div>
+</main>

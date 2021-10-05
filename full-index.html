@@ -2,29 +2,31 @@
 layout: default
 title: MeadSteve's Dev Blog - Full index
 ---
-<div>
-    <h2>Pages</h2>
-    <ul>
-        <li><a href="/python">Python specific overview</a></li>
-        <li><a href="/knowledgebase">My Knowledgebase</a></li>
-        <li><a href="/about">About me in general</a></li>
-        <li><a href="/unpublished">Unpublished posts</a></li>
-    </ul>
-</div>
-<div>
-    <h2>Posts by tag</h2>
-    <div id='tag_list'>
-        {% assign sorted_tags = site.tags | sort %}
-        {% for tag in sorted_tags %}
-          <div>
-              <h3 class='tag_name'>{{ tag[0] }}</h3>
-              <ul>
-              {% assign sorted_posts = tag[1] | sort: "date" | reverse %}
-              {% for post in sorted_posts %}
-                  <li class='tag_post {% if post.published == false %} unpublished{% endif %}'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} {% if post.published == false %} (unpublished) {% endif %}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endfor %}
-    </div>
-</div>
+<main id="full-index">
+    <section class="pages-index">
+        <h2>Pages</h2>
+        <ul>
+            <li><a href="/python">Python specific overview</a></li>
+            <li><a href="/knowledgebase">My Knowledgebase</a></li>
+            <li><a href="/about">About me in general</a></li>
+            <li><a href="/unpublished">Unpublished posts</a></li>
+        </ul>
+    </section>
+    <section class="posts-index">
+        <h2>Posts by tag</h2>
+        <div id='tag_list'>
+            {% assign sorted_tags = site.tags | sort %}
+            {% for tag in sorted_tags %}
+              <div>
+                  <h3 class='tag_name'>{{ tag[0] }}</h3>
+                  <ul>
+                  {% assign sorted_posts = tag[1] | sort: "date" | reverse %}
+                  {% for post in sorted_posts %}
+                      <li class='tag_post {% if post.published == false %} unpublished{% endif %}'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} {% if post.published == false %} (unpublished) {% endif %}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
