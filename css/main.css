@@ -112,6 +112,7 @@ i {
 
 h2.post-title i {
   color: darkorchid;
+  max-width: 25px;
 }
 
 .specific-summary h2 i {
