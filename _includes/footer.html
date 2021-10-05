@@ -1,16 +1,13 @@
 <footer class="footer">
-    <p>
+    <section class="page-links">
         <a href='{{ "/full-index/" | prepend: site.baseurl }}'> Complete Site Index</a>
-    </p>
-    <p>
         <a href='{{ "/unpublished" | prepend: site.baseurl }}'> View Unpublished Posts</a>
-    </p>
-    <p>
         <a href="/lackofcopyright/">Absence of Copyright</a>
-    </p>
+    </section>
     <p>
         You can fork/edit/grab the raw text for this blog on <a href="https://github.com/meadsteve/meadsteve.github.io">GitHub</a>
     </p>
     <script src="/javascripts/blogspeed.js" async></script>
     <span id="blogspeed"></span>
+    {% include edit_post.html %}
 </footer>

@@ -23,10 +23,6 @@ section {
   padding-top: 0.5em;
 }
 
-footer {
-  font-size: 0.8em;
-}
-
 .post-title .post-date {
   font-size: 0.5em;
 }
@@ -169,4 +165,44 @@ div.highlight {
   background: darkslategrey;
   padding: 0.5em 1em 0.5em 1em;
   line-height: 1.2em;
+}
+
+/** bottom of post comment link styling **/
+
+.comment-section {
+  padding: 0 0 2em 0;
+}
+
+.comment-section a:link {
+  color: deeppink;
+}
+
+.comment-section a:visited {
+  color: deeppink;
+}
+
+
+/** footer styling **/
+
+footer {
+  font-size: 0.8em;
+  color: grey;
+  opacity: 90%;
+}
+
+footer a:link {
+  color: firebrick;
+}
+footer a:visited {
+  color: firebrick;
+}
+
+footer .page-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .page-links a{
+  margin-right: 2em;
 }
