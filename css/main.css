@@ -127,6 +127,17 @@ i.fab.fa-python {
   font-weight: 100;
 }
 
+/** Post links **/
+section.post {
+  padding: 0 4em 0 0;
+}
+
+.posts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 20em);
+}
+
 /** pagination styling  **/
 .pagination .older {
   float: right
