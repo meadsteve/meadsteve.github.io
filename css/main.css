@@ -92,6 +92,11 @@ a:visited {
   color: deeppink;
 }
 
+a.header-link {
+  color: lightgrey;
+  padding-left: 0.25em;
+}
+
 .post a:hover i {
   color: mediumpurple;
 }
