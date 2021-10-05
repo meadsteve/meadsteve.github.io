@@ -88,6 +88,14 @@ a:visited {
   text-decoration: none;
 }
 
+.post a:hover {
+  color: deeppink;
+}
+
+.post a:hover i {
+  color: mediumpurple;
+}
+
 header a {
   text-decoration: none;
 }
