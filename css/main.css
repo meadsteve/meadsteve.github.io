@@ -200,6 +200,7 @@ footer {
   font-size: 0.8em;
   color: grey;
   opacity: 90%;
+  margin-top: 3em;
 }
 
 footer a:link {
