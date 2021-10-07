@@ -1,7 +1,6 @@
 html {
   max-width:80ch;
   margin:auto;
-  font-size:1.2em;
   font-family: sans-serif;
   background: #edeae7;
   color: #1e0010;
@@ -140,12 +139,12 @@ i.fab.fa-python {
 /** Post links **/
 section.post {
   padding: 0;
-  min-width: 18em;
-  max-width: 18em;
+  min-width: 20em;
+  max-width: 20em;
 }
 
 .posts {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
