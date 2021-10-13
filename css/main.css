@@ -69,6 +69,10 @@ article header h1 {
   margin-right: 2em;
 }
 
+.article h2, h3 {
+  margin-top: 2em;
+}
+
 article header time {
   margin: auto 0 auto 0;
   max-width: 10em;
