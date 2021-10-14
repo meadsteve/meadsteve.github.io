@@ -14,6 +14,10 @@ article {
   padding-bottom: 1em;
 }
 
+article p {
+  font-size: 1.1em
+}
+
 li {
   padding-bottom: 0.3em;
 }
