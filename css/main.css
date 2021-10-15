@@ -14,7 +14,7 @@ article {
   padding-bottom: 1em;
 }
 
-article p {
+article p, li, pre.highlight {
   font-size: 1.1em
 }
 
