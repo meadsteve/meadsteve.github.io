@@ -4,6 +4,7 @@ html {
   font-family: sans-serif;
   background: #edeae7;
   color: #1e0010;
+  line-height: 1.5em
 }
 
 header, footer, h1, h2, h3 {
