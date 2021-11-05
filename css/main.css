@@ -4,7 +4,6 @@ html {
   font-family: sans-serif;
   background: #edeae7;
   color: #1e0010;
-  line-height: 1.5em
 }
 
 header, footer, h1, h2, h3 {
@@ -16,7 +15,8 @@ article {
 }
 
 article p, li, pre.highlight {
-  font-size: 1.1em
+  font-size: 18px;
+  line-height: 26px;
 }
 
 li {
