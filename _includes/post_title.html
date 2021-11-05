@@ -1,5 +1,5 @@
-<section class="post{% if post.published == false %} unpublished{% endif %}" title="{{ post.summary }}">
-  <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+<section class="post{% if post.published == false %} unpublished{% endif %}" >
+  <a href="{{ post.url | prepend: site.baseurl }}" class="post-link" title="{{ post.summary}}">
     <h2 class="post-title">
       {% include post_icon.html %}
       <span>{{ post.title }}</span>
