@@ -14,7 +14,7 @@ article {
   padding-bottom: 1em;
 }
 
-article p, li, pre.highlight {
+article p, li {
   font-size: 18px;
   line-height: 26px;
 }
@@ -180,12 +180,14 @@ div.twitter-tweet{
 pre.highlight {
   overflow: auto;
   margin: 0;
+  line-height: 18px;
+  font-size: 15px;
 }
+
 div.highlight {
   color: lightblue;
   background: darkslategrey;
   padding: 0.5em 1em 0.5em 1em;
-  line-height: 1.2em;
 }
 
 /** bottom of post comment link styling **/
