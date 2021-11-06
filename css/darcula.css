@@ -13,8 +13,8 @@ hll { background-color: #ffffcc }
 .cm { color: #6272a4 } /* Comment.Multiline */
 .cp { color: #ff79c6 } /* Comment.Preproc */
 .cpf { color: #6272a4 } /* Comment.PreprocFile */
-.c1 { color: #6272a4 } /* Comment.Single */
-.cs { color: #6272a4 } /* Comment.Special */
+.c1 { color: orange } /* Comment.Single */
+.cs { color: orange } /* Comment.Special */
 .gd { color: #8b080b } /* Generic.Deleted */
 .ge { color: #f8f8f2; text-decoration: underline } /* Generic.Emph */
 .gr { color: #f8f8f2 } /* Generic.Error */
