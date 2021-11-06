@@ -73,6 +73,7 @@ article header {
 article header h1 {
   margin-right: 2em;
   font-size: 2em;
+  max-width: 26ch;
 }
 
 .article h2, h3 {
