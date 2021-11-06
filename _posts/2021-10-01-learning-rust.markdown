@@ -10,7 +10,7 @@ tags:
     - rust
     - languages
     - learning
----
+---fb
 
 ## What
 
@@ -111,7 +111,7 @@ let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
 My worry here is that I will accidentally change something rather than doing it on purpose.
 
-### A semicolon between and expression and a statement
+### A semicolon between an expression and a statement
 
 ```rust
 // This returns x + 1
