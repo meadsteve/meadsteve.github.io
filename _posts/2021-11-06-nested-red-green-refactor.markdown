@@ -48,7 +48,7 @@ In my view: yes. Both levels of this loop bring value to me. The compiler driven
 me where I've tried to do something impossible with my input types or where I've not handled an error
 condition that I should (this is especially true in rust - it has no exceptions so errors must be handled).
 
-However, the compiler can't tell me if my functions actually do what I intended to them to do. The 
+However, the compiler can't tell me if my functions actually do what I intended them to do. The 
 following example code would be "green" in my compiler driven loop, the types are all good:
 
 ```rust
