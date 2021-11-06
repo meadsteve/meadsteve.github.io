@@ -1,7 +1,7 @@
 html {
   max-width:80ch;
   margin:auto;
-  font-family: Open Sans, helvetica, sans-serif;
+  font-family: "Open Sans", helvetica, sans-serif;
   background: #edeae7;
   color: #1e0010;
 }
@@ -182,9 +182,15 @@ div.twitter-tweet{
 pre.highlight {
   overflow: auto;
   margin: 0;
-  line-height: 18px;
+  line-height: 20px;
   font-size: 15px;
 }
+code { font-family: 'Fira Code', Consolas, monospace; }
+
+@supports (font-variation-settings: normal) {
+  code { font-family: 'Fira Code VF', Consolas,  monospace; }
+}
+
 
 div.highlight {
   color: lightblue;
