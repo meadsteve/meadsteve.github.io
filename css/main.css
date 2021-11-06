@@ -166,6 +166,12 @@ section.post {
   float: right
 }
 
+/** quote styling **/
+blockquote {
+  font-style: italic;
+  font-family: open ui-serif;
+}
+
 /** Tweet styling  **/
 blockquote.twitter-tweet {
   background: lavender;
