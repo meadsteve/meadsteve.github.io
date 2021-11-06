@@ -4,7 +4,7 @@ published: true
 title:  "Nested 'red, green, refactor'"
 date:   2021-11-06 10:00:00
 categories: programming
-summary: "The second part of my rust adventure"
+summary: "Using compiler driven development as an inner red, green refactor loop."
 icon: fab fa-rust
 tags:
     - rust
