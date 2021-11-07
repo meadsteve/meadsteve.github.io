@@ -154,7 +154,7 @@ section.post {
   max-width: 20em;
 }
 
-.posts {
+main.home .posts {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
