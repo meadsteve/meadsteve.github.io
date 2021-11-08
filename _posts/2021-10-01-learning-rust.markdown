@@ -10,6 +10,9 @@ tags:
     - rust
     - languages
     - learning
+comments:
+    title: Discuss this post over on reddit
+    link: https://www.reddit.com/r/rust/comments/qpg30i/i_recently_started_learning_rust_and_this_is_what/
 ---
 
 ## What
