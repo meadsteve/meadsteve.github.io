@@ -39,7 +39,7 @@ How could this be improved:
 ### Link errors to the library
 ```python
     class SuperCoolPackageError(Exception, ABC):
-        """All exceptions in this library are instances of a LagomException"""
+        """All exceptions in this library are instances of a SuperCoolPackageError"""
         pass
 
     class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
