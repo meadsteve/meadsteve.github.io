@@ -29,30 +29,31 @@ However, I've been running into a problems when the exceptions are raised like t
 How could this be improved:
 
 ### Sub typed errors
+For example there are lots of different things that can timeout. Rather than throwing the generic exception libraries could subclass it:
 
 ```python
-    class QueryTookTooLong(TimeoutError):
-        pass
-
+class QueryTookTooLong(TimeoutError):
+    pass
 ```
+
+This makes it easier to catch and handle exactly the problem I want to handle. 
+
 
 ### Link errors to the library
 ```python
-    class SuperCoolPackageError(Exception, ABC):
-        """All exceptions in this library are instances of a SuperCoolPackageError"""
-        pass
+class SuperCoolPackageError(Exception, ABC):
+    """All exceptions in this library are instances of a SuperCoolPackageError"""
+    pass
 
-    class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
-        pass
-
+class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
+    pass
 ```
 
 ### Provide structured data in the exception
 ```python
-    class QueryTookTooLong(TimeoutError):
-        server_address: str
-        query_type: str
-
+class QueryTookTooLong(TimeoutError):
+    server_address: str
+    query_type: str
 ```
 
 ### Provide a link to documentation about this error (bonus points for this one)
