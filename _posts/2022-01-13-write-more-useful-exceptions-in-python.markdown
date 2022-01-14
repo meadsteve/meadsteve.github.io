@@ -54,3 +54,6 @@ How could this be improved:
         query_type: str
 
 ```
+
+### Provide a link to documentation about this error (bonus points for this one)
+The SqlAlchemy library provides links to documentation about an error in the exception string. This makes reading up about the error much easier
