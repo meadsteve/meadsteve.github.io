@@ -25,6 +25,8 @@ However, I've been running into a problems when the exceptions are raised like t
     raise TimeoutError("When trying to do the thing we timed out for reason X")
 ```
 
+I'm having to do a combination of rewriting code and some fragile string matching on the error messages so that I can filter out what's a really important error and what is more like warning.
+
 ## What would I prefer
 How could this be improved:
 
@@ -36,7 +38,18 @@ class QueryTookTooLong(TimeoutError):
     pass
 ```
 
-This makes it easier to catch and handle exactly the problem I want to handle. 
+This makes it easier to catch and handle exactly the problem I want to handle:
+
+```python
+try:
+    do_something()
+except QueryTookTooLong:
+    record_slow_query():
+except ServerRejectedQueryBecauseItWasBusy:
+    back_off_and_try_a_different_server()
+except Exception:
+    panic_an_error_we_didnt_know_about_happened()
+```
 
 
 ### Link errors to the library
