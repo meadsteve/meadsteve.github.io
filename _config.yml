@@ -10,11 +10,6 @@ show_related_posts: false
 unpublished: true
 future: true
 
-
-collections:
-  knowledgebase:
-    output: true
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
