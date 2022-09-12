@@ -26,3 +26,5 @@ https://github.com/mypyc/mypyc/issues/864
 ## Building a generic wheel for unsuported platforms
 
 ## Testing the compiled code
+
+## Was it worth it? The results
