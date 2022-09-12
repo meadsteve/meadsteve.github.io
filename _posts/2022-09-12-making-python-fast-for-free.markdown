@@ -23,6 +23,8 @@ https://github.com/mypyc/mypyc/issues/864
 
 ## Picking core modules
 
+## Losing flit and adding a build step
+
 ## Building a generic wheel for unsuported platforms
 
 ## Testing the compiled code
