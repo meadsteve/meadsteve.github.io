@@ -15,3 +15,5 @@ tags:
 ---
 
 TODO: Write about only doing 1 or 2 exciting things at a time.
+
+Reference: https://shimweasel.com/2018/08/25/novelty-budgets
