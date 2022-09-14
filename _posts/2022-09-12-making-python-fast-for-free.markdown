@@ -29,4 +29,6 @@ https://github.com/mypyc/mypyc/issues/864
 
 ## Testing the compiled code
 
+## Backwards compatability breaks - a new major version
+
 ## Was it worth it? The results
