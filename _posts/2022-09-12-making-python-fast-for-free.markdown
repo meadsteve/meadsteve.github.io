@@ -29,6 +29,9 @@ https://github.com/mypyc/mypyc/issues/864
 
 ## Testing the compiled code
 
-## Backwards compatability breaks - a new major version
+## Backwards compatability breaks - a new major version?
+
+### Native classes can't be used as a base class for inheritence
+### Luckily a decorator can be added to enabled inheritence
 
 ## Was it worth it? The results
