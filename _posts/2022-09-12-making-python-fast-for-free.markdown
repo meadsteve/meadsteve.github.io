@@ -16,8 +16,7 @@ tags:
 
 I recently learnt that mypy has a compiler called [mypyc](https://github.com/mypyc/mypyc). The compiler uses standard
 python type hints to generate c extensions automatically from python code. I found the idea very interesting as
-I have a library ([Lagom](https://lagom-di.readthedocs.io/en/stable/) - a dependency injection container)  
-which is fairly extensively annotated with types. I liked the idea of getting a performance boost without having to 
+I have a library ([Lagom](https://lagom-di.readthedocs.io/en/stable/) - a dependency injection container) which is fairly extensively annotated with types. I liked the idea of getting a performance boost without having to 
 rewrite any code or having to deal with multiple languages. This blogpost is intended to be a short overview of what
 I did, the problems I ran into and the workflow I ended up with.
 
@@ -153,7 +152,7 @@ compilation should see no change and supported platforms will see a speed boost.
 
 As part of my workflow I have a short feedback loop running the unit tests and mypy. These give me relatively 
 good confidence that the code will compile and work as I expect, and I don't need to execute the compile step
-whist I devlop which helps keep the feedback cycle short.
+whist I develop which helps keep the feedback cycle short.
 
 However, despite this before I merge code I still want to make sure that the compiled library does behave in the same
 way. I use another github action to check this which runs on PRs. It builds the compiled wheel, installs it, then
