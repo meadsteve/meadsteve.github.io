@@ -19,7 +19,7 @@ TODO: write stuff
 
 ## Github actions
 ```ỳaml
-
+{% raw %}
 name: Validate
 
 on: [push, pull_request]
@@ -44,6 +44,7 @@ jobs:
     - name: Validate code
       run: |
         ./validate.sh
+{% endraw %}
 ```
 
 ## Scripts
