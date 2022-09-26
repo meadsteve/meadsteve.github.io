@@ -223,7 +223,8 @@ previous version of the code. I'm pretty happy with this from a mostly one time 
 I also believe there's some additional improvement that could be made with a little bit of profiling and work to 
 make more modules compilable.
 
-So if you maintain a fairly well typed library or have a codebase that could do with a speed boost take a look at mypyc.
+So if you maintain a fairly well typed library or codebase that could do with a speed boost I suggest you take a look 
+at mypyc.
 
 For now I've completely ignored the fact that mypyc is described as alpha quality. I have my escape hatch of maintaining
 a pure python build alongside the compiled one.
