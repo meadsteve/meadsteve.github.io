@@ -21,7 +21,7 @@ which is fairly extensively annotated with types. I liked the idea of getting a 
 rewrite any code or having to deal with multiple languages. This blogpost is intended to be a short overview of what
 I did, the problems I ran into and the workflow I ended up with.
 
-(Note: [Cython](https://cython.readthedocs.io/) has a similar target usage but can require a few more changes)
+(Note: [Cython](https://cython.readthedocs.io/) has a similar target usage but often requires a few more code changes)
 
 ## Attempting to compile the whole thing
 
