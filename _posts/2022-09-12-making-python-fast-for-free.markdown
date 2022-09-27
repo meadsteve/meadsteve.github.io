@@ -105,7 +105,8 @@ I now had an automated publishing workflow triggered entirely by git.
 
 ## Building a generic wheel for unsupported platforms
 I wanted to keep support in my library for platforms where the code could not be compiled, so I decided to have a 
-final build step that publishes a pure python wheel without any compiled code. 
+final build step that publishes a pure python wheel without any compiled code. I modified my `setup.py` file to toggle
+the compilation step based on an environment variable.
 
 ```python
 if not bool(int(os.getenv('LAGOM_SKIP_COMPILE', '0'))):
