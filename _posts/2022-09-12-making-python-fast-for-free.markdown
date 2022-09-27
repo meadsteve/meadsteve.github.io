@@ -100,8 +100,8 @@ jobs:
 
 I limited cibuildwheel to cpython only with a `CIBW_BUILD` set to `cp3*` and each OS has the python 
 version range specified (at the time of writing I had some problems building for linux with 3.11). I also added
-a final step to use twine to publish these versions. Since this job is scheduled to run when a build is tagged
-this means my publishing workflow is automatically completed once I decided to tag a build.
+a final step to use twine to publish these versions. Since this job is scheduled to run when a commit is tagged
+I now had an automated publishing workflow triggered entirely by git.
 
 ## Building a generic wheel for unsupported platforms
 I wanted to keep support in my library for platforms where the code could not be compiled, so I decided to have a 
