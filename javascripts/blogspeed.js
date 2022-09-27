@@ -6,22 +6,21 @@
 {% assign allposts = site.posts | where_exp: "post", "post.published != false" | sort: 'date'%}
 
 
-const postDates = [
+const allPostDates = [
     {% for post in allposts %}
     Date.parse("{{post.date}}".replace(" +0000", ""))
     {% unless forloop.last %},{% endunless %}
     {% endfor %}
 ];
 
-const oldest = postDates[0];
-const n5post = postDates[postDates.length - 5];
-const count = postDates.length;
+const oldest = allPostDates[0];
+const count = allPostDates.length;
 const threeishMonths = 1000 * 60 * 60 * 24 * 30 * 3;
 const oneYear = 1000 * 60 * 60 * 24 * 365.25;
 
 
 // Returns the posts per year for the last 3 months
-function recentAverage(atDate, samplePeriod) {
+function recentAverage(postDates, atDate, samplePeriod) {
     const cutOff = atDate - samplePeriod;
     const postsInThePeriod = postDates.filter(d => d >= cutOff)
         .filter(d => d <= atDate);
@@ -29,8 +28,8 @@ function recentAverage(atDate, samplePeriod) {
 }
 
 // Blog posts per year
-const lifetimeSpeed = (count / ((Date.now() - oldest) / 1000 / 60 / 60 / 24 / 365.25)).toFixed(1);
-const recentSpeed =  recentAverage(Date.now(), threeishMonths);
+const lifetimeSpeed = (count / ((Date.now() - oldest) / oneYear)).toFixed(1);
+const recentSpeed =  recentAverage(allPostDates, Date.now(), threeishMonths);
 
 console.log(`Current blog speed is ${recentSpeed} posts per year (The lifetime average is ${lifetimeSpeed})`);
 const speedSection = document.getElementById("blogspeed");

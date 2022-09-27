@@ -20,7 +20,7 @@ layout: null
     allDates.push(Date.now()); // Make sure we have the latest right now
 
     const dataPoints = allDates.map(d => {
-        return {x: d, y: recentAverage(d, threeishMonths)}
+        return {x: d, y: recentAverage(allPostDates, d, threeishMonths)}
     });
 
     const lifetimeAveragePoints = allDates.map(d => {
