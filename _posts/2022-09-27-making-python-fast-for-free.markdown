@@ -12,6 +12,9 @@ tags:
     - mypy
     - types
     - libraries
+comments:
+  title: Discuss this post over on reddit
+  link: https://www.reddit.com/r/Python/comments/xpamlp/making_python_fast_for_free_adventures_with_mypyc/
 ---
 
 I recently learnt that mypy has a compiler called [mypyc](https://github.com/mypyc/mypyc). The compiler uses standard
