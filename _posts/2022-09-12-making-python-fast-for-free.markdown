@@ -151,13 +151,13 @@ compilation should see no change and supported platforms will see a speed boost.
 
 ## Testing the compiled code
 
-As part of my workflow I have a short feedback loop running the unit tests and mypy. These give me relatively 
-good confidence that the code will compile and work as I expect, and I don't need to execute the compile step
+As part of my workflow I continuously run the unit tests and mypy. These give me relatively 
+good confidence that the code will compile and work as I expect. Meaning I don't need to execute the compile step
 whist I develop which helps keep the feedback cycle short.
 
-However, despite this before I merge code I still want to make sure that the compiled library does behave in the same
-way. I use another github action to check this which runs on PRs. It builds the compiled wheel, installs it, then
-runs the test suite against it. 
+However, despite these checks, I still want to make sure that the compiled library does behave in the same
+way before merging any code. I use another github action to check this which runs on PRs. 
+It builds the compiled wheel, installs it, then runs the test suite against it. 
 
 ```yaml
 {% raw %}
