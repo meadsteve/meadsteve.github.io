@@ -231,3 +231,9 @@ at mypyc.
 
 For now I've completely ignored the fact that mypyc is described as alpha quality. I have my escape hatch of maintaining
 a pure python build alongside the compiled one.
+
+## Extra - response to reddit & hacker news comments
+
+### What was the total diff of the change?
+The diff for me is relatively large because I also need to change to setuptools
+and build a workflow around this but for anyone interested [here is the full diff](https://github.com/meadsteve/lagom/compare/22d670facf6acd2e5db33278aff32b64daf609cf...2.0.0)
