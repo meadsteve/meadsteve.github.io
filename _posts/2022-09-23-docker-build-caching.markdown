@@ -35,7 +35,11 @@ least [circleci](https://circleci.com/docs/docker-layer-caching) and
 [github actions](https://depot.dev/blog/docker-layer-caching-in-github-actions) have it). 
 
 At the time of writing this post this was not an option on our internally hosted bamboo CI. What
-we did have though, was an internal docker repository(using artifactory). 
+we did have though, was an internal docker repository(using artifactory). I'd also recently learnt about docker's 
+[`--cache-from`](https://docs.docker.com/engine/reference/commandline/build/#specifying-external-cache-sources) 
+argument. This allows you to use an existing image as a layer cache for a build.
+
+So we changed the CI job to do the following (instead of just a plain `docker build`)
 
 ```bash
 IMAGE = some.remote.docker.cache.net/team/image_name
@@ -49,3 +53,28 @@ DOCKER_BUILDKIT=1 docker build -t ${IMAGE} --build-arg BUILDKIT_INLINE_CACHE=1 -
 # Push back to the cache to keep the cache up to date.
 docker push ${IMAGE}  
 ```
+
+breaking this down a little:
+
+### IMAGE = some.remote.docker.cache.net/team/image_name
+In our case this pointed to an image on our local docker image registry. It
+didn't exist at the start but the very first CI job to run the build would publish this image.
+
+### `DOCKER_BUILDKIT=1`
+In order for cache metadata to be created in a built image [buildkit](https://docs.docker.com/develop/develop-images/build_enhancements/) 
+must be used. This is supported from docker version `18.09`. It can only build linux containers but this was not an 
+issue for this particular project.
+
+### `--build-arg BUILDKIT_INLINE_CACHE=1`
+This argument tells buildkit to include the cache metadata in the generated image. This is what enables us to push this
+image and use it as a cache source.
+
+### `--cache-from`
+This is the part that speeds up our build. Now for any of the layers in our docker container that haven't changed
+the build can be skipped.
+
+### `docker push ${IMAGE}`
+This final step keeps the cache up to date. If one of the layers has changed, for example if a dependency has been 
+updated, then this new updated layer will be pushed to the cache so the next build will benefit from it.
+
+## Did it work?
