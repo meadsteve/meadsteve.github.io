@@ -240,3 +240,26 @@ a pure python build alongside the compiled one.
 ### What was the total diff of the change?
 The diff for me is relatively large because I also need to change to setuptools
 and build a workflow around this but for anyone interested [here is the full diff](https://github.com/meadsteve/lagom/compare/22d670facf6acd2e5db33278aff32b64daf609cf...2.0.0)
+
+### How does the compiled code compare on python 3.11
+A [really interesting](https://www.reddit.com/r/Python/comments/xpamlp/comment/iq6uuqd/?context=3) question came from 
+reddit asking how the performance compares when run on python 3.11. Python 3.11 has a number of improvements intended
+to speed up regular execution.
+
+I ran 3.11.0-rc.2 on a mac (running using a github action - so I would not take this example too seriously) first using
+the pure python version and then the compiled version.
+
+```
+Name (time in us)                      Min                   Max                   Mean              StdDev              Median                IQR            Outliers         OPS (Kops/s)            Rounds  Iterations
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_optimised (compiled)              106.2480 (1.0)      4,241.7840 (1.98)     139.0374 (1.0)       53.1291 (1.08)     130.7245 (1.0)      14.4320 (1.0)     3248;6711        7.1923 (1.0)       71154           1
+test_optimised (old)                   152.6050 (1.44)     3,837.4120 (1.79)     196.3902 (1.41)      49.4011 (1.0)      186.5420 (1.43)     23.1537 (1.60)    3448;4365        5.0919 (0.71)      47023           1
+test_plain (compiled)                  200.0300 (1.88)     4,770.0280 (2.22)     236.2659 (1.70)      60.7922 (1.23)     231.8340 (1.77)     20.8140 (1.44)      201;367        4.2325 (0.59)      11430           1
+test_magic (compiled)                  224.2850 (2.11)     2,833.1920 (1.32)     261.5948 (1.88)      64.9260 (1.31)     253.3900 (1.94)     21.6040 (1.50)       69;134        3.8227 (0.53)       2310           1
+test_plain (old)                       280.1830 (2.64)     2,146.2120 (1.0)      331.2418 (2.38)      50.7920 (1.03)     318.7065 (2.44)     23.5730 (1.63)     894;1116        3.0189 (0.42)      10414           1
+test_magic (old)                       315.3660 (2.97)     5,035.4740 (2.35)     356.1327 (2.56)     145.1398 (2.94)     342.8950 (2.62)     19.1577 (1.33)        13;89        2.8079 (0.39)       1151           1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
+
+So the compiled version was only 1.5 times faster this time. So there's still an advantage to compilation here but not
+as great as the more than 2x I saw on other platforms.
