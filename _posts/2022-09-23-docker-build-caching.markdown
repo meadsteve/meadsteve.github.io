@@ -81,5 +81,5 @@ updated, then this new updated layer will be pushed to the cache so the next bui
 
 So far, yes. The build times dropped and everything seems to work. One thing I really like about this solution is that
 updates to dependencies get automatically updated in the cache. In the past I've seen this problem solved by creating
-a "base image" with the dependencies bundled in. This added an extra manual step of bumping the base image whenver
+a "base image" with the dependencies bundled in. This added an extra manual step of bumping the base image whenever
 dependencies got updated. Using a cache skips this complexity.
