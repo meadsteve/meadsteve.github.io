@@ -22,7 +22,7 @@ At a lot of my workplaces we've often had at least one project that fits the fol
 * A project that users a docker container for some CI job.
 * The docker container installs a few system dependencies then some language dependencies.
 * The dependencies change relatively infrequently.
-* The build is run a few times a day, enough to warm up the docker cache on all the CI workers.
+* The build is run a few times a day, not enough to warm up the docker cache on all the CI workers.
 * A system that you may not work on often, so you want quick feedback from CI before moving to another task.
 
 Recently at my last contract we had exactly one of these. It was a node based build and the test suite
