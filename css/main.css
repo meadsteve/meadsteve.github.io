@@ -212,6 +212,7 @@ div.highlight {
 
 .comment-section a:link {
   color: deeppink;
+  display: block;
 }
 
 .comment-section a:visited {

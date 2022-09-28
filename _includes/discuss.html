@@ -4,6 +4,14 @@
         <i class="fas fa-comments" aria-hidden="true"></i>
         {{ page.comments.title }}
     </a>
+    {% if page.comments.extras %}
+        {% for extra_comments in page.comments.extras %}
+            <a href={{ extra_comments.link }}>
+                <i class="fas fa-comments" aria-hidden="true"></i>
+                {{ extra_comments.title }}
+            </a>
+        {% endfor %}
+    {% endif %}
 {% else %}
     <a href=https://twitter.com/meadsteve>
         <i class="fas fa-crow" aria-hidden="true"></i>
