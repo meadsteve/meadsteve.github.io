@@ -39,10 +39,13 @@ we did have though, was an internal docker repository(using artifactory).
 
 ```bash
 IMAGE = some.remote.docker.cache.net/team/image_name
+
 # First pull the image to use as a cache
 docker pull ${IMAGE} || true
+
 # Build with the image as a cache. Any layer already built in the cache can the be skipped
 DOCKER_BUILDKIT=1 docker build -t ${IMAGE} --build-arg BUILDKIT_INLINE_CACHE=1 --cache-from ${IMAGE} .
+
 # Push back to the cache to keep the cache up to date.
 docker push ${IMAGE}  
 ```
