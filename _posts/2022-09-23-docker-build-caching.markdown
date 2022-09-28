@@ -39,6 +39,9 @@ we did have though, was an internal docker repository(using artifactory). I'd al
 [`--cache-from`](https://docs.docker.com/engine/reference/commandline/build/#specifying-external-cache-sources) 
 argument. This allows you to use an existing image as a layer cache for a build.
 
+It's also worth noting that the image we build is only used for running CI tests. We didn't publish or deploy it, so we
+didn't have to worry about publishing something that would fail tests or fail to deploy.
+
 So we changed the CI job to do the following (instead of just a plain `docker build`)
 
 ```bash
