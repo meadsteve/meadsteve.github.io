@@ -12,6 +12,9 @@ tags:
     - speed
     - caching
     - builds
+comments:
+  title: Discuss this post over on reddit
+  link: https://www.reddit.com/r/programming/comments/xr0qus/using_a_docker_registry_as_a_distributed_layer/
 ---
 This is a short blog post to cover a feature I hadn't realised existed in docker: using an existing image 
 as a source for layer caches.
