@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title:  "Using a docker repository as a distributed layer cache for CI"
+title:  "Using a docker registry as a distributed layer cache for CI"
 date:   2022-09-28 10:00:00
 categories: docker
 summary: "Steps to use --cache-from to speed up CI builds that use docker"
@@ -35,7 +35,7 @@ least [circleci](https://circleci.com/docs/docker-layer-caching) and
 [github actions](https://depot.dev/blog/docker-layer-caching-in-github-actions) have it). 
 
 At the time of writing this post this was not an option on our internally hosted bamboo CI. What
-we did have though, was an internal docker repository(using artifactory). I'd also recently learnt about docker's 
+we did have though, was an internal docker registry(using artifactory). I'd also recently learnt about docker's 
 [`--cache-from`](https://docs.docker.com/engine/reference/commandline/build/#specifying-external-cache-sources) 
 argument. This allows you to use an existing image as a layer cache for a build.
 
@@ -87,5 +87,5 @@ updates to dependencies get automatically updated in the cache. In the past I've
 a "base image" with the dependencies bundled in. This added an extra manual step of bumping the base image whenever
 dependencies got updated. Using a cache skips this complexity.
 
-So for anyone who wants to speed up docker build times and has a container repository available this is definitely
+So for anyone who wants to speed up docker build times and has a container registry available this is definitely
 something I recommend investigating.
