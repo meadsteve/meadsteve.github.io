@@ -73,8 +73,8 @@ This argument tells buildkit to include the cache metadata in the generated imag
 image and use it as a cache source.
 
 ### `--cache-from`
-This is the part that speeds up our build. Now for any of the layers in our docker container that haven't changed
-the build can be skipped.
+This is the part that speeds up our build. Now the build steps can be skipped for any layers in the image that haven't
+changed.
 
 ### `docker push ${IMAGE}`
 This final step keeps the cache up to date. If one of the layers has changed, for example if a dependency has been 
