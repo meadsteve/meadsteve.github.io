@@ -1,8 +1,8 @@
 ---
 layout: post
-published: false
+published: true
 title:  "Using a docker registry as a distributed layer cache for CI"
-date:   2022-09-28 10:00:00
+date:   2022-09-29 10:00:00
 categories: docker
 summary: "Steps to use --cache-from to speed up CI builds that use docker"
 icon: fab fa-docker
