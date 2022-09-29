@@ -16,8 +16,8 @@ tags:
 
 Recently I was talking to friend about getting new people up and running in software teams. He mentioned some problems
 a few new starters had had with an unfamiliar library they'd chosen in one project. This got me thinking about a blog
-post I'd read a number of year's ago about [novelty budgets](https://shimweasel.com/2018/08/25/novelty-budgets) (
-and even more year's ago: [choose boring technology](https://mcfunley.com/choose-boring-technology)).
+post I'd read a number of years ago about [novelty budgets](https://shimweasel.com/2018/08/25/novelty-budgets) (
+and even more years ago: [choose boring technology](https://mcfunley.com/choose-boring-technology)).
 
 ## Perspectives on novelty
 ### Team perspective - the new starter?
