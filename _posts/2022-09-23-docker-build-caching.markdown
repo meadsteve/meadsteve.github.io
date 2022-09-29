@@ -86,3 +86,6 @@ So far, yes. The build times dropped and everything seems to work. One thing I r
 updates to dependencies get automatically updated in the cache. In the past I've seen this problem solved by creating
 a "base image" with the dependencies bundled in. This added an extra manual step of bumping the base image whenever
 dependencies got updated. Using a cache skips this complexity.
+
+So for anyone who wants to speed up docker build times and has a container repository available this is definitely
+something I recommend investigating.
