@@ -18,3 +18,13 @@ Recently I was talking to friend about getting new people up and running in soft
 a few new starters had had with an unfamiliar library they'd chosen in one project. This got me thinking about a blog
 post I'd read a number of year's ago about [novelty budgets](https://shimweasel.com/2018/08/25/novelty-budgets) (
 and even more year's ago: [choose boring technology](https://mcfunley.com/choose-boring-technology)).
+
+## Perspectives on novelty
+### Team perspective - the new starter?
+### Large companies internal transfer?
+
+## what things can be novel?
+### The domain is always new
+### Is your language common yet?
+### Is that library common yet?
+### Are the patterns common yet?
