@@ -28,3 +28,7 @@ and even more years ago: [choose boring technology](https://mcfunley.com/choose-
 ### Is your language common yet?
 ### Is that library common yet?
 ### Are the patterns common yet?
+
+## Changes with time
+
+## When to discuss the novelty? ADRs? PRs?
