@@ -44,7 +44,7 @@ So now whenever I receive some comments on a code review I try to follow this th
  Thank the reviewer and celebrate that my code is now better.
  This is the simplest situation.
 
- * Has reviewer has mistaken the intention of my code?
+ * Has the reviewer mistaken the intention of my code?
  If they have then this is possibly an issue with the way my code has been presented.
  Are there any comments I could add to clarify my intent?
  Is there any supporting documentation I could update?
