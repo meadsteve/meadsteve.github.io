@@ -11,6 +11,9 @@ tags:
     - collaboration
     - PR
     - Review
+comments:
+  title: Discuss this post on hacker news
+  link: https://news.ycombinator.com/item?id=33107827
 ---
 
 I started thinking about this because of this tweet:
