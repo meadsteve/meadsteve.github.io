@@ -29,7 +29,7 @@ starting state and returning the next sate. This is fairly easy to test with sta
 
 ## Onto components
 Where I ran into bigger problems was around testing the components. I had these partially covered with end to end
-tests running in [cypress](https://www.cypress.io/). I also won't cover that here but `learntdd.in has a [good tutorial
+tests running in [cypress](https://www.cypress.io/). I also won't cover that here but `learntdd.in` has a [good tutorial
 on outside in testing](https://learntdd.in/react/) with cypress for react.
 
 My problems started when I wanted to test a component in isolation. One of the main responsibilities of my components
