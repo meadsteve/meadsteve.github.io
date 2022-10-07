@@ -24,7 +24,7 @@ documenting an approach I've tried out. Redux is not an area I'm an expert in so
 reading this post with better ideas.
 
 ## I won't discuss driving slice development with TDD
-Most of the code around slices is purely functional, taking a immutable
+Most of the code around slices is purely functional, taking an immutable
 starting state and returning the next sate. This is fairly easy to test with standard techniques. 
 
 ## Onto components
