@@ -197,6 +197,10 @@ code { font-family: 'Fira Code', Consolas, monospace; }
   code { font-family: 'Fira Code VF', Consolas,  monospace; }
 }
 
+code.language-plaintext {
+  color: darkmagenta;
+  font-family: "Open Sans", helvetica, sans-serif;
+}
 
 div.highlight {
   color: lightblue;
