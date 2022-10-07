@@ -17,9 +17,9 @@ tags:
 
 Whilst I typically spend more of my time working on backend code ([in python](https://blog.meadsteve.dev/python/)) I 
 also work on the frontend (mostly typescript). I'm a big fan of TDD and I've also worked with redux but I've never 
-combined the two before. This post will be a little more stream of consciousness than normal and is more me documenting
-an approach I've tried out. Redux is not an area I'm an expert in so I'd welcome any feedback from people reading
-this post with better ideas.
+combined the two before. This post will be a little bit more stream of consciousness than normal and is basically me 
+documenting an approach I've tried out. Redux is not an area I'm an expert in so I'd welcome any feedback from people 
+reading this post with better ideas.
 
 ## I won't discuss driving slice development with TDD
 Most of the code around slices is purely functional, taking a immutable
