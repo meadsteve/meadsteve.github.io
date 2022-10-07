@@ -12,7 +12,9 @@ tags:
     - typescript
     - tdd
     - testing
-
+comments:
+  title: Discuss this post over on reddit
+  link: https://www.reddit.com/r/react/comments/xxu257/how_do_you_tdd_with_redux/
 ---
 
 Whilst I typically spend more of my time working on backend code ([in python](https://blog.meadsteve.dev/python/)) I 
