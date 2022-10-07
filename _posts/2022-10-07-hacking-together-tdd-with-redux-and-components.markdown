@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title:  "Hacking together a TDD workflow for redux and components"
 date:   2022-10-07 10:00:00
 categories: react
