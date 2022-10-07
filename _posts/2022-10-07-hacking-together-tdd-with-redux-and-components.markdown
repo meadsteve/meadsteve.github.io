@@ -83,7 +83,7 @@ test('the posts must have some content to be saved', async () => {
 });
 ```
 
-I didn't know exactly what `makeTestStore` or `testRender` would look like but I new I wanted to be able to make
+I didn't know exactly what `makeTestStore` or `testRender` would look like but I knew I wanted to be able to make
 assertions about dispatch so I ended up creating something like this:
 
 ```tsx
