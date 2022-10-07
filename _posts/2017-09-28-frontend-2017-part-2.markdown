@@ -306,7 +306,7 @@ I'm now happy that I've got a good foundation for adding new features to my code
 
 The next step will be adding one of the following (depending on my mood):
   * Persistence - A disappearing todo list is no good after all.
-  * End to end Tests - I've currently got nothing that asserts I've wired all the pieces togetehr.
+  * End to end Tests - I've currently got nothing that asserts I've wired all the pieces together.
 
 [repo-app]: https://github.com/meadsteve/todo-2017/
 [series-part-one]: /programming/2017/09/19/frontend-2017-part-1/
