@@ -43,7 +43,7 @@ lot of the terms and concepts you use will be something they need to learn as pa
 
 ### Is your language common yet?
 If your company codes in Java or Python you will probably have no problem hiring a developer who already knows this 
-language and won't have to add learning it to their onboarding tasks. If your entire company uses haskell there's a 
+language. They won't have to add learning it to their onboarding tasks. If your entire company uses haskell there's a 
 good chance you'll hire someone who's wiling to learn it but may not have already used it.
 
 ### Is that library/framework common yet?
