@@ -18,7 +18,7 @@ Recently I was talking to friend about getting new people up and running in soft
 a few new starters had had with an unfamiliar library they'd chosen in one project. This got me thinking about a pair 
 of blog posts I'd read a number of years ago about [novelty budgets](https://shimweasel.com/2018/08/25/novelty-budgets) 
 and [choosing boring technology](https://mcfunley.com/choose-boring-technology). These blog posts both use different 
-language to talk about similar concepts a "novelty budget" and "innovation tokens". The core idea is that you should 
+language to talk about similar concepts: "a novelty budget" and "innovation tokens". The core idea is that you should 
 limit the amount of "non-standard" solutions you use on a project. 
 
 To me balancing this level of novelty is very important for a team. Whenever you bring someone new into the team they
@@ -27,7 +27,7 @@ have to get up to speed on all your existing code and technology choices. The mo
 
 ## When to discuss the novelty? 
 Most teams I've worked on have some process to make larger architectural decisions. This could be a larger discussion
-on a PR for a proof of concept. Or maybe a more formal process for making `Architectural Decisions` that leads
+on a PR for a proof of concept. Or maybe a more formal process for making "Architectural Decisions" that leads
 to the creation of an [ADR](https://adr.github.io/).
 
 This is a great point to discuss the impact the novelty of your choice will have on the team. Let's start by covering 
@@ -42,7 +42,7 @@ It's possible they've never worked in your industry before or at least your spec
 lot of the terms and concepts you use will be something they need to learn as part of the onboarding.
 
 ### Is your language common yet?
-If your company codes in Java or Python you will probably have no problem hiring a developer who already knows this 
+If your company codes in java or python you will probably have no problem hiring a developer who already knows this 
 language. They won't have to add learning it to their onboarding tasks. If your entire company uses haskell there's a 
 good chance you'll hire someone who's wiling (and maybe excited) to learn haskell but has never worked with it before.
 
@@ -54,8 +54,8 @@ then you may need to spend a while reading the docs to really understand what's 
 
 ### A special mention - Not using a framework
 If there's a handful of common frameworks for your language and you chose **not** to use one then I would consider
-this a novel choice. There's a good chance you'll end up creating an [`ad hoc and informally-specified
-implementation of a framework`](https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule). This will be new to any developer you hire as it only exists within your team or company.
+this a novel choice. There's a good chance you'll end up creating an ["ad hoc and informally-specified
+implementation of a framework"](https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule). This will be new to any developer you hire as it only exists within your team or company.
 
 ### Are the patterns common yet?
 For example is functional programming popular in your language of choice? Has it always been popular or is it 
@@ -73,7 +73,7 @@ Javascript for a device driver would be an interestingly novel choice.
 
 ### Large companies internal transfer?
 Once a company is above a certain size then considering people moving internally becomes a factor. Erlang as a 
-language choice might be considered novel if the rest of your company writes in Java. But if your entire company uses
+language choice might be considered novel if the rest of your company writes in java. But if your entire company uses
 erlang already then it's almost the default language choice and you would have to justify using something else.
 
 ## Changes with time
