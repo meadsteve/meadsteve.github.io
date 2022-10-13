@@ -53,9 +53,9 @@ a lot of convention rather than explicit code. Django for example can be very fa
 then you may need to spend a while reading the docs to really understand what's going on.
 
 ### A special mention - Not using a framework
-If there's a handful of common frameworks in your language of choice and you chose not to use one then I would consider
-this a novel choice. There's a good chance you'll end up creating an `ad hoc and informally-specified
-implementation of a framework`. This will be new to any developer you hire as it only exists within your team or company.
+If there's a handful of common frameworks for your language and you chose **not** to use one then I would consider
+this a novel choice. There's a good chance you'll end up creating an [`ad hoc and informally-specified
+implementation of a framework`](https://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule). This will be new to any developer you hire as it only exists within your team or company.
 
 ### Are the patterns common yet?
 For example is functional programming popular in your language of choice? Has it always been popular or is it 
@@ -68,12 +68,11 @@ to kubernetes? All of these may be technology that your new starter needs to lea
 ## Perspectives on novelty
 Obviously not all new starters to your team are the same. Different people have taken different career paths and arrive
 in your team with a unique set of skills and perspectives. There are however trends. There might be languages and 
-frameworks that are more popular and common in your specific industry so won't be considered as novel as they would be
-for a company in a different space. Javascript for the web is not novel. Javascript for a device driver would be an 
-interestingly novel choice.
+frameworks that are more popular and common in your specific industry or specialism. Javascript for the web is not novel. 
+Javascript for a device driver would be an interestingly novel choice.
 
 ### Large companies internal transfer?
-Once a company is above a certain size considering people moving about teams internally becomes a factor. Erlang as a 
+Once a company is above a certain size then considering people moving internally becomes a factor. Erlang as a 
 language choice might be considered novel if the rest of your company writes in Java. But if your entire company uses
 erlang already then it's almost the default language choice and you would have to justify using something else.
 
@@ -83,8 +82,8 @@ using typescript would be considered a novel choice. Now I would argue that type
 team was on the cutting edge and spent some of its novelty budget on typescript a few years ago that budget is now 
 available again today to invest in something else. Some technology choices never become mainstream and will always
 use up some of your novelty budget. Other choices might have started out as a common choice but become more niche with 
-time. COBOL for example is a good example of this. Finding developers that won't find COBOL novel is becoming harder
-every year.
+time. COBOL as a programming language is a good example of this. It was very mainstream in the 60s. However now finding 
+developers that won't find COBOL novel is becoming harder every year.
 
 ## Too little novelty
 None of the things listed above are bad in isolation. They may bring a number of benefits:
