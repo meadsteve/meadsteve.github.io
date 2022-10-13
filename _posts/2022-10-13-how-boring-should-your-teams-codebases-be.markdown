@@ -23,7 +23,7 @@ limit the amount of "non-standard" solutions you use on a project.
 
 To me balancing this level of novelty is very important for a team. Whenever you bring someone new into the team they
 have to get up to speed on all your existing code and technology choices. The more unusual these choices are the steeper
-this learning curve will be.
+(and/or longer) this learning curve will be.
 
 ## When to discuss the novelty? 
 Most teams I've worked on have some process to make larger architectural decisions. This could be a larger discussion
