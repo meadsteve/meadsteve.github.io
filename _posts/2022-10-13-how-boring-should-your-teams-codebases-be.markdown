@@ -38,7 +38,7 @@ There are many things that add to your teams novelty but I consider the followin
 
 ### The domain is (probably) always new
 To a developer just starting working at your company there's a good chance they've never used your product before. 
-It's possible they've never worked in your domain before or at least your specific niche in the domain. This means a 
+It's possible they've never worked in your industry before or at least your specific niche in the industry. This means a 
 lot of the terms and concepts you use will be something they need to learn as part of the onboarding.
 
 ### Is your language common yet?
