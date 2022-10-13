@@ -12,6 +12,9 @@ tags:
     - novelty
     - onboarding
     - complexity
+comments:
+  title: Discuss this post on hacker news
+  link: https://news.ycombinator.com/item?id=33189724
 ---
 
 Recently I was talking to friend about getting new people up and running in software teams. He mentioned some problems
