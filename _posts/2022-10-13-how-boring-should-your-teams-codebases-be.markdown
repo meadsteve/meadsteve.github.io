@@ -79,8 +79,8 @@ erlang already then it's almost the default language choice and you would have t
 ## Changes with time
 Technology moves on. What was once new, exciting and unstable becomes common, stable and well known. A few years ago
 using typescript would be considered a novel choice. Now I would argue that typescript is a standard choice. So if your
-team was on the cutting edge and spent some of its novelty budget on typescript a few years ago that budget is now 
-available again today to invest in something else. Some technology choices never become mainstream and will always
+team was on the cutting edge and spent some of its novelty budget on typescript at the start of a project that budget is 
+now available again today to invest in something else. Some technology choices never become mainstream and will always
 use up some of your novelty budget. Other choices might have started out as a common choice but become more niche with 
 time. COBOL as a programming language is a good example of this. It was very mainstream in the 60s. However now finding 
 developers that won't find COBOL novel is becoming harder every year.
