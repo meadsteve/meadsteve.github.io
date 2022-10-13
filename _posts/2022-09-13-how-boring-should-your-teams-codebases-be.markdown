@@ -46,11 +46,16 @@ If your company codes in Java or Python you will probably have no problem hiring
 language and won't have to add learning it to their onboarding tasks. If your entire company uses haskell there's a 
 good chance you'll hire someone who's wiling to learn it but may not have already used it.
 
-### Is that library common yet?
+### Is that library/framework common yet?
 Developers might be familiar with language your team (and company) uses but if you use a brand new library or framework
 this is another thing they will have to learn. This can be especially time consuming if it's a framework that relies on
 a lot of convention rather than explicit code. Django for example can be very fast to develop in but if you're new to it
 then you may need to spend a while reading the docs to really understand what's going on.
+
+### A special mention - Not using a framework
+If there's a handful of common frameworks in your language of choice and you chose not to use one then I would consider
+this a novel choice. There's a good chance you'll end up creating an `ad hoc and informally-specified
+implementation of a framework`. This will be new to any developer you hire as it only exists within your team or company.
 
 ### Are the patterns common yet?
 For example is functional programming popular in your language of choice? Has it always been popular or is it 
@@ -82,9 +87,12 @@ time. COBOL for example is a good example of this. Finding developers that won't
 every year.
 
 ## Too little novelty
+None of the things listed above are bad in isolation. They may bring a number of benefits:
 
-Very good reasons for needing some novelty.
-* The new thing may be a better tool for solving your problem. Less bugs, better performance, improvement development time and many other things.
-* It is an important part of employee growth and development
-* It can be exciting and motivating.
-* Everything was new once.
+* The new thing may be a better tool for solving your problem. It may help express your domain logic more cleanly.
+* It may result in less bugs and improved development time.
+* It may offer better performance.
+* The codebase might become smaller and easier to maintain.
+* It can be exciting and motivating as part of your team member's personal development to learn new skills & technology.
+
+
