@@ -5,7 +5,7 @@ title:  "How boring should your team's codebases be"
 date:   2022-10-13 10:00:00
 categories: team-work
 summary: "Thoughts on how to keep the novelty in a team at the correct level for easy onboarding"
-icon: fab fa-lightbulb
+icon: fas fa-balance-scale
 tags:
     - teams
     - experimentation
