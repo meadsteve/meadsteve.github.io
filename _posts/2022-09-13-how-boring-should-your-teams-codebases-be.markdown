@@ -16,9 +16,9 @@ tags:
 
 Recently I was talking to friend about getting new people up and running in software teams. He mentioned some problems
 a few new starters had had with an unfamiliar library they'd chosen in one project. This got me thinking about a pair 
-of blog posts I'd read a number of years ago about [novelty budgets](https://shimweasel.com/2018/08/25/novelty-budgets) (
-and [choose boring technology](https://mcfunley.com/choose-boring-technology)). These blog posts both use different 
-language to talk about similar concepts "innovation tokens" and a "novelty budget".  The core idea is that you should 
+of blog posts I'd read a number of years ago about [novelty budgets](https://shimweasel.com/2018/08/25/novelty-budgets) 
+and [choosing boring technology](https://mcfunley.com/choose-boring-technology). These blog posts both use different 
+language to talk about similar concepts a "novelty budget" and "innovation tokens". The core idea is that you should 
 limit the amount of "non-standard" solutions you use on a project. 
 
 To me balancing this level of novelty is very important for a team. Whenever you bring someone new into the team they
@@ -30,7 +30,7 @@ Most teams I've worked on have some process to make larger architectural decisio
 on a PR for a proof of concept. Or maybe a more formal process for making `Architectural Decisions` that leads
 to the creation of an [ADR](https://adr.github.io/).
 
-This is a great point to discuss the impact the novelty of your choice will have on the team. But first lets discuss 
+This is a great point to discuss the impact the novelty of your choice will have on the team. Let's start by covering 
 what it means to be novel and what things could be considered novel.
  
 ## What things can be novel?
@@ -53,14 +53,38 @@ a lot of convention rather than explicit code. Django for example can be very fa
 then you may need to spend a while reading the docs to really understand what's going on.
 
 ### Are the patterns common yet?
+For example is functional programming popular in your language of choice? Has it always been popular or is it 
+"the new thing". This potentially adds another set of concepts your new developer has to learn.
 
+### Platforms, Databases, etc...
+Is your database or data storage widely used? What executes your code? Is it a docker container? Serverless? Deployed
+to kubernetes? All of these may be technology that your new starter needs to learn.
 
 ## Perspectives on novelty
-### Team perspective - the new starter?
-### Large companies internal transfer?
+Obviously not all new starters to your team are the same. Different people have taken different career paths and arrive
+in your team with a unique set of skills and perspectives. There are however trends. There might be languages and 
+frameworks that are more popular and common in your specific industry so won't be considered as novel as they would be
+for a company in a different space. Javascript for the web is not novel. Javascript for a device driver would be an 
+interestingly novel choice.
 
+### Large companies internal transfer?
+Once a company is above a certain size considering people moving about teams internally becomes a factor. Erlang as a 
+language choice might be considered novel if the rest of your company writes in Java. But if your entire company uses
+erlang already then it's almost the default language choice and you would have to justify using something else.
 
 ## Changes with time
-
+Technology moves on. What was once new, exciting and unstable becomes common, stable and well known. A few years ago
+using typescript would be considered a novel choice. Now I would argue that typescript is a standard choice. So if your
+team was on the cutting edge and spent some of its novelty budget on typescript a few years ago that budget is now 
+available again today to invest in something else. Some technology choices never become mainstream and will always
+use up some of your novelty budget. Other choices might have started out as a common choice but become more niche with 
+time. COBOL for example is a good example of this. Finding developers that won't find COBOL novel is becoming harder
+every year.
 
 ## Too little novelty
+
+Very good reasons for needing some novelty.
+* The new thing may be a better tool for solving your problem. Less bugs, better performance, improvement development time and many other things.
+* It is an important part of employee growth and development
+* It can be exciting and motivating.
+* Everything was new once.
