@@ -2,7 +2,7 @@
 layout: post
 published: false
 title:  "How boring should your team's codebases be"
-date:   2022-09-13 10:00:00
+date:   2022-10-13 10:00:00
 categories: team-work
 summary: "Thoughts on how to keep the novelty in a team at the correct level for easy onboarding"
 icon: fab fa-lightbulb
@@ -95,4 +95,10 @@ None of the things listed above are bad in isolation. They may bring a number of
 * The codebase might become smaller and easier to maintain.
 * It can be exciting and motivating as part of your team member's personal development to learn new skills & technology.
 
+To me the important thing is to be conscious of the total novelty your team owns. If your team has very little novelty
+perhaps you could consider writing the next proof of concept using a new technology. If you find have a lot of novelty 
+maybe it's time to rewrite that old proof of concept that got pushed into production.
+
+This is not a static thing. Make novelty one of the factors you consider every time you make an architectural decision 
+and hopefully you'll  find you have an easier time bringing in new people to your team.
 
