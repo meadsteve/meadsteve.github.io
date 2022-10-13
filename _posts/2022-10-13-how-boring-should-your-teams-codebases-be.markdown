@@ -44,7 +44,7 @@ lot of the terms and concepts you use will be something they need to learn as pa
 ### Is your language common yet?
 If your company codes in Java or Python you will probably have no problem hiring a developer who already knows this 
 language. They won't have to add learning it to their onboarding tasks. If your entire company uses haskell there's a 
-good chance you'll hire someone who's wiling to learn it but may not have already used it.
+good chance you'll hire someone who's wiling (and maybe excited) to learn haskell but has never worked with it before.
 
 ### Is that library/framework common yet?
 Developers might be familiar with language your team (and company) uses but if you use a brand new library or framework
