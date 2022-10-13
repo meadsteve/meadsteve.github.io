@@ -17,7 +17,7 @@ layout: null
         console.log(currDate.toDate());
         allDates.push(currDate.clone().toDate());
     }
-    allDates.push(Date.now()); // Make sure we have the latest right now
+    allDates.push(moment(Date.now()).startOf('day').toDate()); // Make sure we have the latest right now
 
     const dataPoints = allDates.map(d => {
         return {x: d, y: recentAverage(allPostDates, d, threeishMonths)}
@@ -28,7 +28,7 @@ layout: null
     });
 
     let ctx = document.getElementById('mySpeedChart').getContext('2d');
-    console.log(dataPoints);
+
     let scatterChart = new Chart(ctx, {
         type: 'line',
         data: {
