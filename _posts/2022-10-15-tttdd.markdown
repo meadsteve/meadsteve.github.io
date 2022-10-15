@@ -1,0 +1,19 @@
+---
+layout: post
+published: false
+title:  "TTTDD - Types then Test Driven Development"
+date:   2022-10-13 10:00:00
+categories: programming
+summary: "Notes on using TDD with a nestjs graphql backend"
+icon: fab fa-js
+tags:
+    - tdd
+    - typescript
+    - graphql
+---
+
+TODO: actually write
+
+## Mention setup: wallaby, nest.js and graphql
+
+## Steps: Graphql types first, then test, then implementation
