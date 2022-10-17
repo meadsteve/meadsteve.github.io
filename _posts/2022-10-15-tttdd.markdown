@@ -109,4 +109,119 @@ type Query {
 
 # But now we need a good test
 
+query {
+  blogposts{title, content}
+}
+
+{
+  "errors": [
+    {
+      "message": "CODE ME!",
+      "extensions": {
+        "code": "501",
+        "response": {
+          "statusCode": 501,
+          "message": "CODE ME!",
+          "error": "Not Implemented"
+        }
+      }
+    }
+  ],
+  "data": null
+}
+
+describe('Blog Posts (graphql e2e)', () => {
+  let app: INestApplication;
+
+  beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init();
+  });
+
+  it('returns no posts when we dont have any', async () => {
+    const query = `query{
+      blogposts {title, content}
+    }`;
+    const { body } = await request(app.getHttpServer()).post('/graphql').send({
+      query: query,
+    });
+    expect(body.data.blogposts).toEqual([]);
+  });
+});
+
+# Passes - but it's still not useful
+0 failing tests, 3 passing
+
+# We need a mutation - back to types
+
+  @Mutation((returns) => BlogPost, { name: 'blogpost' })
+  async createBlogPost(
+    @Args('title') title: string,
+    @Args('content') content: string,
+  ): Promise<BlogPost> {
+    throw new NotImplementedException('CODE ME');
+  }
+  
+mutation {
+  blogpost(title: "First post", content: "weccome to my blog") {title, content}
+}
+
+
+# test for creation
+  it('can post a blogpost and then see that its in the list', async () => {
+    // Create the post
+    const creationMutation = `mutation {
+      blogpost(title: "First post", content: "welcome to my blog") {title, content}
+    }`;
+    await request(app.getHttpServer()).post('/graphql').send({
+      query: creationMutation,
+    });
+
+    // Check that the post is found in the list
+    const query = `query{
+      blogposts {title, content}
+    }`;
+    const { body } = await request(app.getHttpServer()).post('/graphql').send({
+      query: query,
+    });
+    expect(body.data.blogposts).toContainEqual({
+      title: 'First post',
+      content: 'welcome to my blog',
+    });
+  });
+  
+# Use regular TDD to create an in memory storage for blog posts
+  providers: [
+    BlogpostsResolver,
+    {
+      provide: 'BlogpostStorage',
+      useClass: InMemoryBlogpostStorage,
+    },
+  ],
+  
+# Update the resolver to use this storage
+@Resolver((of) => BlogPost)
+export class BlogpostsResolver {
+  constructor(@Inject('BlogpostStorage') private storage: BlogpostStorage) {}
+
+  @Query((returns) => [BlogPost])
+  async blogposts(): Promise<BlogPost[]> {
+    return this.storage.getAllPosts();
+  }
+
+  @Mutation((returns) => BlogPost, { name: 'blogpost' })
+  async createBlogPost(
+    @Args('title') title: string,
+    @Args('content') content: string,
+  ): Promise<BlogPost> {
+    const newPost = { title, content };
+    this.storage.addNewPost(newPost);
+    return newPost;
+  }
+}
+
 ```
