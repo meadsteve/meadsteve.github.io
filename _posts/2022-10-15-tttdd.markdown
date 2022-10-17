@@ -11,55 +11,77 @@ tags:
     - typescript
     - graphql
 ---
+I wanted to have an experiment using tdd with [nestjs](https://nestjs.com/) and [graphql](https://graphql.org/). I've
+worked with graphql a little before and nestjs not at all. This post won't really have a conclusion, sales pitch
+or any analysis but I wanted to document an approach that worked for me. I'm nicknaming it types then test driven 
+development.
 
-TODO: actually write
+## The setup
+I decide for the experiment I would create a small api which stores and queries blogposts via graphql.
+There's a github repo [meadsteve/blogpost-tttdd-nestjs-graphql](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql)
+with the full code for this experiment. I'll link to relevant commits along the way.
 
-## Mention setup: wallaby, nest.js and graphql
+I started with nestjs default project template from `nest new --strict {path}` (see commit [69e25be](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/69e25be70d3fbc377f798867735a18ee843d0e46)).
 
-## Steps: Graphql types first, then test, then implementation
+I'm using [wallabyjs](https://wallabyjs.com/) as a test runner because I love getting rapid feedback in my IDE. It 
+can work automatically with a jest based project but I added a little bit of configuration so that it found the end to
+end tests created by nest as well as the inline spec files (commit [f357595](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/f357595badfa97edbc78b88e4d997ccba3047230)):
 
+```javascript
+// create wallaby.js
+
+module.exports = function (wallaby) {
+    return {
+        autoDetect: true,
+
+        files: ['src/**/*.ts', { pattern: 'src/**/*.spec.ts', ignore: true }],
+
+        tests: ['src/**/*.spec.ts', 'test/**/*.e2e-spec.ts'],
+
+        env: {
+            type: 'node',
+        },
+    };
+};
+```
+
+Wallaby now shows me `0 failing tests, 2 passing`, these are the two tests that come from the project template so
+I now know everything is configured correctly.
+
+## Adding graphql
+
+Next I needed to setup graphql for the project so I installed the apollo server integration for nextjs
+
+```bash
+npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express
+```
+
+and modified `app.module.ts` to load it (commit [4c5e06e](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/4c5e06e095ecafb568b3a0417df6dc5fceef436c)):
+```javascript
+// src/app.module.ts
+//...
+imports: [
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+        driver: ApolloDriver,
+    }),
+]
+//...
+```
+
+but now wallaby tells me one of my tests is failing:
+
+```
+test/app.e2e-spec.ts AppController (e2e) / (GET) [41 ms]
+
+	Error: Apollo Server requires either an existing schema, modules or typeDefs
+```
+
+The end to end test created by nest is failing because apollo expects something to do with graphql. 
 
 ## Dump
 
 ```
-# new project
-nest new --strict nestjs-tttdd 
 
-# create wallaby.js
-
-module.exports = function (wallaby) {
-  return {
-    autoDetect: true,
-
-    files: ['src/**/*.ts', { pattern: 'src/**/*.spec.ts', ignore: true }],
-
-    tests: ['src/**/*.spec.ts', 'test/**/*.e2e-spec.ts'],
-
-    env: {
-      type: 'node',
-    },
-  };
-};
-
-# 0 failing tests, 2 passing
-
-# Graphql deps
-npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express
-
-
-# Setup graphql (added to "src/app.module.ts")
-  imports: [
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      driver: ApolloDriver,
-    }),
-  ],
-
-# !! an error
-
-test/app.e2e-spec.ts AppController (e2e) / (GET) [41 ms]
-
-	Error: Apollo Server requires either an existing schema, modules or typeDefs
-	
 # nest g module blogposts
 
 # code first
