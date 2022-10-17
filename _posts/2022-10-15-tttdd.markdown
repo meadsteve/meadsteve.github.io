@@ -17,3 +17,96 @@ TODO: actually write
 ## Mention setup: wallaby, nest.js and graphql
 
 ## Steps: Graphql types first, then test, then implementation
+
+
+## Dump
+
+```
+# new project
+nest new --strict nestjs-tttdd 
+
+# create wallaby.js
+
+module.exports = function (wallaby) {
+  return {
+    autoDetect: true,
+
+    files: ['src/**/*.ts', { pattern: 'src/**/*.spec.ts', ignore: true }],
+
+    tests: ['src/**/*.spec.ts', 'test/**/*.e2e-spec.ts'],
+
+    env: {
+      type: 'node',
+    },
+  };
+};
+
+# 0 failing tests, 2 passing
+
+# Graphql deps
+npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express
+
+
+# Setup graphql (added to "src/app.module.ts")
+  imports: [
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
+    }),
+  ],
+
+# !! an error
+
+test/app.e2e-spec.ts AppController (e2e) / (GET) [41 ms]
+
+	Error: Apollo Server requires either an existing schema, modules or typeDefs
+	
+# nest g module blogposts
+
+# code first
+# Setup graphql (added to "src/app.module.ts")
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+    }),
+
+
+src/blogposts/models/blogpost.model.ts
+@ObjectType()
+export class BlogPost {
+  @Field()
+  title: string;
+
+  @Field()
+  content: string;
+}
+
+src/blogposts/blogposts.resolver.ts
+@Resolver((of) => BlogPost)
+export class BlogpostsResolver {
+  @Query((returns) => [BlogPost])
+  async blogposts(): Promise<BlogPost[]> {
+    throw new NotImplementedException('CODE ME!');
+  }
+}
+
+src/schema.gql
+
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type BlogPost {
+  title: String!
+  content: String!
+}
+
+type Query {
+  blogposts: [BlogPost!]!
+}
+
+# back to two passing tests
+0 failing tests, 2 passing 
+
+# But now we need a good test
+
+```
