@@ -57,7 +57,7 @@ npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express
 ```
 
 and modified `app.module.ts` to load it (commit [4c5e06e](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/4c5e06e095ecafb568b3a0417df6dc5fceef436c)):
-```javascript
+```typescript
 // src/app.module.ts
 //...
 imports: [
@@ -78,21 +78,18 @@ test/app.e2e-spec.ts AppController (e2e) / (GET) [41 ms]
 
 The end to end test created by nest is failing because apollo expects something to do with graphql. 
 
-## Dump
+## Setup some types
+This is where I decided to do `types first then tests`. I setup a module:
 
+```bash
+nest g module blogposts
 ```
 
-# nest g module blogposts
+I then thought about what the smallest useful type would be for a blogpost. I decided on a post with just
+a title and content (more can be added later):
+```typescript
+// src/blogposts/models/blogpost.model.ts
 
-# code first
-# Setup graphql (added to "src/app.module.ts")
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-    }),
-
-
-src/blogposts/models/blogpost.model.ts
 @ObjectType()
 export class BlogPost {
   @Field()
@@ -101,40 +98,42 @@ export class BlogPost {
   @Field()
   content: string;
 }
+```
 
+and I thought it would make sense if graphql could return all the blogposts, so I created a resolver with
+a method for this:
+
+```typescript
 src/blogposts/blogposts.resolver.ts
 @Resolver((of) => BlogPost)
 export class BlogpostsResolver {
-  @Query((returns) => [BlogPost])
-  async blogposts(): Promise<BlogPost[]> {
-    throw new NotImplementedException('CODE ME!');
-  }
+    @Query((returns) => [BlogPost])
+    async blogposts(): Promise<BlogPost[]> {
+        throw new NotImplementedException('CODE ME!');
+    }
 }
+```
 
-src/schema.gql
+Importantly this doesn't have any logic yet but the shape of the code seems right and my tests are back to passing 
+(commit [414e792](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/414e79291745d515753ce3c8385c19aac7626df3) has the code to get to this point):
 
-# ------------------------------------------------------
-# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
-# ------------------------------------------------------
+```
+0 failing tests, 2 passing
+```
 
-type BlogPost {
-  title: String!
-  content: String!
-}
+## The first real end to end test
+The very first real thing I wanted was to test that initially there are no blogposts. Since the graphql server
+was up and running I could use the playground to generate a query to get this:
 
-type Query {
-  blogposts: [BlogPost!]!
-}
-
-# back to two passing tests
-0 failing tests, 2 passing 
-
-# But now we need a good test
-
+```
 query {
   blogposts{title, content}
 }
+```
 
+running this gave me the following error response. Which makes sense because I didn't write any logic.
+
+```json
 {
   "errors": [
     {
@@ -151,43 +150,72 @@ query {
   ],
   "data": null
 }
+```
 
+I created a new test file `test/graphql/blogposts-graphql.e2e-spec.ts` and wrote a test that the query earlier 
+should result in `[]` blogposts:
+
+```typescript
 describe('Blog Posts (graphql e2e)', () => {
-  let app: INestApplication;
+    let app: INestApplication;
 
-  beforeEach(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
-    }).compile();
+    beforeEach(async () => {
+        const moduleFixture: TestingModule = await Test.createTestingModule({
+            imports: [AppModule],
+        }).compile();
 
-    app = moduleFixture.createNestApplication();
-    await app.init();
-  });
-
-  it('returns no posts when we dont have any', async () => {
-    const query = `query{
-      blogposts {title, content}
-    }`;
-    const { body } = await request(app.getHttpServer()).post('/graphql').send({
-      query: query,
+        app = moduleFixture.createNestApplication();
+        await app.init();
     });
-    expect(body.data.blogposts).toEqual([]);
-  });
+
+    it('returns no posts when we dont have any', async () => {
+        const query = `query{
+          blogposts {title, content}
+        }`;
+        const { body } = await request(app.getHttpServer()).post('/graphql').send({
+            query: query,
+        });
+        expect(body.data.blogposts).toEqual([]);
+    });
 });
+```
 
-# Passes - but it's still not useful
-0 failing tests, 3 passing
+Then I made the smallest change I could think to make to the test pass (see commit [b34b4f4](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/b34b4f44eba87ec249e6741791fc73141a931d4c)).
 
-# We need a mutation - back to types
-
-  @Mutation((returns) => BlogPost, { name: 'blogpost' })
-  async createBlogPost(
-    @Args('title') title: string,
-    @Args('content') content: string,
-  ): Promise<BlogPost> {
-    throw new NotImplementedException('CODE ME');
+```typescript
+// src/blogposts/blogposts.resolver.ts
+@Resolver((of) => BlogPost)
+export class BlogpostsResolver {
+  @Query((returns) => [BlogPost])
+  async blogposts(): Promise<BlogPost[]> {
+    return [];
   }
-  
+}
+```
+
+## More types and the second (much more useful) test
+Always returning an empty list, whilst technically correct, is not very useful. I wanted to write another
+end to end test case. This one would create a blogpost and then check that it is returned in the list of all blogposts.
+But first I needed to go back to my types and make a mutation available. 
+
+I added to my blog posts resolver and as with the previous change I ignored logic for now and just got the shape
+right. I would take in title and content strings and create a blogpost.
+
+```typescript
+// src/blogposts/blogposts.resolver.ts
+export class BlogpostsResolver {
+    // ... existing code ... 
+    @Mutation((returns) => BlogPost, { name: 'blogpost' })
+    async createBlogPost(@Args('title') title: string, @Args('content') content: string): Promise<BlogPost> {
+        throw new NotImplementedException('CODE ME');
+    }
+}
+```
+
+
+## Dump
+
+```
 mutation {
   blogpost(title: "First post", content: "weccome to my blog") {title, content}
 }
