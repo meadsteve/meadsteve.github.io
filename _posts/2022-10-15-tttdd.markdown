@@ -104,7 +104,7 @@ and I thought it would make sense if graphql could return all the blogposts, so 
 a method for this:
 
 ```typescript
-src/blogposts/blogposts.resolver.ts
+// src/blogposts/blogposts.resolver.ts
 @Resolver((of) => BlogPost)
 export class BlogpostsResolver {
     @Query((returns) => [BlogPost])
