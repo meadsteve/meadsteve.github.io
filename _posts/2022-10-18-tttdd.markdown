@@ -11,7 +11,7 @@ tags:
     - typescript
     - graphql
 ---
-I wanted to have an experiment using tdd with [nestjs](https://nestjs.com/) and [graphql](https://graphql.org/). I've
+I wanted to experiment using tdd with [nestjs](https://nestjs.com/) and [graphql](https://graphql.org/). I've
 worked with graphql a little before and nestjs not at all. This post won't really have a conclusion, sales pitch
 or any analysis but I wanted to document an approach that worked for me. I'm nicknaming it "types then test driven 
 development".
