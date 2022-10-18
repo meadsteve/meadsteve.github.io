@@ -152,8 +152,8 @@ running this gave me the following error response. Which makes sense because I d
 }
 ```
 
-I created a new test file `test/graphql/blogposts-graphql.e2e-spec.ts` and wrote a test that the query earlier 
-should result in `[]` blogposts:
+I created a new test file `test/graphql/blogposts-graphql.e2e-spec.ts` and wrote a test to assert that running the query 
+for blogposts returns an empty list:
 
 ```typescript
 describe('Blog Posts (graphql e2e)', () => {
@@ -196,7 +196,7 @@ export class BlogpostsResolver {
 ## More types and the second (much more useful) test
 Always returning an empty list, whilst technically correct, is not very useful. I wanted to write another
 end to end test case. This one would create a blogpost and then check that it is returned in the list of all blogposts.
-But first I needed to go back to my types and make a mutation available. 
+But first I needed to go back to my types and make a mutation available to create a new blogpost. 
 
 I added to my blog posts resolver and as with the previous change I ignored logic for now and just got the shape
 right. I would take in title and content strings and create a blogpost.
