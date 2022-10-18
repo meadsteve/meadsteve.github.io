@@ -13,8 +13,8 @@ tags:
 ---
 I wanted to have an experiment using tdd with [nestjs](https://nestjs.com/) and [graphql](https://graphql.org/). I've
 worked with graphql a little before and nestjs not at all. This post won't really have a conclusion, sales pitch
-or any analysis but I wanted to document an approach that worked for me. I'm nicknaming it types then test driven 
-development.
+or any analysis but I wanted to document an approach that worked for me. I'm nicknaming it "types then test driven 
+development".
 
 ## The setup
 I decide for the experiment I would create a small api which stores and queries blogposts via graphql.
@@ -294,11 +294,12 @@ export class BlogpostsResolver {
 ```
 
 After writing this implementation I saw that wallaby showed me all tests passing (note: it's jumped to 6 because my 
-storage class has some test of its own.)
+storage class has some tests of its own).
 
 ```
 0 failing tests, 6 passing
 ```
 
-And this is where I'm stopping the experiment for now. But with this way of working I should be able to continue looping
-between "writing some typed code", "writing a test" and "making the test pass" to add any other features I want. 
+This is where I'm stopping the experiment for now. But with this way of working I'm confident that I should be able to 
+continue looping between "writing some typed code", "writing a test", and "making the test pass" to add any other 
+features I want. 
