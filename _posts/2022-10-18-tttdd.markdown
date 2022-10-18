@@ -2,7 +2,7 @@
 layout: post
 published: false
 title:  "TTTDD - Types then Test Driven Development"
-date:   2022-10-13 10:00:00
+date:   2022-10-18 10:00:00
 categories: programming
 summary: "Notes on using TDD with a nestjs graphql backend"
 icon: fab fa-js
@@ -212,16 +212,18 @@ export class BlogpostsResolver {
 }
 ```
 
-
-## Dump
+Going back to the graphql playground I can then build a mutation like this to add a post:
 
 ```
 mutation {
   blogpost(title: "First post", content: "weccome to my blog") {title, content}
 }
+```
 
+It will fail, as the previous query did at first, because it has no implementation but I can use this mutation to build a 
+test for the feature I want (the test is a little long so I ended up refactoring it in a [later commit](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/395cffe59431434e855b70c4c601995b5ce0577b)).
 
-# test for creation
+```typescript
   it('can post a blogpost and then see that its in the list', async () => {
     // Create the post
     const creationMutation = `mutation {
@@ -243,17 +245,33 @@ mutation {
       content: 'welcome to my blog',
     });
   });
-  
-# Use regular TDD to create an in memory storage for blog posts
-  providers: [
-    BlogpostsResolver,
-    {
-      provide: 'BlogpostStorage',
-      useClass: InMemoryBlogpostStorage,
-    },
-  ],
-  
-# Update the resolver to use this storage
+```
+
+With this failing end to end test I started work on implementing some actual storage. For the purpose of this 
+experiment I wrote a class to store the list "in-memory". This storage class is useful for tests but before I'd
+put this into production I'd need to swap it out for something more permanent. With this in mind I registered the 
+provider as an interface with my in-memory implementation as the default for now.
+
+```typescript
+// src/blogposts/blogposts.module.ts
+
+@Module({
+    //...
+    providers: [
+        BlogpostsResolver,
+        {
+            provide: 'BlogpostStorage',
+            useClass: InMemoryBlogpostStorage,
+        },
+    ]
+    //...
+})
+export class BlogpostsModule {}
+```
+
+Now that this storage was available to nest I updated my resolver to use it (see commit [41e95eb](https://github.com/meadsteve/blogpost-tttdd-nestjs-graphql/commit/41e95ebb07fcf87d406fd91d63aa893a8332705f)):
+
+```typescript
 @Resolver((of) => BlogPost)
 export class BlogpostsResolver {
   constructor(@Inject('BlogpostStorage') private storage: BlogpostStorage) {}
@@ -273,5 +291,14 @@ export class BlogpostsResolver {
     return newPost;
   }
 }
+```
+
+After writing this implementation I saw that wallaby showed me all tests passing (note: it's jumped to 6 because my 
+storage class has some test of its own.)
 
 ```
+0 failing tests, 6 passing
+```
+
+And this is where I'm stopping the experiment for now. But with this way of working I should be able to continue looping
+between "writing some typed code", "writing a test" and "making the test pass" to add any other features I want. 
