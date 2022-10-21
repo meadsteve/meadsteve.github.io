@@ -57,6 +57,14 @@ a company provided dedicated space for this.
 ## Things I didn't expect
  * Still mobbing pairing on zoom even when in office 
 
+## Challenges with hybrid
+One of the main challenges I've experienced with hybrid is around meetings when some people are in the office but not all.
+I've noticed there's a desire to want to run these meetings as in person meetings with a zoom call running on a large screen.
+At the moment my experience of this style of meeting is that those who are remote are getting a second class experience. It's
+harder to contribute and encourages stepping back and leaving things to the people in person.
+I think this is an issue that teams need to be really explicit about addressing. Whether they address it with cultural changes, 
+better audio equipment or stopping mixed meetings is best handled by the teams themselves.
+
 ## How do I want to work in the future
 For future contracts I would absolutely work hybrid again. For the above reasons. I would also consider entirely remote
 work. Though I think it would be important for me (and the company) to spend some effort trying to make up for the
