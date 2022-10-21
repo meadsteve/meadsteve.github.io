@@ -26,27 +26,33 @@ However, I've been running into a problems when the exceptions are raised like t
 ```
 
 I'm having to do a combination of rewriting code and some fragile string matching on the error messages so that I can 
-filter out what's a really important error and what is more like warning.
+filter out what's a really important error, what can be retried and what is more like warning.
 
 ## What would I prefer
-How could this be improved:
+For anyone writing libraries, either publicly or for use within a codebase, there's a number of steps that can
+be applied to make things better.
+
+### Pick a good base exception from the standard library 
+The python standard library defines [a number of exception classes](https://docs.python.org/3/library/exceptions.html#base-classes).
+Starting with the most specific one you can find communicates a lot about what kind of error has happened.
 
 ### Sub typed errors
-For example there are lots of different things that can timeout. Rather than throwing the generic exception libraries 
-could subclass it:
+Following on from picking a good base exception. Create your own class for each type of error you have and give it
+a sensible name. For example there are lots of different things that can timeout. Rather than throwing a generic 
+`TimeoutError` exception your library could subclass it:
 
 ```python
 class QueryTookTooLong(TimeoutError):
     pass
 ```
 
-This makes it easier to catch and handle exactly the problem I want to handle:
+This makes it easier to catch and allows consumers to handle different errors in a different way:
 
 ```python
 try:
     do_something()
 except QueryTookTooLong:
-    record_slow_query():
+    record_slow_query()
 except ServerRejectedQueryBecauseItWasBusy:
     back_off_and_try_a_different_server()
 except Exception:
