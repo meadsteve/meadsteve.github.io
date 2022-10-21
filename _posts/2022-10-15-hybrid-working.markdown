@@ -5,7 +5,7 @@ title:  "What I like about hybrid working"
 date:   2022-10-13 10:00:00
 categories: teamwork
 summary: "What it's been like with more remote work but not entirely remote work"
-icon: fab fa-js
+icon: fas fa-phone
 tags:
     - teamwork
     - remote
@@ -14,15 +14,16 @@ tags:
 ---
 
 This isn't going to be a sales pitch for a specific way of working. I believe it makes much more sense for individuals,
-teams and companies to figure this out for themselves. Instead I wanted to write about how I've found the last year or
-so working in a hybrid remote environment.
+teams and companies to figure this out for themselves. I'm not even sure if I have a firm perference yet. Instead I 
+wanted to write about how I've found the last year or so working in a hybrid remote environment.
 
 ## What kind of hybrid have I been doing?
 
 My last contract was working at a company that had tuesdays and thursdays as "office first" days. You were also welcome 
 at the office every day of the week. It's also quite important that I mention that I'm very lucky to live on the edge
-of a city centre with great bike paths. This means visiting the office only means a 15 minute bike ride for me. I 
-suspect my experience would be very different if instead I had an hour long commute.
+of a city centre with great bike paths. This means visiting the office only means a 15 minute bike ride for me (or 20 
+minute boat or bus ride if the weather is really bad). I suspect my experience would be very different if instead 
+I had an hour long commute.
 
 ## The pros of the in-office days
 
@@ -53,13 +54,16 @@ Being flexible with my time means I can get various tasks done around the house.
 between blocks of work. Being at home as meant I can do really useful things in this time. Put the washing on. Sweep
 the floors. Make some pizza dough for dinner and leave it to rise. These small things really improve my quality of life.
 
-
 ### The school run
 Picking up my son from school takes way less time as I live next door to the school. The office isn't far away for me
-but it's still much easier not having to worry about the journey time at all.
+but it's still much easier not having to worry about the journey time at all. This actually means I can get a little 
+more work done without feeling rushed. 
 
 ## Things I didn't expect
-During the office shutdowns caused by covid the teams I've worked in adopted remote pairing and mobbing quite well.
+During the office shutdowns caused by covid the teams I've worked with adopted remote pairing and mobbing quite well. 
+We found ways of working with temporary "WIP" commits, changing drivers, talking over zoom and various other things.
+I was expecting this to stop when in the office and go back to more in person pairing. But we didn't really. The remote
+pairing stayed.
 
 ## Challenges with hybrid
 One of the main challenges I've experienced with hybrid is around meetings when some people are in the office but not all.
