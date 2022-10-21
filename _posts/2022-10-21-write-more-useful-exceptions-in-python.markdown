@@ -80,15 +80,37 @@ class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
     server_address: str
     query_type: str
 ```
+This makes it easier to programmatically act on the exception. Useful information can also be extracted into a logging
+context. Maybe there's a particular server that's having a problem?
 
 ### Add notes and explanations to the exception's docstring
-This is often the first place a user will land when trying to debug your exception. 
+This is often the first place a user will land when trying to debug your exception. The more context and details you
+have here the easier it is for your consumers to understand what happened.
 
-### Provide a link to documentation about this error (bonus points for this one)
-The SqlAlchemy library provides links to documentation about an error in the exception string. This makes reading up about the error much easier
+SqlAlchemy has a number of good examples of this:
 
 ```python
-# Code sample from https://github.com/sqlalchemy/sqlalchemy/blob/79dbe94bb4ccd75888d57f388195a3ba4fa6117e/lib/sqlalchemy/exc.py
+# Code sample from https://github.com/sqlalchemy/sqlalchemy/blob/d5e31d130808c94f09e51e9afb222c4efa63875c/lib/sqlalchemy/orm/exc.py#L35
+class StaleDataError(sa_exc.SQLAlchemyError):
+    """An operation encountered database state that is unaccounted for.
+    Conditions which cause this to happen include:
+    * A flush may have attempted to update or delete rows
+      and an unexpected number of rows were matched during
+      the UPDATE or DELETE statement.   Note that when
+      version_id_col is used, rows in UPDATE or DELETE statements
+      are also matched against the current known version
+      identifier.
+    ... MORE TEXT FOLLOWS
+    """
+```
+
+### Provide a link to documentation about this error (bonus points for this one)
+If you have documentation about the error on the web. Link to it. Again, the SqlAlchemy library deserves a mention. 
+It provides links to documentation on the web for each exception. This really helps with the developer experience and 
+makes your library much easier to use.
+
+```python
+# Code sample from https://github.com/sqlalchemy/sqlalchemy/blob/79dbe94bb4ccd75888d57f388195a3ba4fa6117e/lib/sqlalchemy/exc.py#L54
 def _code_str(self) -> str:
     return (
         "(Background on this error at: "
