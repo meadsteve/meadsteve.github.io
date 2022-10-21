@@ -2,7 +2,7 @@
 layout: post
 published: false
 title:  "Write more useful exceptions in python"
-date:   2022-01-13 10:00:00
+date:   2022-10-21 10:00:00
 categories: programming
 summary: "Using specific exceptions with structured data to help consumers of your exceptions"
 icon: fab fa-python
@@ -71,3 +71,7 @@ class QueryTookTooLong(TimeoutError):
 
 ### Provide a link to documentation about this error (bonus points for this one)
 The SqlAlchemy library provides links to documentation about an error in the exception string. This makes reading up about the error much easier
+
+## Extra steps for internal code (not a public library)
+
+### Remove PII and other sensitive data from a message
