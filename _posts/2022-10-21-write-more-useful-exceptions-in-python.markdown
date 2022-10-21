@@ -22,7 +22,7 @@ filter them out programmatically so that they don't end up in [sentry](https://s
 However, I've been running into a problems when the exceptions are raised like this:
 
 ```python
-    raise TimeoutError("When trying to do the thing we timed out for reason X")
+raise Exception("The thing timed out for reason X")
 ```
 
 I'm having to do a combination of rewriting code and some fragile string matching on the error messages so that I can 
@@ -69,6 +69,10 @@ class SuperCoolPackageError(Exception, ABC):
 class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
     pass
 ```
+
+This means consumers can handle all errors from your package in a consistent way. For example error stats for your
+library could be fed into monitoring or logging and help the team asses if more work needs to be done on the integration
+of the library.
 
 ### Provide structured data in the exception
 ```python
