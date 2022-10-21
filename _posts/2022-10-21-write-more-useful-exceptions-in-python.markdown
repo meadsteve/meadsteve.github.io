@@ -76,10 +76,26 @@ of the library.
 
 ### Provide structured data in the exception
 ```python
-class QueryTookTooLong(TimeoutError):
+class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
     server_address: str
     query_type: str
 ```
 
+### Add notes and explanations to the exception's docstring
+This is often the first place a user will land when trying to debug your exception. 
+
 ### Provide a link to documentation about this error (bonus points for this one)
 The SqlAlchemy library provides links to documentation about an error in the exception string. This makes reading up about the error much easier
+
+```python
+# Code sample from https://github.com/sqlalchemy/sqlalchemy/blob/79dbe94bb4ccd75888d57f388195a3ba4fa6117e/lib/sqlalchemy/exc.py
+def _code_str(self) -> str:
+    return (
+        "(Background on this error at: "
+        "https://sqlalche.me/e/%s/%s)"
+        % (
+            _version_token,
+            self.code,
+        )
+    )
+```
