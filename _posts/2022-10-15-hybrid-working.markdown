@@ -45,17 +45,21 @@ a company provided dedicated space for this.
 ## The pros of the remote days
 
 ### Access to nature
- * I live by a lot of nature so I can take my breaks in a really pleasant environment.
- * And the added bonus of the previous point: Swimming in my local lake over lunch.
+I live by a lot of nature so I can take my breaks in a really pleasant environment. Going for a short walk in a forest
+is a really nice way to clear my head. I also happen to live near a very nice lake so can go for lunch time swims.
 
 ### Jobs around the house can be done
- * Being flexible with my time means I can get various tasks done around the house.
+Being flexible with my time means I can get various tasks done around the house. I like to take short breaks in 
+between blocks of work. Being at home as meant I can do really useful things in this time. Put the washing on. Sweep
+the floors. Make some pizza dough for dinner and leave it to rise. These small things really improve my quality of life.
+
 
 ### The school run
- * Picking up my son from school takes way less time as I live next door to the school.
+Picking up my son from school takes way less time as I live next door to the school. The office isn't far away for me
+but it's still much easier not having to worry about the journey time at all.
 
 ## Things I didn't expect
- * Still mobbing pairing on zoom even when in office 
+During the office shutdowns caused by covid the teams I've worked in adopted remote pairing and mobbing quite well.
 
 ## Challenges with hybrid
 One of the main challenges I've experienced with hybrid is around meetings when some people are in the office but not all.
