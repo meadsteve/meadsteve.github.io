@@ -21,7 +21,7 @@ wanted to write about how I've found the last year or so working in a hybrid rem
 
 My last contract was working at a company that had tuesdays and thursdays as "office first" days. You were also welcome 
 at the office every day of the week. It's also quite important that I mention that I'm very lucky to live on the edge
-of a city centre with great bike paths. This means visiting the office only means a 15 minute bike ride for me (or 20 
+of a city centre with great bike paths. This means visiting the office is only a 15 minute bike ride for me (or 20 
 minute boat or bus ride if the weather is really bad). I suspect my experience would be very different if instead 
 I had an hour long commute.
 
