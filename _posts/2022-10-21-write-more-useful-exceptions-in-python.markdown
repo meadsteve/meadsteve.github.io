@@ -63,7 +63,7 @@ except Exception:
 ### Link all types of error back to the library with an ABC
 ```python
 class SuperCoolPackageError(Exception, ABC):
-    """All exceptions in this library are instances of a SuperCoolPackageError"""
+    """All exceptions are instances of a SuperCoolPackageError"""
     pass
 
 class QueryTookTooLong(TimeoutError, SuperCoolPackageError):
@@ -100,7 +100,7 @@ class StaleDataError(sa_exc.SQLAlchemyError):
       version_id_col is used, rows in UPDATE or DELETE statements
       are also matched against the current known version
       identifier.
-    ... MORE TEXT FOLLOWS
+    ...
     """
 ```
 
@@ -121,3 +121,7 @@ def _code_str(self) -> str:
         )
     )
 ```
+
+## Thank you
+Hopefully at least one of these suggestions (they can all be applied independently) is useful to you and you'll take
+it away and improve some code you're working on.
