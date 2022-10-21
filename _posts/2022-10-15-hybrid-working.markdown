@@ -82,8 +82,8 @@ doing more and more things in person and therefore start unintentionally excludi
 how this is addressed really depends on the company and team but I think it's another issue that should not be ignored.
 
 ## How do I want to work in the future
-For future contracts I would absolutely work hybrid again. For the above reasons. I would also consider entirely remote
-work. Though I think it would be important for me (and the company) to spend some effort trying to make up for the
-missing benefits of in-office work. I'm very hesitant, however, to go for work that would be entirely in the office. 
-I'm not convinced there's anything that could make up for what I'd lose on the remote days. As always, I reserve the
-right to change my mind on this but I don't think that's likely at the moment. 
+For future contracts, given all the reasons above, I would absolutely work hybrid again. I would also consider 
+entirely remote work. Though I think it would be important for me (and the company) to spend some effort trying to 
+make up for the missing benefits of in-office work. I'm very hesitant, however, to go for work that would be entirely 
+in the office. I'm not convinced there's anything that could make up for what I'd lose on the remote days. As always, 
+I reserve the right to change my mind on this but I don't think that's likely at the moment. 
