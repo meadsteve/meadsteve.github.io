@@ -26,7 +26,7 @@ raise Exception("The thing timed out for reason X")
 ```
 
 I'm having to do a combination of rewriting code and some fragile string matching on the error messages so that I can 
-filter out what's a really important error, what can be retried and what is more like a warning.
+filter out what's really an important error, what can be retried and what is more like a warning.
 
 ## What would I prefer
 For anyone writing libraries, either publicly or for use within a codebase, there's a number of steps that can
