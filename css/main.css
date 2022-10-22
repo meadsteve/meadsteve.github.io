@@ -36,6 +36,19 @@ p.unpublished-notice{
   color: deeppink;
 }
 
+.aside {
+  color: #1e0010;
+  font-weight: normal;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.aside::before {
+  font-weight: bold;
+  color: darkmagenta;
+  content: "\1F331 Short aside: ";
+}
+
 img {
   max-width:100%;
   height:auto;
