@@ -32,8 +32,9 @@ filter out what's a really important error, what can be retried and what is more
 For anyone writing libraries, either publicly or for use within a codebase, there's a number of steps that can
 be applied to make things better. 
 
-> *Short aside: It's also worth thinking about redesigning and using exceptions less, especially for flow control, 
-> but that's a post for another day.*
+It's also worth thinking about redesigning and using exceptions less, especially for flow control, 
+but that's a bigger change and a post topic for another day.
+{: .aside}
 
 ### Pick a good base exception from the standard library 
 The python standard library defines [a number of exception classes](https://docs.python.org/3/library/exceptions.html#base-classes).
