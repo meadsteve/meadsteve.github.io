@@ -10,6 +10,9 @@ tags:
     - python
     - exceptions
     - structured data
+comments:
+  title: Discuss this post over on reddit
+  link: https://www.reddit.com/r/Python/comments/yc5fzv/raising_better_exceptions/
 ---
 
 ## Why I'm writing this
