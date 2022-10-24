@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title:  "Profling the newtype pattern in python"
+title:  "Profiling the newtype pattern in python"
 date:   2021-11-08 10:00:00
 categories: programming
 summary: "How much does avoiding primitive types cost us in python?"
