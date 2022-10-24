@@ -1,15 +1,14 @@
 ---
 layout: post
-published: false
+published: true
 title:  "Write more useful exceptions in python"
-date:   2022-10-21 10:00:00
+date:   2022-10-24 10:00:00
 categories: programming
 summary: "Using specific exceptions with structured data to help consumers of your exceptions"
 icon: fab fa-python
 tags:
     - python
     - exceptions
-    - languages
     - structured data
 ---
 
