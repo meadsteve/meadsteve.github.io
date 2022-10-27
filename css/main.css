@@ -67,7 +67,7 @@ div.bottom-of-post {
 nav {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 10.5em);
+  grid-template-columns: repeat(auto-fill, 8em);
 }
 
 nav  i {
