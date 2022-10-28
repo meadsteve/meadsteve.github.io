@@ -9,5 +9,8 @@ title: Unpublished blog posts
 </p>
 {% assign unpublished-posts = site.posts | where: "published", "false" | sort: "date" | reverse  %}
 {% for post in unpublished-posts  %}
-    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    <li>
+        {% include post_icon.html %}
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
 {% endfor %}
