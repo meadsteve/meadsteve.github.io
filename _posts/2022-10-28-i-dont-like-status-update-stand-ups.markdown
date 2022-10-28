@@ -18,7 +18,7 @@ regularly is probably the best way to find this for your team. Maybe what I'm ab
 your team, in which case you can safely ignore this post.
 
 ## I do not like status update stand-ups
-With that disclaimer out of the way there's a very specific kind of meeting/process that I do dont like and I feel adds
+With that disclaimer out of the way there's a very specific kind of meeting/process that I do not like and I feel adds
 almost no value to a team (and possibly takes away value). This is the stand-up where you go around the team and 
 everyone  says something like:
 
