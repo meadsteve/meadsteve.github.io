@@ -30,9 +30,9 @@ If I'm really honest: I'm just not that interested in the details of what everyo
 and will work on today). It feels too much like the purpose of this meeting is to check up on everyone and make sure
 they are all busy. It might be important for your manager to make sure you're a valuable amount of busy, but it's not 
 something I want to spend time on (unless I happen to be your manager). I think the sad thing is that most people don't
-intend this. They likely set up the meeting with good intentions, the desire to make their team more collaborative.
+intend this. They probably set up the meeting with good intentions, the desire to make their team more collaborative.
 
-At best I think this meeting is a waste of time. At worst I think it encourages a culture of policing and justifying
+At best, I think this meeting is a waste of time. At worst, I think it encourages a culture of policing and justifying
 how busy we all.
 
 ## Are there some parts I like?
