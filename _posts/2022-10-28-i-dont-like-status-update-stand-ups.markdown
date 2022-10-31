@@ -32,7 +32,7 @@ they are all busy. It might be important for your manager to make sure you're a 
 something I want to spend time on (unless I happen to be your manager). I think the sad thing is that most people don't
 intend this. They probably set up the meeting with good intentions, the desire to make their team more collaborative.
 
-At best, I think this meeting is a waste of time. At worst, I think it encourages a culture of policing and justifying
+At best, I think this meeting is a waste of time. At worst, I think it encourages a culture of distrust and justifying
 how busy we all.
 
 ## Are there some parts I like?
@@ -57,4 +57,5 @@ you are focussed on what the team can do to get a piece of work completed. I thi
 together for the team rather than check up on how busy they are. If someone says they are stuck or blocked the whole 
 team can come together to help.
 
-So please: think about whether you need this status update or if there's something else you could do instead. 
+So please: think about whether you need this status update or if there's something else you could do instead. Focus on
+the work not the workers.
