@@ -34,7 +34,7 @@ that most people don't intend this. They probably set up the meeting with good i
 more collaborative.
 
 At best, I think this meeting is a waste of time. At worst, I think it encourages a culture of distrust and justifying
-how busy we all.
+how busy we all are.
 
 ## Are there some parts I like?
 The core idea of sharing what people have worked on is valuable to me. Although I don't want to know exactly how 
