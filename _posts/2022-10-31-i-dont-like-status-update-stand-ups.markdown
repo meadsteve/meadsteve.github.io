@@ -1,8 +1,8 @@
 ---
 layout: post
-published: false
+published: true
 title:  "A short rant: I don't like status update stand-ups"
-date:   2022-10-28 10:00:00
+date:   2022-10-31 10:00:00
 categories: teamwork
 summary: "My feelings about 'yesterday I..., today I will... meetings"
 icon: fas fa-child
