@@ -20,17 +20,18 @@ your team, in which case you can safely ignore this post.
 ## I do not like status update stand-ups
 With that disclaimer out of the way there's a very specific kind of meeting/process that I do not like and I feel adds
 almost no value to a team (and possibly takes away value). This is the stand-up where you go around the team and 
-everyone  says something like:
+everyone says (or writes in slack) something like:
 
 > Yesterday I worked on super important task X...
 > Today I will continue my work on task X...
 
 ## Why don't I like this type of meeting?
-If I'm really honest: I'm just not that interested in the details of what everyone in the team worked on yesterday (
-and will work on today). It feels too much like the purpose of this meeting is to check up on everyone and make sure
-they are all busy. It might be important for your manager to make sure you're a valuable amount of busy, but it's not 
-something I want to spend time on (unless I happen to be your manager). I think the sad thing is that most people don't
-intend this. They probably set up the meeting with good intentions, the desire to make their team more collaborative.
+If I'm really honest: I'm just not that interested in the details of what everyone in the team spent time on on 
+yesterday (and will spend time on on today). It feels too much like the purpose of this meeting is to check up on 
+everyone and make sure they are all busy. It might be important for your manager to make sure you're a valuable amount 
+of busy, but it's not something I want to spend time on (unless I happen to be your manager). I think the sad thing is 
+that most people don't intend this. They probably set up the meeting with good intentions, the desire to make their team 
+more collaborative.
 
 At best, I think this meeting is a waste of time. At worst, I think it encourages a culture of distrust and justifying
 how busy we all.
@@ -38,10 +39,10 @@ how busy we all.
 ## Are there some parts I like?
 The core idea of sharing what people have worked on is valuable to me. Although I don't want to know exactly how 
 people spent their time I do want to know what interesting things the people in my team are working on and what they've 
-learnt. But there are better ways of getting this for me. We could have showcases and demos at the end of each piece of 
-work. We could have "this week I learnt" meetings where people can share any interesting things they learnt. We could
-add (or shrink) "work in progress" limits to encourage pairing and mobbing in the team. Techniques like these focus
-on the thing that's important to me: what the team learnt, not how they spent their time.
+learnt. But I think there are better ways of getting this knowledge shared. We could have showcases and demos at the 
+end of each piece of work. We could have "this week I learnt" meetings where people can share any interesting things 
+they learnt. We could add (or shrink) "work in progress" limits to encourage pairing and mobbing in the team. Techniques 
+like these focus on the thing that's important to me: what the team learnt, not how they spent their time.
 
 ## What kind of stand-up would I prefer instead?
 
