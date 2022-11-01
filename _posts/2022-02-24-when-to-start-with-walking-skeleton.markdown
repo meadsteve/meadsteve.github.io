@@ -5,7 +5,7 @@ title:  "When to start with a walking skeleton"
 date:   2022-01-13 10:00:00
 categories: programming
 summary: "How I decided if I should start by getting a project building and deploying or if a should hack"
-icon: fab fa-skull-crossbones
+icon: fas fa-skull
 tags:
     - software
     - walking skeleton
