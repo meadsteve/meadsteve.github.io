@@ -1,17 +1,25 @@
 <section class="comment-section">
 {% if page.mastodon.id %}
-    <div class="article-content">
-        <h2>Comments</h2>
-        <p><a class="button" href="https://{{ page.mastodon.host }}/interact/{{ page.mastodon.id }}?type=reply">Reply (using mastodon)</a></p>
-        <noscript><p>You need JavaScript to view the comments via mastodon.</p></noscript>
-        <script type="text/javascript">
-            fetch('https://{{ page.mastodon.host }}/api/v1/statuses/{{ page.mastodon.id }}/context')
-                .then(function(response) {
-                    return response.json();
-                }).then(console.log);
+    <h2>Comments</h2>
+    <p><a class="button" href="https://{{ page.mastodon.host }}/interact/{{ page.mastodon.id }}?type=reply">Reply (using mastodon)</a></p>
+    <noscript><p>You need JavaScript to view the comments via mastodon.</p></noscript>
+    <section id="mastodon-comments"></section>
+    <script src="/javascripts/purify.min.js"></script>
+    <script type="text/javascript">
+        const commentSection = document.getElementById('mastodon-comments');
+        fetch('https://{{ page.mastodon.host }}/api/v1/statuses/{{ page.mastodon.id }}/context')
+            .then(function(response) {
+                return response.json();
+            }).then(function (data) {
+                if(data['descendants'] && Array.isArray(data['descendants'])) {
+                    data['descendants'].forEach(function(comment) {
+                        console.log(comment);
+                        commentSection.innerHTML += DOMPurify.sanitize(comment.content, { USE_PROFILES: { html: true } });
+                    });
+                }
+            });
 
-        </script>
-    </div>
+    </script>
 {% elsif page.comments%}
     <a href={{ page.comments.link }}>
         <i class="fas fa-comments" aria-hidden="true"></i>
