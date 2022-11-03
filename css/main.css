@@ -236,6 +236,26 @@ div.highlight {
   color: deeppink;
 }
 
+.mastodon-comment {
+  border: 1px solid grey;
+  padding: 0 1em 0 1em;
+}
+
+.mastodon-comment .comment-author img {
+  float: left;
+  width: 2em;
+  padding-right: 0.5em;
+}
+
+.mastodon-comment a.comment-author {
+  display: inline-block;
+  width: 9em;
+  padding-right: 1em;
+}
+
+.mastodon-comment .comment-content {
+  display: inline-block;
+}
 
 /** footer styling **/
 
