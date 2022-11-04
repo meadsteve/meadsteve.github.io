@@ -1,42 +1,49 @@
 <section class="comment-section">
-{% if page.mastodon.id %}
-    <h2>Comments</h2>
-    <p><a class="button" href="https://{{ page.mastodon.host }}/interact/{{ page.mastodon.id }}?type=reply">Reply (using mastodon)</a></p>
-    <noscript><p>You need JavaScript to view the comments via mastodon.</p></noscript>
-    <section id="mastodon-comments"></section>
-    <script src="/javascripts/purify.min.js"></script>
-    <script type="text/javascript">
-        const commentSection = document.getElementById('mastodon-comments');
-        fetch('https://{{ page.mastodon.host }}/api/v1/statuses/{{ page.mastodon.id }}/context')
-            .then(function(response) {
-                return response.json();
-            }).then(function (data) {
-                if(data['descendants'] && Array.isArray(data['descendants'])) {
-                    data['descendants'].forEach(function(comment) {
-                        console.log(comment);
-                        commentSection.innerHTML += DOMPurify.sanitize(comment.content, { USE_PROFILES: { html: true } });
-                    });
-                }
-            });
-
-    </script>
-{% elsif page.comments%}
+{% if page.comments.title %}
     <a href={{ page.comments.link }}>
         <i class="fas fa-comments" aria-hidden="true"></i>
         {{ page.comments.title }}
     </a>
     {% if page.comments.extras %}
         {% for extra_comments in page.comments.extras %}
-            <a href={{ extra_comments.link }}>
-                <i class="fas fa-comments" aria-hidden="true"></i>
-                {{ extra_comments.title }}
-            </a>
+        <a href={{ extra_comments.link }}>
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            {{ extra_comments.title }}
+        </a>
         {% endfor %}
     {% endif %}
-{% else %}
+{% endif %}
+
+{% if page.comments.mastodon %}
+    <h2>Comments (from mastodon)</h2>
+    <noscript><p>You need JavaScript to view the comments via mastodon.</p></noscript>
+    <section id="mastodon-comments"></section>
+    <script src="/javascripts/purify.min.js"></script>
+    <script type="text/javascript">
+        const commentSection = document.getElementById('mastodon-comments');
+        fetch('https://{{ page.comments.mastodon.host }}/api/v1/statuses/{{ page.comments.mastodon.id }}/context')
+            .then(function(response) {
+                return response.json();
+            }).then(function (data) {
+                if(data['descendants'] && Array.isArray(data['descendants'])) {
+                    data['descendants'].forEach(function(comment) {
+                        console.log(comment);
+                        const contentText = DOMPurify.sanitize(comment.content, { USE_PROFILES: { html: true } });
+                        const contentSection = `<div class="comment-content">${contentText}</div>`;
+                        const author = comment.account;
+                        const authorSection = `<a class="comment-author" href="${author.url}"><img src="${author.avatar_static}" alt="${author.username} avatar">${author.display_name}</a>`;
+                        commentSection.innerHTML += `<div class="mastodon-comment">${authorSection}${contentSection}</div>`;
+                    });
+                }
+            });
+    </script>
+    <p class="mastodon-reply"><a class="button" href="https://{{ page.comments.mastodon.host }}/interact/{{ page.comments.mastodon.id }}?type=reply">Click here to reply</a></p>
+{% endif %}
+
+{% unless page.comments %}
     <a href=https://twitter.com/meadsteve>
         <i class="fas fa-crow" aria-hidden="true"></i>
         Thoughts? Comments? Send me a tweet!
     </a>
-{% endif %}
+{% endunless %}
 </section>
