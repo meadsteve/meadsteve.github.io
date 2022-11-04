@@ -5,7 +5,7 @@ title:  "Mastodon powered comment section: a live experiment"
 date:   2022-11-04 10:00:00
 categories: tools
 summary: "Experimenting adding a comments section to my blog using mastodon"
-icon: fas fa-child
+icon: fab fa-mastodon
 tags:
     - mastodon
     - comments
@@ -14,7 +14,6 @@ tags:
 comments:
   mastodon:
     host: mastodon.green
-    username: meadsteve
     id: 109262709610932404
 ---
 
@@ -38,21 +37,21 @@ function loadComments(host, postId) {
     const commentSection = document.getElementById('mastodon-comments');
     const purifySettings = { ALLOWED_TAGS: ['b', 'p', 'a'] };
     fetch(`https://${host}/api/v1/statuses/${postId}/context`)
-        .then(function(response) {
-            return response.json();
-        }).then(function (data) {
-        if(data['descendants'] && Array.isArray(data['descendants']) && data['descendants'].length > 0) {
-            data['descendants'].forEach(function(comment) {
-                const contentText = DOMPurify.sanitize(comment.content, purifySettings);
-                const contentSection = `<div class="comment-content">${contentText}</div>`;
-                const author = comment.account;
-                const authorSection = `<a class="comment-author" href="${author.url}"><img src="${author.avatar_static}" alt="${author.username} avatar">${author.display_name}</a>`;
-                commentSection.innerHTML += `<div class="mastodon-comment">${authorSection}${contentSection}</div>`;
-            });
-        } else {
-            commentSection.innerHTML += "<p><i class=\"fas fa-user-clock\"></i>No comments yet...</p>";
-        }
-    });
+        .then((response) => response.json())
+        .then((data) => {
+            if(data['descendants'] && Array.isArray(data['descendants']) && data['descendants'].length > 0) {
+                data['descendants'].forEach(function(comment) {
+                    console.log(comment);
+                    const contentText = DOMPurify.sanitize(comment.content, purifySettings);
+                    const contentSection = `<div class="comment-content">${contentText}</div>`;
+                    const author = comment.account;
+                    const authorSection = `<a class="comment-author" href="${author.url}"><img src="${author.avatar_static}" alt="${author.username} avatar">${author.display_name}</a>`;
+                    commentSection.innerHTML += `<div class="mastodon-comment">${authorSection}${contentSection}</div>`;
+                });
+            } else {
+                commentSection.innerHTML += "<p><i class=\"fas fa-user-clock\"></i>No comments yet...</p>";
+            }
+        });
 }
 ```
 

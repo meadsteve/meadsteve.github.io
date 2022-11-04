@@ -6,9 +6,8 @@ function loadComments(host, postId) {
     const commentSection = document.getElementById('mastodon-comments');
     const purifySettings = { ALLOWED_TAGS: ['b', 'p', 'a'] };
     fetch(`https://${host}/api/v1/statuses/${postId}/context`)
-        .then(function(response) {
-            return response.json();
-        }).then(function (data) {
+        .then((response) => response.json())
+        .then((data) => {
         if(data['descendants'] && Array.isArray(data['descendants']) && data['descendants'].length > 0) {
             data['descendants'].forEach(function(comment) {
                 console.log(comment);
