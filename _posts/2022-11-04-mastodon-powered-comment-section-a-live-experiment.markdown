@@ -1,6 +1,7 @@
 ---
 layout: post
 published: false
+live_experiment: true
 title:  "Mastodon powered comment section: a live experiment"
 date:   2022-11-04 10:00:00
 categories: tools
@@ -16,11 +17,6 @@ comments:
     host: mastodon.green
     id: 109284718794831683
 ---
-
-This is going to be a bit of a live experiment. This post may update a few times. The code I discuss will start live
-on this blog post but it may well already be removed by the time you read this.
-
-## What am I adding
 
 I read a blog post titled ["Adding comments to your static blog with Mastodon"](https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/)
 and it sounded like quite a fun idea. I liked the idea that it means I can have comments on my site without writing a

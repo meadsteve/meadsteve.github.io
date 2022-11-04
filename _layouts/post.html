@@ -10,10 +10,17 @@ layout: default
     <span class="post-meta">Updated: <time datetime='{{ page.update_date | date: "%Y-%m-%d %H:%M:%S" }}'>{{ page.update_date | date: "%b %-d, %Y" }}</time></span><br>
     {% endif %}
     {% if page.published == false %}
-    <p class="unpublished-notice">
+    <p class="post-notice">
       <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
       This is an unpublished post. It's likely (more) full of spelling mistakes and errors.
       It may also end abruptly without a conclusion.
+    </p>
+    {% endif %}
+    {% if page.live_experiment == true %}
+    <p class="post-notice">
+      <i class="fas fa-flask" aria-hidden="true"></i>
+      This post refers to a live experiment. This post may update a few times. The code I discuss will start live
+      but it may already be removed and/or destroyed by the time you read this.
     </p>
     {% endif %}
   </header>
