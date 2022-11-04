@@ -6,9 +6,6 @@ layout: default
   <header>
     <h1>{{ page.title }}</h1>
     <time datetime='{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}' class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</time>
-    {% if page.update_date %}
-    <span class="post-meta">Updated: <time datetime='{{ page.update_date | date: "%Y-%m-%d %H:%M:%S" }}'>{{ page.update_date | date: "%b %-d, %Y" }}</time></span><br>
-    {% endif %}
     {% if page.published == false %}
     <p class="post-notice">
       <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
@@ -22,6 +19,15 @@ layout: default
       This post refers to a live experiment. This post may update a few times. The code I discuss will start live
       but it may already be removed and/or destroyed by the time you read this.
     </p>
+    {% endif %}
+    {% if page.update_notices %}
+      {% for update_notice in page.update_notices %}
+        <p class="post-notice">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <span class="post-meta"><time datetime='{{ update_notice.date | date: "%Y-%m-%d %H:%M:%S" }}'>{{ update_notice.date | date: "%Y-%m-%d %H:%M:%S" }}</time></span>
+          {{ update_notice.message }}
+        </p>
+      {% endfor %}
     {% endif %}
   </header>
   {{ content }}
