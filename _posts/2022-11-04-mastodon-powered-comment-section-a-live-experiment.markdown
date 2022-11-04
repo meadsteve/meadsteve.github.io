@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 live_experiment: true
 title:  "Mastodon powered comment section: a live experiment"
 date:   2022-11-04 10:00:00
