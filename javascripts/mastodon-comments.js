@@ -10,7 +10,6 @@ function loadComments(host, postId) {
         .then((data) => {
         if(data['descendants'] && Array.isArray(data['descendants']) && data['descendants'].length > 0) {
             data['descendants'].forEach(function(comment) {
-                console.log(comment);
                 const contentText = DOMPurify.sanitize(comment.content, purifySettings);
                 const contentSection = `<div class="comment-content">${contentText}</div>`;
                 const author = comment.account;
