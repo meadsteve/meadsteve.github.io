@@ -22,12 +22,19 @@ I read a blog post titled ["Adding comments to your static blog with Mastodon"](
 and it sounded like quite a fun idea. I liked the idea that it means I can have comments on my site without writing a
 backend (this blog is a statically generated site). I could probably build a similar thing with a twitter api or some other
 service but what I liked about [mastodon](https://docs.joinmastodon.org/) was the federation. With the way mastodon
-works the replies to my post (called a toot apparently) can come from any service that's part of the fediverse 
-(TODO: explain this). This means I'm not requiring people to make the same choice as me. As long as they have an account
-on a fediverse service they can join the conversation.
+works the replies to my post (called a toot apparently) can come from any service that's part of the [fediverse](https://en.wikipedia.org/wiki/Fediverse).
+
+The fediverse is effectively a set of different social networks that can communicate with each other. This means 
+I'm not requiring people to make the same choice as me. As long as they have an account on a fediverse service they 
+can join the conversation.
 
 ## On with the experiment
-This code loads on the bottom of each of my posts if a mastodon toot's details are added to the blogpost's frontmatter:
+The basic idea is that on my mastodon account I publish a toot (I'm not sure about this weird name). Then the replies to
+this toot become the comments of my blog.
+
+Mastodon has an API for fetching the replies to a toot. So I can call my mastodon server's API and fetch all the replies 
+with a block of code like this:
+
 ```javascript
 function loadComments(host, postId) {
     const commentSection = document.getElementById('mastodon-comments');
@@ -37,7 +44,6 @@ function loadComments(host, postId) {
         .then((data) => {
             if(data['descendants'] && Array.isArray(data['descendants']) && data['descendants'].length > 0) {
                 data['descendants'].forEach(function(comment) {
-                    console.log(comment);
                     const contentText = DOMPurify.sanitize(comment.content, purifySettings);
                     const contentSection = `<div class="comment-content">${contentText}</div>`;
                     const author = comment.account;
