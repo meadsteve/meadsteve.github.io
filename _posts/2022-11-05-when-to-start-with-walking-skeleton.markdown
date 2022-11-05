@@ -18,9 +18,10 @@ From the book [Growing Object-Oriented Software, Guided by Tests](https://www.or
 > A “walking skeleton” is an implementation of the thinnest possible slice of real functionality that we can automatically build, deploy, and test end-to-end
 
 ## So when would I *not* use this? 
-If I don't even know that I'll need a web service/whatever I don't worry about a walking skeleton. I hack together anything that takes input and gives output and
-helps me explore a concept. That way I don't waste time with infrastructure that I might not need. In other words when
-I'm definitely treating the code as a prototype (not aiming for an MVP). If I'm planning on throwing the code away.
+If I don't even know that I'll need a web service/whatever I don't worry about a walking skeleton. I hack together 
+anything that takes input and gives output and helps me explore a concept. That way I don't waste time with 
+infrastructure that I might not need. In other words when I'm definitely treating the code as a prototype 
+(not aiming for an MVP). If I'm planning on throwing the code away.
 
 
 ## When do I start with a skeleton?
