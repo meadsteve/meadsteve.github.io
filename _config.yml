@@ -14,7 +14,7 @@ future: true
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 40
+paginate: 80
 sass:
   compressed: true
 
