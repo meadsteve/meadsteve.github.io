@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /.well-known/webfinger
+---
+{
+    "subject": "acct:meadsteve@mastodon.meadsteve",
+    "aliases": [
+        "https://mastodon.green/@meadsteve",
+        "https://mastodon.green/users/meadsteve"
+    ],
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://mastodon.green/@meadsteve"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://mastodon.green/users/meadsteve"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://mastodon.green/authorize_interaction?uri={uri}"
+        }
+    ]
+}
