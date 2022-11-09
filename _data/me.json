@@ -15,10 +15,12 @@
       "link": "/typescript/"
     },
     {
-      "language": "Rust"
+      "language": "Rust",
+      "link": "/rust/"
     },
     {
-      "language": "Elixir/Erlang"
+      "language": "Elixir/Erlang",
+      "link": "/elixir/"
     },
     {
       "language": "PHP"
