@@ -2,13 +2,35 @@
   "name": "Steve Brazier",
   "username": "MeadSteve",
   "blurbs": {
-    "general": "I'm a Stockholm (previously London) based Software Developer who has worked with a number of languages (including Python, PHP, JavaScript/TypeScript, C#, Elixir/Erlang) and environments.",
-    "python": "I've spent the last few years working with Python. I've worked with Python on aws lambda, converted large projects from Python 2 to 3 and setup new projects in async typed Python."
+    "python": "I've spent the last few years working with Python. I've worked with Python on aws lambda, converted large projects from Python 2 to 3 and setup new projects in async typed Python.",
+    "typescript": "For the last few years I've been working with typescript whenever I've needed to do some frontend work (and a little backend with node). I enjoy the extra help and safety provided by the type system"
   },
   "current_focus": {
     "language": "Python",
     "link": "/python/"
   },
+  "languages": [
+    {
+      "language": "Python",
+      "link": "/python/"
+    },
+    {
+      "language": "Javascript/Typescript",
+      "link": "/typescript/"
+    },
+    {
+      "language": "Rust"
+    },
+    {
+      "language": "Elixir/Erlang"
+    },
+    {
+      "language": "PHP"
+    },
+    {
+      "language": "C#"
+    }
+  ],
   "current_job": {
     "role": "fullstack consultant (with a focus on back-end)",
     "name": "0+x",

@@ -10,10 +10,27 @@ title: MeadSteve's Dev Blog - About me
             <span class="nickname"> ({{ site.data.me.username}})</span>
         </h2>
         <p>
-            {{ site.data.me.blurbs.general}}
-            At the moment <a href='{{ site.data.me.current_focus.link}}'>I mostly develop in {{ site.data.me.current_focus.language}}</a>.
+            I'm a Stockholm (previously London) based Software Developer who has worked with a number of languages and
+            environments.  At the moment <a href='{{ site.data.me.current_focus.link}}'>I mostly develop in {{ site.data.me.current_focus.language}}</a>.
             I work as a {{ site.data.me.current_job.role}} at <a href='{{ site.data.me.current_job.link}}'>{{ site.data.me.current_job.name}}</a>.
+            I've worked with distributed systems, cloud infrastructure, containers, serverless systems and lots more. What I really enjoy is
+            getting teams working together effectively.
         </p>
+    </section>
+
+    <section>
+        <h3 id="languages-ive-worked-with"><i class="fas fa-file-alt" style="color:darkblue" aria-hidden="true"></i> Languages I've worked with</h3>
+        <ul>
+            {% for lang in site.data.me.languages %}
+                <li>
+                    {% if lang.link %}
+                        <a href='{{ lang.link }}'>{{ lang.language }}</a>.
+                    {% else %}
+                        {{ lang.language }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
     </section>
 
     <section>
