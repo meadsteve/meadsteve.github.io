@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{% assign Lang-posts = site.posts | where: "tags", page.language | where_exp: "p", "p.published != false" %}
+{% assign Lang-projects-all = site.data.projects | where_exp:"p","p.language == page.language" %}
+
+{% assign Lang-libraries = Lang-projects-all  | where_exp:"p","p.type == 'library'" %}
+{% assign Lang-sites = Lang-projects-all | where_exp:"p","p.type == 'website'" %}
+{% assign Lang-talks = Lang-projects-all | where_exp:"p","p.type == 'talk'" %}
+{% assign Lang-katas = Lang-projects-all | where_exp:"p","p.type == 'kata'" %}
+<article class="specific-summary">
+  <section class="intro">
+    <h2 id="what-i-know">
+      <i class="fas fa-chalkboard-teacher"></i>
+      What I know about {{page.language}}
+    </h2>
+    <p>
+      {{ content }}
+    </p>
+  </section>
+  <section class="posts">
+    <h2 id="blog-posts">
+      <i class="fas fa-pencil-alt"></i>
+      Blog posts
+    </h2>
+    {% for post in Lang-posts %}
+      {% include post_title_short.html %}
+    {% endfor %}
+  </section>
+  <section class="library-list">
+    <h2 id="libraries">
+      <i class="fas fa-file-code"></i>
+      Python Libraries
+    </h2>
+    {% for project in Lang-libraries %}
+      {% include project-link.html %}
+    {% endfor %}
+  </section>
+  <section class="site-list">
+    <h2 id="sites">
+      <i class="fas fa-globe"></i>
+      Websites
+    </h2>
+    {% for project in Lang-sites %}
+      {% include project-link.html %}
+    {% endfor %}
+  </section>
+  <section class="talk-list">
+    <h2 id="talks">
+      <i class="fas fa-bullhorn"></i>
+      Talks
+    </h2>
+    {% for project in Lang-talks %}
+      {% include project-link.html %}
+    {% endfor %}
+  </section>
+  <section class="kata-list">
+    <h2 id="katas">
+      <i class="fas fa-hand-rock"></i>
+      Katas
+    </h2>
+    {% for project in Lang-katas %}
+      {% include project-link.html %}
+    {% endfor %}
+  </section>
+</article>
+
