@@ -3,7 +3,7 @@
   "username": "MeadSteve",
   "current_focus": {
     "language": "Python",
-    "link": "/python/"
+    "link": "/python"
   },
   "languages": [
     {
@@ -12,15 +12,15 @@
     },
     {
       "language": "Javascript/Typescript",
-      "link": "/typescript/"
+      "link": "/typescript"
     },
     {
       "language": "Rust",
-      "link": "/rust/"
+      "link": "/rust"
     },
     {
       "language": "Elixir/Erlang",
-      "link": "/elixir/"
+      "link": "/elixir"
     },
     {
       "language": "PHP"
