@@ -41,7 +41,7 @@ For major changes we should try to pair, discuss or plan the issue before commit
 I like iterative development. Unless there's a major issue with the code or architecture I'd rather move forward, learn from it and apply 
 some refactoring after.
 
-### We're often more emotionally invested in our code that we'd like to admit
+### We're often more emotionally invested in our code than we'd like to admit
 Once time has been spent on a change it's very hard to not be committed to it.
 
 ### PRs are a learning opportunity for the reviewer(s) too
