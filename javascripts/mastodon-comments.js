@@ -4,6 +4,7 @@
 
 function loadComments(host, postId) {
     const commentSection = document.getElementById('mastodon-comments');
+    const replySection = document.getElementById('mastodon-comments-reply');
     const purifySettings = { ALLOWED_TAGS: ['b', 'p', 'a'] };
     fetch(`https://${host}/api/v1/statuses/${postId}/context`)
         .then((response) => response.json())
@@ -20,4 +21,12 @@ function loadComments(host, postId) {
             commentSection.innerHTML += "<p><i class=\"fas fa-user-clock\"></i>No comments yet...</p>";
         }
     });
+    fetch(`https://${host}/api/v1/statuses/${postId}`)
+        .then((response) => response.json())
+        .then((data) => {
+        if(data['url']) {
+            replySection.innerHTML = `<p class="mastodon-reply"><a class="button" href="${data['url']}">Click here to reply</a></p>`;
+        }
+    });
+
 }

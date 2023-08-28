@@ -20,7 +20,7 @@
     <section id="mastodon-comments"></section>
     <script src="/javascripts/purify.min.js" defer></script>
     <script src="/javascripts/mastodon-comments.js" defer onload='loadComments("{{ page.comments.mastodon.host }}", "{{ page.comments.mastodon.id }}")'></script>
-    <p class="mastodon-reply"><a class="button" href="https://{{ page.comments.mastodon.host }}/interact/{{ page.comments.mastodon.id }}?type=reply">Click here to reply</a></p>
+    <span id="mastodon-comments-reply"></span>
 {% endif %}
 
 {% unless page.comments %}
