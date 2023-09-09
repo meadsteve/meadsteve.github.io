@@ -14,6 +14,10 @@ tags:
     - collections
     - covariance
     - contravariance
+comments:
+  mastodon:
+    host: fosstodon.org
+    id: 111036589039877362
 ---
 
 ## What am I talking about?
