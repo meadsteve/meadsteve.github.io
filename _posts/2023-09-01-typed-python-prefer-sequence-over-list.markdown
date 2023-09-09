@@ -38,7 +38,7 @@ defaulting to a sequence has a number of benefits.
 
 ## Soft immutability (via a type checker)
 
-Trying to type this code
+If I try and write this code:
 
 ```python
 def calculate_sum_and_add_ten(items: Sequence[float]):
@@ -46,7 +46,7 @@ def calculate_sum_and_add_ten(items: Sequence[float]):
     return sum(items)
 ```
 
-will result in an error from mypy (or your IDE or any other type checker.)
+then I will get an error from mypy (or your IDE or any other type checker.)
 
 ```
 error: "Sequence[float]" has no attribute "append"  [attr-defined]
