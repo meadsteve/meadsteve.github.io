@@ -34,7 +34,7 @@ def do_a_thing(items: list[float]):
 ```
 
 It's not a hard rule. There are plenty of situations where list is fine (or even required) but 
-defaulting to a sequence a number of benefits. 
+defaulting to a sequence has a number of benefits. 
 
 ## Soft immutability (via a type checker)
 
