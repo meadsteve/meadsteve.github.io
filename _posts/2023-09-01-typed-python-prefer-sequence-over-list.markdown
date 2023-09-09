@@ -65,3 +65,43 @@ error: Argument 1 to "double_then_sum" has incompatible type "list[int]"; expect
 note: "List" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
 note: Consider using "Sequence" instead, which is covariant
 ```
+
+## Accepts a wider variety of inputs
+
+```python
+def double_then_sum(items: list[float]):
+    return sum(item * 2 for item in items)
+    
+my_integers = (2, 4, 5)
+my_doubled_total = double_then_sum(my_integers)
+```
+
+results in
+```
+error: Argument 1 to "double_then_sum" has incompatible type "tuple[int, int, int]"; expected "list[int]"  [arg-type]
+```
+
+## Bonus - I would also consider Collection instead of Sequence
+
+```python
+def double_then_sum(items: Sequence[int]):
+    return sum(item * 2 for item in items)
+    
+my_doubled_total = double_then_sum(set([2,3,4]))
+```
+
+gives 
+
+```
+Argument 1 to "double_then_sum" has incompatible type "set[int]"; expected "Sequence[int]"  [arg-type]
+```
+
+but all of my examples would work with
+
+```python
+from typing import Collection
+def double_then_sum(items: Collection[int]):
+    return sum(item * 2 for item in items)
+    
+my_doubled_total = double_then_sum(set([2,3,4]))
+```
