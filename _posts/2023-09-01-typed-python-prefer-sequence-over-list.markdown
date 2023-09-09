@@ -100,7 +100,7 @@ the type checker can ensure that it stays as a list of integers.
 
 ## Accepts a wider variety of inputs
 Another benefit of `Sequence` is that it can accept a much wider variety of types (including custom classes written by you).
-This makes it much easier to write functions are re-usable and compose well together.
+This makes it much easier to write functions that are re-usable and compose well together.
 
 Consider my earlier `double_then_sum` function. But this time I've got an input that's a tuple. This seems like a 
 perfectly valid use-case. There's no reason why I should have to convert this to a list.
