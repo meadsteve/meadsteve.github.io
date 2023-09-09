@@ -1,8 +1,8 @@
 ---
 layout: post
-published: false
+published: true
 title:  "Typed Python: Choose Sequence over List"
-date:   2023-09-01 10:00:00
+date:   2023-09-09 19:00:00
 categories: programming
 summary: "Why I would default to choosing sequence over list when adding types to a function"
 icon: fab fa-python
@@ -17,8 +17,8 @@ tags:
 ---
 
 ## What am I talking about?
-I've been working with type hints for a few years now in python. Over time I've noticed certain patterns evolving in my
-code. This will be a short post on one of them. It's a small pattern where I try and be more precise in what I
+I've been working with type hints in python for a few years now. Over time I've noticed certain patterns evolving in my
+code. This will be a short post on one of those patterns. It's a small pattern where I try and be more precise in what I
 require or accept as a function input. Or more specifically why I try and default to writing the following:
 
 ```python
@@ -48,21 +48,21 @@ def calculate_sum_and_add_ten(items: Sequence[float]):
     return sum(items)
 ```
 
-then I will get an error from mypy (or your IDE or any other type checker.)
+then I will get an error from mypy (or my IDE or any other type checker I may be running):
 
 ```
 error: "Sequence[float]" has no attribute "append"  [attr-defined]
 ```
 
 This means I won't accidentally mutate a list I pass in to the function. If I expect the function to mutate
-the list then I can communicate this fact by altering the typehint to a list. This helps communicate the intent
-of the function more clearly.
+the list then I can communicate this fact by altering the typehint to a list. This helps make my intent clear. I took
+a list because I wanted a list (with all its mutability).
 
 ## Covariance
 
 Most of the time an `int` can be treated as a `float`. Your code will treat `5` as effectively being `5.0`. So a
-function which accepts a `float` can be passed an `int`. This breaks down though once you have a function taking a 
-list of floats. If you try and write the following code:
+function which accepts a `float` can be passed an `int` without any issues. This breaks down though once you have a 
+function taking a list of floats. If you try and write the following code:
 
 ```python
 def double_then_sum(items: list[float]):
@@ -81,7 +81,8 @@ note: Consider using "Sequence" instead, which is covariant
 ```
 
 You can read a thorough writeup of what's going in the [page linked by the error,](https://mypy.readthedocs.io/en/stable/common_issues.html#variance) 
-but effectively it's because the function signature `double_then_sum(items: list[float])` means "I accept a list of floats and may add a float to it".
+but effectively it's because the function signature `double_then_sum(items: list[float])` means "I accept a list of 
+floats and may add a float to it".
 
 You can see why this wouldn't work with this contrived example:
 
@@ -153,4 +154,6 @@ The type checker is then happy with this as a set is an instance of a `Collectio
 
 ## Wrapping up
 
-TODO: write me
+This is a fairly specific example but generally what I've been trying to do is be more intentional about what
+data types a function actually requires. I've found the upside is more bug free and more flexible code. It requires a
+little bit more thought on my side as I won't just always reach for a list or a dict but I'm quite happy with the results.
