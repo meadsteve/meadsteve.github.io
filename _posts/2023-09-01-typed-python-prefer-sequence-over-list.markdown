@@ -17,7 +17,9 @@ tags:
 ---
 
 ## What am I talking about?
-This will be a short post on why I try and default to writing the following:
+I've been working with type hints for a few years now in python. Over time I've noticed certain patterns evolving in my
+code. This will be a short post on one of them. It's a small pattern where I try and be more precise in what I
+require or accept as a function input. Or more specifically why I try and default to writing the following:
 
 ```python
 from typing import Sequence
@@ -26,7 +28,7 @@ def do_a_thing(items: Sequence[float]):
     ...
 ```
 
-instead of writing:
+instead of:
 
 ```python
 def do_a_thing(items: list[float]):
