@@ -15,6 +15,9 @@
       "link": "/typescript"
     },
     {
+      "language": "Go",
+    },
+    {
       "language": "Rust",
       "link": "/rust"
     },
