@@ -57,7 +57,7 @@ try, would I prefer to be in state 2 or state 3? If in doubt I will always prefe
 a decision that's easier to reverse/change. Splitting out a new service from an existing
 service usually looks something like this:
 
-![splitting out a service](/images/2020-02-17-one-less/micro-split.png)
+![image showing 2 pieces that initially fit together well changing over time so that they no longer fit together](/images/2020-02-17-one-less/micro-split.png)
 
 The process of splitting required drawing up some boundaries, moving the newly bounded code
 to its own service then running it. These services can now be worked on fully independently.
