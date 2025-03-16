@@ -72,11 +72,13 @@ We could make sure we're diligent about testing then mostly we could catch bugs 
 modelled this as a new type with a constructor that takes "1 or more choices" then we can never create an invalid
 list to begin with.
 
+In some "go inspired pseudocode" it could look like this:
+
 ```go
 type UserChoices []string
 
 func New(firstChoice string, extraChoices ...string) UserChoices {
-	// Code goes here
+	// Construct the object somehow
 }
 
 // Usage
@@ -84,3 +86,8 @@ func New(firstChoice string, extraChoices ...string) UserChoices {
 New("up")
 New("up", "down", "left", "right")
 ```
+
+The design gives no method for constructing an empty list, so we can be more confident that it won't sneak
+into the code somehow. This can help reduce the amount of tests we have to write. It's worth noting though
+that getting to this kind of design is harder in some languages than others, so it may not always be appropriate.
+Don't fight your language.
