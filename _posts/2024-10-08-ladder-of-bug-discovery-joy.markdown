@@ -104,7 +104,7 @@ flags, and you find your footing on step 4.
 My advice is to take a look at the steps on the ladder and consider if your tools and processes are missing
 anything that would help you catch bugs at that point.
 
-Hare are some example questions you could ask yourself:
+Here are some example questions you could ask yourself:
 
 * Are you learning about how your users use the software? *(step 0)*
 * Do you have an easy way for a user to report bugs *(step 1)*
