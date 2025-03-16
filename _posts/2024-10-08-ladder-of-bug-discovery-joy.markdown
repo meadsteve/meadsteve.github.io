@@ -30,7 +30,7 @@ maybe a little business. Mistakes will happen occasionally, but it's not good if
 
 ### Step 2 - Automated logging/alarms/graphs tell you about the bug
 In a lot of ways this is similar to the step above. The main difference is speed. Whatever automated thing you have
-can alert you in minutes. The user reports possibly took hours or days to reach you. The sooner you learn the sooner
+can alert you in minutes. The user report possibly took hours or days to reach you. The sooner you learn the sooner
 you can fix. Maybe you notice so quickly you roll back before many users even encounter the bug.
 
 ### Step 3 - A deploy is prevented by a liveness/readiness probe catching the bug
