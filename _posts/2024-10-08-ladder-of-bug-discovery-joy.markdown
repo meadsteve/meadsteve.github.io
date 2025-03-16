@@ -55,7 +55,7 @@ this was happening. All this contributes to me forgetting the context I was work
 
 ### Step 6 - During fast automated tests (Unit tests or anything else fast)
 I love having unit tests running continuously as I'm working. Ideally if the language supports it I have tests
-running as I'm typing (special mention of https://wallabyjs.com/ for enabling this continuous testing in javascript).
+running as I'm typing (special mention of [wallabyjs.com/](https://wallabyjs.com/) for enabling this continuous testing in javascript).
 The real strength here is discovering the bug/edge-case whilst actively thinking about the code. I've not 
 had to wait any significant amount of time between creating some code and learning about its consequences. My flow
 is unbroken.
