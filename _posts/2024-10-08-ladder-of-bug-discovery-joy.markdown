@@ -12,7 +12,9 @@ tags:
     - testing
 ---
 
-This post is mostly a brain dump on when I'm happiest on finding bugs in software I work on.
+This post is mostly a brain dump on when I'm happiest on finding bugs in software and what I do to try
+and maximise my happiness.
+
 I decided to structure it as a ladder. Higher up the ladder is better.
 
 ## The Steps
@@ -93,8 +95,25 @@ that getting to this kind of design is harder in some languages than others, so 
 Don't fight your language.
 
 
-## In conclusion
+## What can you do?
 
-Do all you can to set up systems that help you climb the ladder. No system is going to be perfect.
+Do all you can to climb the ladder, but remember: no system is going to be perfect.
 Make sure you have layers. Maybe you slip a little and miss some bugs on step 6, but you make good use of feature 
 flags, and you find your footing on step 4. 
+
+My advice is to take a look at the steps on the ladder and consider if your tools and processes are missing
+anything that would help you catch bugs at that point.
+
+Hare are some example questions you could ask yourself:
+
+* Are you learning about how your users use the software? [step 0]
+* Do you have an easy way for a user to report bugs [step 1]
+* If you have monitoring is there something that definitely indicates a bug that could get an alarm? [step 2]
+* Is there a smoke test that could run on a container as it starts before it goes into service? [step 3]
+* Could you start making use of feature flags & some manual QA in prod on the code behind flags? [step 4]
+* Do you need some integration tests that hit a real database? [step 5]
+* Could you run a workshop on writing fast, reliable unit tests in your teams? [step 6]
+* Do you model your domain well in code? Do you have some primitives that could be a type? (tip: search for blogs on "primitive obsession") [step 7 & ∞]
+
+This list is neither dogmatic nor exhaustive. Do what makes sense for you and your context. But generally
+anything that helps you find bugs sooner rather than later is going to be good.
