@@ -106,14 +106,14 @@ anything that would help you catch bugs at that point.
 
 Hare are some example questions you could ask yourself:
 
-* Are you learning about how your users use the software? [step 0]
-* Do you have an easy way for a user to report bugs [step 1]
-* If you have monitoring is there something that definitely indicates a bug that could get an alarm? [step 2]
-* Is there a smoke test that could run on a container as it starts before it goes into service? [step 3]
-* Could you start making use of feature flags & some manual QA in prod on the code behind flags? [step 4]
-* Do you need some integration tests that hit a real database? [step 5]
-* Could you run a workshop on writing fast, reliable unit tests in your teams? [step 6]
-* Do you model your domain well in code? Do you have some primitives that could be a type? (tip: search for blogs on "primitive obsession") [step 7 & ∞]
+* Are you learning about how your users use the software? *(step 0)*
+* Do you have an easy way for a user to report bugs *(step 1)*
+* If you have monitoring is there something that definitely indicates a bug that could get an alarm? *(step 2)*
+* Is there a smoke test that could run on a container as it starts before it goes into service? *(step 3)*
+* Could you start making use of feature flags & some manual QA in prod on the code behind flags? *(step 4)*
+* Do you need some integration tests that hit a real database? *(step 5)*
+* Could you run a workshop on writing fast, reliable unit tests in your teams? *(step 6)*
+* Do you model your domain well in code? Do you have some primitives that could be a type? (tip: search for blogs on "primitive obsession") *(step 7 & ∞)*
 
 This list is neither dogmatic nor exhaustive. Do what makes sense for you and your context. But generally
 anything that helps you find bugs sooner rather than later is going to be good.
