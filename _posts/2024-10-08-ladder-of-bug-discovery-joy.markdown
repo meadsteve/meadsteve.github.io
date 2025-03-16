@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title:  "Ladder of bug discovery joy"
 date:   2025-03-16 10:00:00
 categories: programming
