@@ -2,8 +2,8 @@
   "name": "Steve Brazier",
   "username": "MeadSteve",
   "current_focus": {
-    "language": "Python",
-    "link": "/python"
+    "language": "Go",
+    "link": "/go"
   },
   "languages": [
     {
@@ -16,6 +16,7 @@
     },
     {
       "language": "Go",
+      "link": "/go"
     },
     {
       "language": "Rust",
