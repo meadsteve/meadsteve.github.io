@@ -36,16 +36,51 @@ you can fix. Maybe you notice so quickly you roll back before many users even en
 ### Step 3 - A deploy is prevented by a liveness/readiness probe catching the bug
 In this step I'm imaging there's some automated precondition that stops a change going live.
 This is the first step where a user didn't find the bug. Which is great. The downside of finding it this 
-late is that it's probably blocking your deploy pipeline
+late is that it's probably blocking your deploy pipeline so your team needs to switch focus to fix or undo
+the bug before normal work can continue.
 
 ### Step 4 - During manual testing behind a feature flag/dark launch/whatever
+I really like feature flags. Being able to get code into production quickly because it's behind a feature flag
+is great. No users will see the bug. No deploy pipelines got blocked. It's a slightly slower feedback loop
+than steps higher up on the ladder and required manual testing effort. That said we're in a pretty good place if
+most of our bugs are stopped here.
 
 ### Step 5 - During slower automated tests (Integration tests perhaps)
+I'm lumping all tests that take minutes to run into this step. Catching bugs here is pretty good. All the
+benefits from step 4: No users impacted, no pipelines blocked. In addition: no manual effort was spent. The downside
+is I've potentially had to wait a long time for this result. Maybe I wandered off to have a drink and a snack whilst 
+this was happening. All this contributes to me forgetting the context I was working in.
 
 ### Step 6 - During fast automated tests (Unit tests or anything else fast)
-
-TODO: mention wallaby
+I love having unit tests running continuously as I'm working. Ideally if the language supports it I have tests
+running as I'm typing (special mention of https://wallabyjs.com/ for enabling this continuous testing in javascript).
+The real strength here is discovering the bug/edge-case whilst actively thinking about the code. I've not 
+had to wait any significant amount of time between creating some code and learning about its consequences. My flow
+is unbroken.
 
 ### Step 7 - Whilst coding because of the type system
+An example of what I mean by this step could be having a function that accepts an `int`. In most languages
+I'll get an error if I try and pass a `float` to the function. The type system has now potentially prevented a bug
+caused by data loss. In a lot of ways this is very similar to step 6. The main advantage is that there's no test
+to maintain so no overhead.
 
 ### Step ∞ - The bug can not exist in your code because of the design
+Largely a continuation of step 7 but in this case I don't encounter the bug in the first place. To give
+an example: imagine you're representing a set of choices a user can make. Let's say in our example domain 
+that the user must always have at least 1 choice. In most languages we could model this as a list of strings.
+We could make sure we're diligent about testing then mostly we could catch bugs by step 4. However, if we instead
+modelled this as a new type with a constructor that takes "1 or more choices" then we can never create an invalid
+list to begin with.
+
+```go
+type UserChoices []string
+
+func New(firstChoice string, extraChoices ...string) UserChoices {
+	// Code goes here
+}
+
+// Usage
+
+New("up")
+New("up", "down", "left", "right")
+```
