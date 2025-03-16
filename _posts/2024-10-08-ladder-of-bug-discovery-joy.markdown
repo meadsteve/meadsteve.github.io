@@ -10,6 +10,10 @@ tags:
     - errors
     - types
     - testing
+comments:
+  mastodon:
+    host: fosstodon.org
+    id: 114171793460762665
 ---
 
 This post is mostly a brain dump on when I'm happiest on finding bugs in software and what I do to try
