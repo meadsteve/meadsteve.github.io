@@ -91,3 +91,10 @@ The design gives no method for constructing an empty list, so we can be more con
 into the code somehow. This can help reduce the amount of tests we have to write. It's worth noting though
 that getting to this kind of design is harder in some languages than others, so it may not always be appropriate.
 Don't fight your language.
+
+
+## In conclusion
+
+Do all you can to set up systems that help you climb the ladder. No system is going to be perfect.
+Make sure you have layers. Maybe you slip a little and miss some bugs on step 6, but you make good use of feature 
+flags, and you find your footing on step 4. 
